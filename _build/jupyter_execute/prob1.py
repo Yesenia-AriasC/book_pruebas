@@ -103,7 +103,7 @@
 # 
 # Si $A$ y $B$ son conjuntos disyuntos, entonces $\text{Prob}[A\cap B] = 0$.
 
-# COMENTARIOS ¿?
+# _Por favor comente su respuesta._
 
 # ### <span style="color:#4CC9F0">Medida de todo el espacio muestral</span>
 
@@ -188,7 +188,7 @@
 
 # Imagínese como se podría verificar esta última ecuación.  Calcule $\text{Prob}(\text{par}|\text{azul})$ usando la dicha ecuación.
 
-# COMENTARIOS¿?
+# _Por favor comente su respuesta._
 
 # :::{admonition} Importante
 # :class: tip
@@ -241,7 +241,7 @@
 
 # Por favor verifique esta última afirmación.
 
-# comentarios¿?
+# _Por favor comente su respuesta._
 
 # ## <span style="color:#4361EE">Ejercicios</span>
 
@@ -261,15 +261,7 @@
 # 4. Compruebe que la probabilidad de obtener 5 en el dado azul es 1/5 y que este evento es independiente del valor obtenido en el dado rojo.
 # 4. Escriba un programa Python que construya un tensor de dimensión 2 y que contenga los 36 posibles resultados. Consulte  sobre como se hace un ciclo for en Python.
 
-# ::::{important}
-# :::{note}
-# Aquí van a estar los **comentarios** _¿?_
-# :::
-# ::::
-
-# :::{note}
-# este texto es **lo normal**, _Markdown del casual_
-# :::
+# ## <span style="color:#4361EE">Comentarios</span>
 
 # 
 # ```{raw} html
