@@ -1,25 +1,29 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # Conceptos básicos de probabilidad
+# # <span style="color:#3A0CA3">Conceptos básicos de probabilidad</span>
+# 
 
-# ## Introducción
+# ## <span style="color:#4361EE">Introducción</span>
+# 
+# 
 
 # En esta sección se introducen los conceptos básicos de probabilidad requeridos para entender la inteligencia artificial. 
 # 
 # El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentar los cálculos que se consideran necesarios para entender el concepto.
 
-# ## Espacio muestral
+# ## <span style="color:#4361EE">Espacio muestral</span>
+# 
+# 
+# 
 
 # La siguiente gráfica representa un ejemplo de un `espacio muestral`, el cual denotaremos como $\mathcal{M}$. Cada objeto dentro de la bolsa es un elemento del espacio muestral. Esto significa que este espacio muestral tiene $N=20$ elementos. Se supone que cada individuo puede identificarse de manera única. En este ejemplo hemos usado  un identificador $1,2,\ldots,20$, para cada uno de los elementos del espacio muestral. 
 # 
 # Adicionalmente,  cada individuo tiene un atributo de color. Hay tres colores diferentes: rojo, azul y gris.
 
-# ````{margin}
-# ```{note}
+# ```{admonition} Nota
 # Se observa que el espacio muestral es un conjunto.
 # ```
-# ````
 
 # ```{figure} https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png
 # :height: 250px
@@ -28,7 +32,9 @@
 # Ejemplo de Espacio Muestral $\mathcal{M}$
 # ```
 
-# ## Evento
+# ## <span style="color:#4361EE">Evento</span>
+# 
+# 
 
 # Un evento es cualquier subconjunto del espacio muestral. El lector interesado puede verificar, si lo desea, que el espacio muestral $\mathcal{M}$ tiene exactamente $2^{20}$ subconjuntos. 
 # 
@@ -49,9 +55,11 @@
 # Ejemplos de **eventos** del Espacio Muestral
 # :::
 
-# ## Probabilidad
+# ## <span style="color:#4361EE">Probabilidad</span>
+# 
+# 
 
-# ## Regla aditiva de la probabilidad
+# ## <span style="color:#4361EE">Regla aditiva de la probabilidad</span>
 
 # La probabilidad de la unión de dos eventos (subconjuntos) disyuntos (que no tiene intersección) es la suma de la probabilidad (medida) de cada uno de ellos. En símbolos, si $A$ y $B$ son eventos disyuntos de $\mathcal{M}$, entonces
 # 
@@ -75,12 +83,6 @@
 # 
 # 
 
-# ````{margin}
-# ```{note}
-# La regla aditiva general aplica para todos los casos.
-# ```
-# ````
-
 # 
 # 
 # ```{math}
@@ -95,7 +97,7 @@
 # \text{Prob}[\text{azul}\cup\text{pares}] = 5/20 + 10/20 - 3/20 = 12/20
 # $$
 
-# ### Ejercicio
+# ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # Que piensa de la siguiente afirmación. ¿Verdadero o falso? Justifique su respuesta.
 # 
@@ -103,7 +105,7 @@
 
 # COMENTARIOS ¿?
 
-# ### Medida de todo el espacio muestral
+# ### <span style="color:#4CC9F0">Medida de todo el espacio muestral</span>
 
 # Vamos a denotar por $\emptyset$ al conjunto vacío, es decir un conjunto que no tiene elementos.
 # 
@@ -133,7 +135,7 @@
 # 
 # Además observe que si se tienen eventos disyuntos entre sí (mutuamente excluyentes), cuya unión es el espacio muestral, entonces la probabilidad de la unión de todos esos eventos tiene probabilidad 1.
 
-# ### Probabilidad del complemento de un evento
+# ### <span style="color:#4CC9F0">Probabilidad del complemento de un evento </span>
 
 # El complemento de un evento $A$ se denotará por $A^{c}$. Este simplemente el conjunto de elementos del espacio muestral que están por fuera de $A$. Entonces, es inmediato que $\mathcal{M} = A\cup A^c$. Por lo que 
 # 
@@ -146,7 +148,7 @@
 # 
 # En nuestro ejemplo $impares^c= pares$. Entonces $Prob[\text{impares} ] = 1- 9/20 = 11/20$. Por favor verifica este resultado.
 
-# ## Probabilidad condicional
+# ## <span style="color:#4361EE">Probabilidad condicional</span>
 
 # El concepto de probabilidad condicional es de vital importancia en el estudio del aprendizaje profundo y la inteligencia artificial.
 # 
@@ -182,21 +184,23 @@
 # \text{Prob}(\text{par}|\text{azul}) = \frac{\text{Prob}[\text{par}\cap \text{azul}]}{\text{Prob}[\text{azul}]}
 # $$
 
-# ### Ejercicio
+# ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # Imagínese como se podría verificar esta última ecuación.  Calcule $\text{Prob}(\text{par}|\text{azul})$ usando la dicha ecuación.
 
 # COMENTARIOS¿?
 
-# ```{important} Esta es una regla general, que se enuncia así: 
+# :::{admonition} Importante
+# :class: tip
+# Esta es una regla general, que se enuncia así: 
 # Si $A$ y $B$ son eventos del espacio muestral $\mathcal{M}$, entonces se define $\text{Prob}[A|B]$ como
 # 
 # $$
 # \text{Prob}[A|B] = \frac{\text{Prob}[A\cap B]}{\text{Prob}[B]}
 # $$
-# ```
+# :::
 
-# ## Regla multiplicativa de la probabilidad
+# ## <span style="color:#4361EE">Regla multiplicativa de la probabilidad</span>
 
 # De la definición de la probabilidad condicional $\text{Prob}[A|B]$ se desprende que 
 # 
@@ -204,7 +208,7 @@
 # \text{Prob}[A\cap B] = \text{Prob}[B]\times \text{Prob}[A|B]
 # $$
 
-# ### Ejemplo
+# ### <span style="color:#4CC9F0">Ejemplo</span>
 
 # Con nuestro ejemplo supongamos que se pregunta por la probabilidad de obtener una bola par azul en un experimento.
 # 
@@ -217,7 +221,7 @@
 # 
 # Esto está de acuerdo con la ilustración de los evento del espacio muestral exhibidos arriba.
 
-# ## Independencia
+# ## <span style="color:#4361EE">Independencia</span>
 
 # Dos eventos $A$ y $B$ del espacio muestral $\mathcal{M}$ se dicen independientes si
 # 
@@ -233,13 +237,13 @@
 # \text{Prob}[A| B] = \text{Prob}[A].
 # $$
 
-# ### Ejercicio
+# ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # Por favor verifique esta última afirmación.
 
 # comentarios¿?
 
-# ## Ejercicios
+# ## <span style="color:#4361EE">Ejercicios</span>
 
 # Considere el siguiente experimento. Se lanzan dos dados no cargados de seis caras cada uno. El resultado del experimento es una pareja de números. Por ejemplo $(5,6)$.
 
@@ -266,3 +270,17 @@
 # :::{note}
 # este texto es **lo normal**, _Markdown del casual_
 # :::
+
+# 
+# ```{raw} html
+# <script src="https://utteranc.es/client.js"
+#         repo="Yesenia-AriasC / book_pruebas"
+#         issue-term="nombre de ruta"
+#         label="proba_basic"
+#         theme="boxy-light"
+#         crossorigin="anónimo"
+#         asíncrono>
+# </script>
+# ```
+# 
+# 
