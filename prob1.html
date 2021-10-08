@@ -40,6 +40,41 @@
     <script src="_static/togglebutton.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "Yesenia-AriasC/book_pruebas");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
     <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
@@ -98,7 +133,9 @@
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1 current active">
   <a class="current reference internal" href="#">
-   Conceptos básicos de probabilidad
+   <span style="color:#3A0CA3">
+    Conceptos básicos de probabilidad
+   </span>
   </a>
  </li>
 </ul>
@@ -161,10 +198,7 @@
             href="https://github.com/Yesenia-AriasC/PRT"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        <a class="issues-button"
-            href="https://github.com/Yesenia-AriasC/PRT/issues/new?title=Issue%20on%20page%20%2Fprob1.html&body=Your%20issue%20content%20here."><button
-                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
-                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
         
     </div>
 </div>
@@ -206,86 +240,116 @@
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#introduccion">
-   Introducción
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-introduccion-span">
+   <span style="color:#4361EE">
+    Introducción
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#espacio-muestral">
-   Espacio muestral
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-espacio-muestral-span">
+   <span style="color:#4361EE">
+    Espacio muestral
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#evento">
-   Evento
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-evento-span">
+   <span style="color:#4361EE">
+    Evento
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad">
-   Probabilidad
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-probabilidad-span">
+   <span style="color:#4361EE">
+    Probabilidad
+   </span>
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regla-aditiva-de-la-probabilidad">
-   Regla aditiva de la probabilidad
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-regla-aditiva-de-la-probabilidad-span">
+   <span style="color:#4361EE">
+    Regla aditiva de la probabilidad
+   </span>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ejercicio">
-     Ejercicio
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejercicio-span">
+     <span style="color:#4CC9F0">
+      Ejercicio
+     </span>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#medida-de-todo-el-espacio-muestral">
-     Medida de todo el espacio muestral
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span">
+     <span style="color:#4CC9F0">
+      Medida de todo el espacio muestral
+     </span>
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#probabilidad-del-complemento-de-un-evento">
-     Probabilidad del complemento de un evento
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-probabilidad-del-complemento-de-un-evento-span">
+     <span style="color:#4CC9F0">
+      Probabilidad del complemento de un evento
+     </span>
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#probabilidad-condicional">
-   Probabilidad condicional
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-probabilidad-condicional-span">
+   <span style="color:#4361EE">
+    Probabilidad condicional
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     <span style="color:#4CC9F0">
+      Ejercicio
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-regla-multiplicativa-de-la-probabilidad-span">
+   <span style="color:#4361EE">
+    Regla multiplicativa de la probabilidad
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejemplo-span">
+     <span style="color:#4CC9F0">
+      Ejemplo
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-independencia-span">
+   <span style="color:#4361EE">
+    Independencia
+   </span>
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#id2">
-     Ejercicio
+     <span style="color:#4CC9F0">
+      Ejercicio
+     </span>
     </a>
    </li>
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#regla-multiplicativa-de-la-probabilidad">
-   Regla multiplicativa de la probabilidad
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#ejemplo">
-     Ejemplo
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#independencia">
-   Independencia
-  </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     Ejercicio
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#ejercicios">
-   Ejercicios
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-ejercicios-span">
+   <span style="color:#4361EE">
+    Ejercicios
+   </span>
   </a>
  </li>
 </ul>
@@ -299,31 +363,28 @@
         
               <div>
                 
-  <div class="section" id="conceptos-basicos-de-probabilidad">
-<h1>Conceptos básicos de probabilidad<a class="headerlink" href="#conceptos-basicos-de-probabilidad" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="introduccion">
-<h2>Introducción<a class="headerlink" href="#introduccion" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="span-style-color-3a0ca3-conceptos-basicos-de-probabilidad-span">
+<h1><span style="color:#3A0CA3">Conceptos básicos de probabilidad</span><a class="headerlink" href="#span-style-color-3a0ca3-conceptos-basicos-de-probabilidad-span" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="span-style-color-4361ee-introduccion-span">
+<h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
 <p>En esta sección se introducen los conceptos básicos de probabilidad requeridos para entender la inteligencia artificial.</p>
 <p>El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentar los cálculos que se consideran necesarios para entender el concepto.</p>
 </div>
-<div class="section" id="espacio-muestral">
-<h2>Espacio muestral<a class="headerlink" href="#espacio-muestral" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-espacio-muestral-span">
+<h2><span style="color:#4361EE">Espacio muestral</span><a class="headerlink" href="#span-style-color-4361ee-espacio-muestral-span" title="Permalink to this headline">¶</a></h2>
 <p>La siguiente gráfica representa un ejemplo de un <code class="docutils literal notranslate"><span class="pre">espacio</span> <span class="pre">muestral</span></code>, el cual denotaremos como <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. Cada objeto dentro de la bolsa es un elemento del espacio muestral. Esto significa que este espacio muestral tiene <span class="math notranslate nohighlight">\(N=20\)</span> elementos. Se supone que cada individuo puede identificarse de manera única. En este ejemplo hemos usado  un identificador <span class="math notranslate nohighlight">\(1,2,\ldots,20\)</span>, para cada uno de los elementos del espacio muestral.</p>
 <p>Adicionalmente,  cada individuo tiene un atributo de color. Hay tres colores diferentes: rojo, azul y gris.</p>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
 <p>Se observa que el espacio muestral es un conjunto.</p>
 </div>
-</div>
-<div class="figure align-default" id="id1">
+<div class="figure align-default" id="espacio-muestral">
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png"><img alt="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png" src="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Ejemplo de Espacio Muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span></span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Ejemplo de Espacio Muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span></span><a class="headerlink" href="#espacio-muestral" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="evento">
-<h2>Evento<a class="headerlink" href="#evento" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-evento-span">
+<h2><span style="color:#4361EE">Evento</span><a class="headerlink" href="#span-style-color-4361ee-evento-span" title="Permalink to this headline">¶</a></h2>
 <p>Un evento es cualquier subconjunto del espacio muestral. El lector interesado puede verificar, si lo desea, que el espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> tiene exactamente <span class="math notranslate nohighlight">\(2^{20}\)</span> subconjuntos.</p>
 <p>Consideremos ahora seis eventos (subconjuntos) especiales de <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>:</p>
 <ol class="simple">
@@ -340,11 +401,11 @@
 <p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Ejemplos de <strong>eventos</strong> del Espacio Muestral</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">¶</a></p>
 </div>
 </div>
-<div class="section" id="probabilidad">
-<h2>Probabilidad<a class="headerlink" href="#probabilidad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-probabilidad-span">
+<h2><span style="color:#4361EE">Probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-span" title="Permalink to this headline">¶</a></h2>
 </div>
-<div class="section" id="regla-aditiva-de-la-probabilidad">
-<h2>Regla aditiva de la probabilidad<a class="headerlink" href="#regla-aditiva-de-la-probabilidad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-regla-aditiva-de-la-probabilidad-span">
+<h2><span style="color:#4361EE">Regla aditiva de la probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-regla-aditiva-de-la-probabilidad-span" title="Permalink to this headline">¶</a></h2>
 <p>La probabilidad de la unión de dos eventos (subconjuntos) disyuntos (que no tiene intersección) es la suma de la probabilidad (medida) de cada uno de ellos. En símbolos, si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> son eventos disyuntos de <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, entonces</p>
 <div class="math notranslate nohighlight" id="equation-mylabel">
 <span class="eqno">(1)<a class="headerlink" href="#equation-mylabel" title="Permalink to this equation">¶</a></span>\[
@@ -358,13 +419,6 @@
 \]</div>
 <p>Esto se debe a que los eventos <em>azul</em> y <em>pares</em>, no son disyuntos. Como se muestra en la parte inferior derecha de la gráfica arriba, se tiene que <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}\cap \text{pares}] = 3/20\)</span>. ¿Cómo afecta esta situación el resultado el cálculo de la probabilidad de la unión de dos evento?</p>
 <p>Lo anterior conduce a la regla aditiva general la cual dice que</p>
-<div class="margin sidebar">
-<p class="sidebar-title"></p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>La regla aditiva general aplica para todos los casos.</p>
-</div>
-</div>
 <div class="math notranslate nohighlight" id="equation-eq-label">
 <span class="eqno">(2)<a class="headerlink" href="#equation-eq-label" title="Permalink to this equation">¶</a></span>\[\text{Prob}[A\cup B] = \text{Prob}[A] + \text{Prob}[B]-\text{Prob}[A\cap B] .\]</div>
 <p>En el ejemplo se tiene entonces que</p>
@@ -372,14 +426,14 @@
 \[
 \text{Prob}[\text{azul}\cup\text{pares}] = 5/20 + 10/20 - 3/20 = 12/20
 \]</div>
-<div class="section" id="ejercicio">
-<h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="span-style-color-4cc9f0-ejercicio-span">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#span-style-color-4cc9f0-ejercicio-span" title="Permalink to this headline">¶</a></h3>
 <p>Que piensa de la siguiente afirmación. ¿Verdadero o falso? Justifique su respuesta.</p>
 <p>Si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> son conjuntos disyuntos, entonces <span class="math notranslate nohighlight">\(\text{Prob}[A\cap B] = 0\)</span>.</p>
 <p>COMENTARIOS ¿?</p>
 </div>
-<div class="section" id="medida-de-todo-el-espacio-muestral">
-<h3>Medida de todo el espacio muestral<a class="headerlink" href="#medida-de-todo-el-espacio-muestral" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span">
+<h3><span style="color:#4CC9F0">Medida de todo el espacio muestral</span><a class="headerlink" href="#span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span" title="Permalink to this headline">¶</a></h3>
 <p>Vamos a denotar por <span class="math notranslate nohighlight">\(\emptyset\)</span> al conjunto vacío, es decir un conjunto que no tiene elementos.</p>
 <p>En nuestro ejemplo tenemos que</p>
 <div class="math notranslate nohighlight">
@@ -401,8 +455,8 @@
 <p>Esta es una propiedad general de la probabilidad. El espacio muestral siempre tiene medida de probabilidad 1.</p>
 <p>Además observe que si se tienen eventos disyuntos entre sí (mutuamente excluyentes), cuya unión es el espacio muestral, entonces la probabilidad de la unión de todos esos eventos tiene probabilidad 1.</p>
 </div>
-<div class="section" id="probabilidad-del-complemento-de-un-evento">
-<h3>Probabilidad del complemento de un evento<a class="headerlink" href="#probabilidad-del-complemento-de-un-evento" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="span-style-color-4cc9f0-probabilidad-del-complemento-de-un-evento-span">
+<h3><span style="color:#4CC9F0">Probabilidad del complemento de un evento </span><a class="headerlink" href="#span-style-color-4cc9f0-probabilidad-del-complemento-de-un-evento-span" title="Permalink to this headline">¶</a></h3>
 <p>El complemento de un evento <span class="math notranslate nohighlight">\(A\)</span> se denotará por <span class="math notranslate nohighlight">\(A^{c}\)</span>. Este simplemente el conjunto de elementos del espacio muestral que están por fuera de <span class="math notranslate nohighlight">\(A\)</span>. Entonces, es inmediato que <span class="math notranslate nohighlight">\(\mathcal{M} = A\cup A^c\)</span>. Por lo que</p>
 <div class="math notranslate nohighlight">
 \[
@@ -412,8 +466,8 @@ Prob[A^c] = 1 - Prob[A].
 <p>En nuestro ejemplo <span class="math notranslate nohighlight">\(impares^c= pares\)</span>. Entonces <span class="math notranslate nohighlight">\(Prob[\text{impares} ] = 1- 9/20 = 11/20\)</span>. Por favor verifica este resultado.</p>
 </div>
 </div>
-<div class="section" id="probabilidad-condicional">
-<h2>Probabilidad condicional<a class="headerlink" href="#probabilidad-condicional" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-probabilidad-condicional-span">
+<h2><span style="color:#4361EE">Probabilidad condicional</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-condicional-span" title="Permalink to this headline">¶</a></h2>
 <p>El concepto de probabilidad condicional es de vital importancia en el estudio del aprendizaje profundo y la inteligencia artificial.</p>
 <p>Como el nombre parece indicar, es trata de calcular la probabilidad de un evento sujeto a una restricción. En realidad es así y la restricción normalmente está asociada con otro evento.</p>
 <p>Para ilustrar el asunto, supongamos que se pregunta por la probabilidad que una bola extraída sea par, dado que la bola es azul.</p>
@@ -438,12 +492,12 @@ Prob[A^c] = 1 - Prob[A].
 \[
 \text{Prob}(\text{par}|\text{azul}) = \frac{\text{Prob}[\text{par}\cap \text{azul}]}{\text{Prob}[\text{azul}]}
 \]</div>
-<div class="section" id="id2">
-<h3>Ejercicio<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>Imagínese como se podría verificar esta última ecuación.  Calcule <span class="math notranslate nohighlight">\(\text{Prob}(\text{par}|\text{azul})\)</span> usando la dicha ecuación.</p>
 <p>COMENTARIOS¿?</p>
-<div class="admonition important">
-<p class="admonition-title">Important</p>
+<div class="tip admonition">
+<p class="admonition-title">Importante</p>
 <p>Esta es una regla general, que se enuncia así:
 Si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> son eventos del espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, entonces se define <span class="math notranslate nohighlight">\(\text{Prob}[A|B]\)</span> como</p>
 <div class="math notranslate nohighlight">
@@ -453,15 +507,15 @@ Si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math n
 </div>
 </div>
 </div>
-<div class="section" id="regla-multiplicativa-de-la-probabilidad">
-<h2>Regla multiplicativa de la probabilidad<a class="headerlink" href="#regla-multiplicativa-de-la-probabilidad" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-regla-multiplicativa-de-la-probabilidad-span">
+<h2><span style="color:#4361EE">Regla multiplicativa de la probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-regla-multiplicativa-de-la-probabilidad-span" title="Permalink to this headline">¶</a></h2>
 <p>De la definición de la probabilidad condicional <span class="math notranslate nohighlight">\(\text{Prob}[A|B]\)</span> se desprende que</p>
 <div class="math notranslate nohighlight">
 \[
 \text{Prob}[A\cap B] = \text{Prob}[B]\times \text{Prob}[A|B]
 \]</div>
-<div class="section" id="ejemplo">
-<h3>Ejemplo<a class="headerlink" href="#ejemplo" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="span-style-color-4cc9f0-ejemplo-span">
+<h3><span style="color:#4CC9F0">Ejemplo</span><a class="headerlink" href="#span-style-color-4cc9f0-ejemplo-span" title="Permalink to this headline">¶</a></h3>
 <p>Con nuestro ejemplo supongamos que se pregunta por la probabilidad de obtener una bola par azul en un experimento.</p>
 <p>La solución es sencilla, por que ya hemos obtenido que <span class="math notranslate nohighlight">\(\text{Prob}(\text{par}|\text{azul}) = \tfrac{3}{5}\)</span>,
 y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)</span>. por lo tanto</p>
@@ -472,8 +526,8 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
 <p>Esto está de acuerdo con la ilustración de los evento del espacio muestral exhibidos arriba.</p>
 </div>
 </div>
-<div class="section" id="independencia">
-<h2>Independencia<a class="headerlink" href="#independencia" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-independencia-span">
+<h2><span style="color:#4361EE">Independencia</span><a class="headerlink" href="#span-style-color-4361ee-independencia-span" title="Permalink to this headline">¶</a></h2>
 <p>Dos eventos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> del espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> se dicen independientes si</p>
 <div class="math notranslate nohighlight">
 \[
@@ -484,14 +538,14 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
 \[
 \text{Prob}[A| B] = \text{Prob}[A].
 \]</div>
-<div class="section" id="id3">
-<h3>Ejercicio<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id2">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>Por favor verifique esta última afirmación.</p>
 <p>comentarios¿?</p>
 </div>
 </div>
-<div class="section" id="ejercicios">
-<h2>Ejercicios<a class="headerlink" href="#ejercicios" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="span-style-color-4361ee-ejercicios-span">
+<h2><span style="color:#4361EE">Ejercicios</span><a class="headerlink" href="#span-style-color-4361ee-ejercicios-span" title="Permalink to this headline">¶</a></h2>
 <p>Considere el siguiente experimento. Se lanzan dos dados no cargados de seis caras cada uno. El resultado del experimento es una pareja de números. Por ejemplo <span class="math notranslate nohighlight">\((5,6)\)</span>.</p>
 <div class="figure align-default" id="dos-dados">
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" style="height: 150px;" /></a>
@@ -516,7 +570,14 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
 <p class="admonition-title">Note</p>
 <p>este texto es <strong>lo normal</strong>, <em>Markdown del casual</em></p>
 </div>
-</div>
+<script src="https://utteranc.es/client.js"
+        repo="Yesenia-AriasC / book_pruebas"
+        issue-term="nombre de ruta"
+        label="proba_basic"
+        theme="boxy-light"
+        crossorigin="anónimo"
+        asíncrono>
+</script></div>
 </div>
 
     <script type="text/x-thebe-config">
