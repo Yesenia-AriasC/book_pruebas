@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# # <span style="color:#3A0CA3">Conceptos básicos de probabilidad</span>
+# # <span style="color:#F72585">Conceptos básicos de probabilidad</span>
 # 
 
 # ## <span style="color:#4361EE">Introducción</span>
@@ -262,7 +262,6 @@
 # 4. Escriba un programa Python que construya un tensor de dimensión 2 y que contenga los 36 posibles resultados. Consulte  sobre como se hace un ciclo for en Python.
 
 # ## <span style="color:#4361EE">Comentarios</span>
-
 # 
 # ```{raw} html
 # <script src="https://utteranc.es/client.js"
