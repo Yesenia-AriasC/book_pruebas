@@ -9,12 +9,21 @@
 
 1. Maria del Pilar Montenegro Reyes, pmontenegro88@gmail.com
 
-:::{note}
-Bienvenido a la versión "producto mínimo viable" que tiene por objetivo recibir retroalimentación sobre 
-su diseño.
-Se realizó corrección ortográfica con spellchecker y ajustes para que todo ejecutara correctamente.
-Este archivo se llama intro.md
-:::
+```{admonition} Cambios realizados
+
+* Color de los títulos (esos todavía no se han revisado pero estoy esperando respuesta). Nuestra diseñadora Pilar me enseñó básicos de teoría del color y a usar herramientas para encontrar buenas paletas de colores y hacer imágenes.
+
+* Idioma del título cajitas donde se colocan anotaciones. 
+Aprendí no solo a colocarlo en español sino a darles el nombre que se desee.
+
+* Integración de anotaciones que los usuarios pueden elegir ver o no (el ojo de la parte superior derecha) para que todo el que esté leyendo pueda contribuir, preguntar y contestar comentarios a los demás entre otros. 
+Este tipo de comentarios en forma de anotación brindan mayor especificidad al tema a discutir o comentar.
+Un dato importante es que ¡estos comentarios pueden usar laTex!
+
+* Comentarios al final de la "hoja" usando la cuenta de GitHub para comentarios más generales. Para esto se creó un label del tema en específico (bases de probabilidad) en Github, pestaña issues.
+
+```
+Espero les guste.
 
 
 
