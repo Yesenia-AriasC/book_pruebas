@@ -53,3 +53,11 @@ html:
     hypothesis              : true
     utterances:
       repo: "Yesenia-AriasC/book_pruebas"
+
+#######################################################################################
+# Launch button settings
+# Information about where the book exists on the web
+repository:
+  url                       : https://github.com/Yesenia-AriasC/book_pruebas  # Online location of your book
+  path_to_book              : path/to/book  # Optional path to your book, relative to the repository root
+  branch                    : gh-pages  # Which branch of the repository should be used when creating links (optional)

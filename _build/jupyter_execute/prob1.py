@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (probabilidad:basicos)=
 # # <span style="color:#F72585">Conceptos básicos de probabilidad</span>
-# 
 
 # ## <span style="color:#4361EE">Introducción</span>
 # 
@@ -125,7 +125,7 @@
 # \end{align}
 # $$
 # 
-# Se dice en esta situación que los conjuntos son `mutuamente excluyentes`.  De acuerdo con la regla aditiva tenemos que
+# Se dice en esta situación que los conjuntos son {ref}`prob:mutuamente_excluyentes`.  De acuerdo con la regla aditiva tenemos que
 # 
 # $$
 # \text{Prob}[\mathcal{M}] = \text{Prob}[\text{azul}] +  \text{Prob}[\text{rojo}]+  \text{Prob}[\text{gris}] = 5/20 + 7/20 + 8/20 = 1.
@@ -262,7 +262,6 @@
 # 4. Escriba un programa Python que construya un tensor de dimensión 2 y que contenga los 36 posibles resultados. Consulte  sobre como se hace un ciclo for en Python.
 
 # ## <span style="color:#4361EE">Comentarios</span>
-# 
 # ```{raw} html
 # <script src="https://utteranc.es/client.js"
 #         repo="Yesenia-AriasC / book_pruebas"

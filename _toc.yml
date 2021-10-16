@@ -7,4 +7,7 @@ parts:
   - caption: probabilidad
     chapters:
     - file: prob1
-  
+    - file: prob2
+  - caption: Conceptos
+    chapters:
+    - file: prob_basicos

@@ -1,26 +1,24 @@
-# Bienvenido 
+#  Bienvenido
 
-## Autores:
+## <span style="color:#4361EE">Autores</span>
 
 1.  Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
 2. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com
 
-## Diseño gráfico y Marketing digital
+##  <span style="color:#4361EE">Diseño gráfico y Marketing digital</span>
+
 
 1. Maria del Pilar Montenegro Reyes, pmontenegro88@gmail.com
 
 ```{admonition} Cambios realizados
 
-* Color de los títulos (esos todavía no se han revisado pero estoy esperando respuesta). Nuestra diseñadora Pilar me enseñó básicos de teoría del color y a usar herramientas para encontrar buenas paletas de colores y hacer imágenes.
+* Se anexó la segunda clase de probabilidad / variables aleatorias.
 
-* Idioma del título cajitas donde se colocan anotaciones. 
-Aprendí no solo a colocarlo en español sino a darles el nombre que se desee.
+* Aprendí a hacer links dentro del libro. A partir de esto se creó una sección de definiciones para  dar una definición y ejemplos de x conceptos.
 
-* Integración de anotaciones que los usuarios pueden elegir ver o no (el ojo de la parte superior derecha) para que todo el que esté leyendo pueda contribuir, preguntar y contestar comentarios a los demás entre otros. 
-Este tipo de comentarios en forma de anotación brindan mayor especificidad al tema a discutir o comentar.
-Un dato importante es que ¡estos comentarios pueden usar laTex!
+*subo a github para hacer pruebas con thebe.
 
-* Comentarios al final de la "hoja" usando la cuenta de GitHub para comentarios más generales. Para esto se creó un label del tema en específico (bases de probabilidad) en Github, pestaña issues.
+
 
 ```
 Espero les guste.
