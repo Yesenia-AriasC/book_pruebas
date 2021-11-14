@@ -8,6 +8,14 @@ parts:
     chapters:
     - file: prob1
     - file: prob2
+    - file: bibliografia
   - caption: Conceptos
     chapters:
-    - file: prob_basicos
+    - file: prob_basicos  
+  - caption: python
+    chapters: 
+    - file: Módulos_en_Python
+    - file: Intro_Clases_Python
+    - file: Decorators
+    - file: Taller_Pandas
+    - file: Intro_Tensores_I
