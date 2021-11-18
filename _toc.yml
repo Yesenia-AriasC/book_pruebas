@@ -12,10 +12,10 @@ parts:
   - caption: Conceptos
     chapters:
     - file: prob_basicos  
-  - caption: python
+  - caption: Python
     chapters: 
-    - file: Módulos_en_Python
-    - file: Intro_Clases_Python
-    - file: Decorators
-    - file: Taller_Pandas
-    - file: Intro_Tensores_I
+    - file: py4
+    - file: py5
+    - file: py6
+    - file: py7
+    - file: py8
