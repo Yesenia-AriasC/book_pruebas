@@ -8,6 +8,18 @@ parts:
     chapters:
     - file: prob1
     - file: prob2
+    - file: prob3
+    - file: prob4
+  - caption: Programación
+    chapters:
+    - file: py1
+    - file: py2
+    - file: py3
+    - file: py4
+    - file: py5
+    - file: py6
+    - file: py7
+    - file: py8
   - caption: Conceptos
     chapters:
     - file: prob_basicos
