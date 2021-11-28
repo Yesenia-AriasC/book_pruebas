@@ -1,0 +1,1189 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introducción a Clases en Python &#8212; IA y Aprendizaje profundo</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "Yesenia-AriasC/book_pruebas");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Introducción a Decoradores (Decorators) en Python" href="py6.html" />
+    <link rel="prev" title="Inspección, Instalación y Carga de Módulos y Paquetes" href="py4.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">IA y Aprendizaje profundo</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Bienvenido
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  probabilidad
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob1.html">
+   <span style="color:#F72585">
+    Conceptos básicos de probabilidad
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob2.html">
+   <span style="color:#F72585">
+    Variables Aleatorias
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob3.html">
+   <span style="color:#F72585">
+    Probabilidad Conjunta y Entropía Cruzada
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob4.html">
+   <span style="color:#F72585">
+    Distribuciones de probabilidad continuas
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Programación
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py1.html">
+   <span style="color:#F72585">
+    Introducción al lenguaje Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py2.html">
+   <span style="color:#F72585">
+    Funciones en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py3.html">
+   <span style="color:#F72585">
+    Listas, Tuplas y Diccionarios en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py4.html">
+   <span style="color:#F72585">
+    Inspección, Instalación y Carga de Módulos y Paquetes
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <span style="color:#F72585">
+    Introducción a Clases en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py6.html">
+   <span style="color:#F72585">
+    Introducción a Decoradores (Decorators) en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py7.html">
+   <span style="color:#F72585">
+    Taller de manejo de Datos en Pandas
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py8.html">
+   <span style="color:#F72585">
+    Introducción a tensores
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Conceptos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob_basicos.html">
+   <span style="color:#F72585">
+    Definiciones
+   </span>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/py5.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/py5.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-introduccion-span">
+   <span style="color:#4361EE">
+    Introducción
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-clases-span">
+   <span style="color:#4361EE">
+    Clases
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-para-que-tomarnos-la-molestia-si-pudimos-hacer-todo-un-diccionario-span">
+     <span style="color:#4CC9F0">
+      ¿Para qué tomarnos la molestia si pudimos hacer todo un diccionario?
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-la-funcion-init-span">
+   <span style="color:#4361EE">
+    La función __init__()
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-documentacion-de-una-clase-span">
+     <span style="color:#4CC9F0">
+      Documentación de una clase
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-agregando-metodos-a-una-clase-span">
+     <span style="color:#4CC9F0">
+      Agregando métodos a una clase
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-imprimiendo-contenidos-de-una-clase-por-defecto-span">
+     <span style="color:#4CC9F0">
+      Imprimiendo contenidos de una clase por defecto
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejecucion-de-una-tarea-por-defecto-en-una-instancia-de-clase-call-span">
+     <span style="color:#4CC9F0">
+      Ejecución de una tarea por defecto en una instancia de clase: call
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-referencias-y-copia-de-objetos-span">
+   <span style="color:#4361EE">
+    Referencias y copia de objetos
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-eliminacion-de-objetos-del-span">
+     <span style="color:#4CC9F0">
+      Eliminación de objetos: del
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-atributos-intrinsecos-de-clases-y-objetos-span">
+   <span style="color:#4361EE">
+    Atributos Intrínsecos de clases y objetos
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-herencia-de-clases-span">
+   <span style="color:#4361EE">
+    Herencia de clases
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-referencia-a-la-clase-base-super-span">
+     <span style="color:#4CC9F0">
+      Referencia a la clase base: super()
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
+   <span style="color:#4361EE">
+    Autores
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-asesora-medios-y-marketing-digital-span">
+   <span style="color:#4361EE">
+    Asesora Medios y Marketing digital
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-espacio-asistentes-span">
+   <span style="color:#4361EE">
+    Espacio Asistentes
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-bibliografia-span">
+   <span style="color:#4361EE">
+    Bibliografía
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
+   <span style="color:#4361EE">
+    Comentarios
+   </span>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="span-style-color-f72585-introduccion-a-clases-en-python-span">
+<span id="py5"></span><h1><span style="color:#F72585">Introducción a Clases en Python</span><a class="headerlink" href="#span-style-color-f72585-introduccion-a-clases-en-python-span" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="span-style-color-4361ee-introduccion-span">
+<h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
+<p>Python es un lenguaje de programación orientado a objetos.</p>
+<p><strong>Todo</strong> en Python es un objeto, con sus propiedades y métodos.</p>
+</div>
+<div class="section" id="span-style-color-4361ee-clases-span">
+<h2><span style="color:#4361EE">Clases</span><a class="headerlink" href="#span-style-color-4361ee-clases-span" title="Permalink to this headline">¶</a></h2>
+<p>Podemos imaginarnos <strong>una clase</strong> como una plantilla o un plano para construir objetos.</p>
+<p>Para crear una clase, usa el la palabra clave <code class="docutils literal notranslate"><span class="pre">class:</span></code></p>
+<p>Supongamos, por ejemplo, que queremos crear una plataforma para recolectar toda la información personal que podamos de nuestros usuarios (nada parecido con la realidad) porque… sí.</p>
+<p>Creemos una clase que no haga nada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La razón de <code class="docutils literal notranslate"><span class="pre">pass</span></code> es debido a que una clase necesita al menos una línea para poder existir.</p>
+<div class="tip admonition">
+<p class="admonition-title">Consejo</p>
+<p>Para crear los nombres de las clases, comience con mayúsculas.</p>
+</div>
+<p>Ok. Ahora creemos un usuario:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u1</span><span class="o">=</span><span class="n">Usuario</span><span class="p">()</span>
+<span class="n">u2</span><span class="o">=</span><span class="n">Usuario</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u1</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Usuario at 0x7fc1a16c0dc0&gt;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Como podemos ver, parece que estuvieramos llamando un método (o función), y en efecto es algo parecido</p>
+<p><code class="docutils literal notranslate"><span class="pre">u1</span></code> es una <strong>instancia</strong> de la clase Usuario.</p>
+<p>También podemos llamar a <code class="docutils literal notranslate"><span class="pre">u1</span></code> un objeto.</p>
+<p>Podemos adjuntar datos a este objeto, usamos la notación punto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#Adjuntando datos a el objeto u1 de la clase Usuario</span>
+
+<span class="n">u1</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Aprendizaje&quot;</span>
+<span class="n">u1</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="s2">&quot;Profundo&quot;</span>
+<span class="n">u2</span><span class="o">.</span><span class="n">edad</span> <span class="o">=</span><span class="mi">15</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u1</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u2</span><span class="o">.</span><span class="n">edad</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Aprendizaje
+Profundo
+15
+</pre></div>
+</div>
+</div>
+</div>
+<p>Los datos adjuntados a un objeto se les llaman <strong>atributos</strong></p>
+<div class="warning admonition">
+<p class="admonition-title">OJO</p>
+<p>nombre y apellido no son variables existentes en el ambiente de trabajo.</p>
+</div>
+<div class="tip admonition">
+<p class="admonition-title">Consejo</p>
+<p>Se recomienda usar minúsculas para los nombres de los campo (Tradición Pythonica).</p>
+</div>
+<p>Es común diferenciar entre atributos de clase y atributos de instancia de clase. Por lo pronto nos referimos a los atributos de instancia de clase qu refieren a la información incluida en una instancia de clase.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u1</span><span class="o">.</span><span class="n">nombre</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;Aprendizaje&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Una bonita consecuencia, es que podemos crear muchos objetos con campos del mismo nombre sin tener que defiinir una variable diferente para cada dato adjuntado del objeto.</p>
+<p>Hagamos otro objeto:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">u2</span><span class="o">=</span><span class="n">Usuario</span><span class="p">()</span>
+<span class="n">u2</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="s2">&quot;Francisco&quot;</span>
+<span class="n">u2</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="s2">&quot;Talavera&quot;</span>
+<span class="n">u2</span><span class="o">.</span><span class="n">edad</span><span class="o">=</span><span class="mi">34</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#edad de u2</span>
+<span class="n">u2</span><span class="o">.</span><span class="n">edad</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>34
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># u1 no tiene edad asginada</span>
+<span class="n">u1</span><span class="o">.</span><span class="n">edad</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="n">bb84ccb0dba</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># u1 no tiene edad asginada</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">u1</span><span class="o">.</span><span class="n">edad</span>
+
+<span class="ne">AttributeError</span>: &#39;Usuario&#39; object has no attribute &#39;edad&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Se estarán preguntando…</p>
+<div class="section" id="span-style-color-4cc9f0-para-que-tomarnos-la-molestia-si-pudimos-hacer-todo-un-diccionario-span">
+<h3><span style="color:#4CC9F0">¿Para qué tomarnos la molestia si pudimos hacer todo un diccionario?</span><a class="headerlink" href="#span-style-color-4cc9f0-para-que-tomarnos-la-molestia-si-pudimos-hacer-todo-un-diccionario-span" title="Permalink to this headline">¶</a></h3>
+<p>La respuesta la encontraremos en características adicionales de las clases. Estas contienen:</p>
+<ul class="simple">
+<li><p>Métodos</p></li>
+<li><p>Inicialización</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-la-funcion-init-span">
+<h2><span style="color:#4361EE">La función __init__()</span><a class="headerlink" href="#span-style-color-4361ee-la-funcion-init-span" title="Permalink to this headline">¶</a></h2>
+<p>Una función dentro de una clase de llama <strong>método</strong>.</p>
+<p>__init__ es el abreviado de <strong>initialization</strong> (inicialización).</p>
+<p>También se le conoce como el <strong>constructor</strong>.</p>
+<p><strong>Note los dos guiones bajos antes y despues de init</strong>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+
+<span class="n">u3</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span> <span class="s1">&#39;19620311&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">cumple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p><em>self</em> es el parámetro que referencia la instancia actual de la clase y se usa para acceder a los atributos de dicha clase. No tiene que llamarse self.</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="n">mi_objeto</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="n">mi_objeto</span><span class="o">.</span><span class="n">nombre</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="n">mi_objeto</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+
+<span class="n">u3</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span> <span class="s1">&#39;19620311&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u3</span><span class="o">.</span><span class="n">cumple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Agreguemos otra característica más.</p>
+<p>Por ejemplo, extraer nombre y apellido:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+<span class="n">u</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span> <span class="s1">&#39;19620311&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">u</span><span class="o">.</span><span class="n">cumple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+<span class="n">Neo</span> <span class="o">=</span> <span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span> <span class="s1">&#39;19620311&#39;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="o">.</span><span class="n">apellido</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="o">.</span><span class="n">cumple</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-documentacion-de-una-clase-span">
+<h3><span style="color:#4CC9F0">Documentación de una clase</span><a class="headerlink" href="#span-style-color-4cc9f0-documentacion-de-una-clase-span" title="Permalink to this headline">¶</a></h3>
+<p>Podemos documentar la clase de la siguiente manera:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Un usuario de nuestra plataforma. Por ahora</span>
+<span class="sd">    sólo recolectamos nombre y cumpleaños.</span>
+<span class="sd">    Pero pronto tendremos mucho más que eso.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+<span class="n">help</span><span class="p">(</span><span class="n">Usuario</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-agregando-metodos-a-una-clase-span">
+<h3><span style="color:#4CC9F0">Agregando métodos a una clase</span><a class="headerlink" href="#span-style-color-4cc9f0-agregando-metodos-a-una-clase-span" title="Permalink to this headline">¶</a></h3>
+<p>Es posible crear métodos propios a una clase.</p>
+<p>Creemos por ejemplo un método que extraiga la edad de nuestro usuario.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Un usuario de nuestra plataforma. Por ahora</span>
+<span class="sd">    sólo recolectamos nombre y cumpleaños.</span>
+<span class="sd">    Pero pronto tendremos mucho más que eso.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">edad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Regresa la edad de nuestro usuario en años.&quot;&quot;&quot;</span>
+        <span class="n">hoy</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="n">año</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">mes</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="n">dia</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+        <span class="n">fecha_cumple</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">año</span><span class="p">,</span><span class="n">mes</span><span class="p">,</span><span class="n">dia</span><span class="p">)</span>
+        <span class="n">edad_dias</span><span class="o">=</span><span class="p">(</span><span class="n">hoy</span><span class="o">-</span><span class="n">fecha_cumple</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+        <span class="n">edad_años</span><span class="o">=</span><span class="n">edad_dias</span><span class="o">/</span><span class="mi">365</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">edad_años</span><span class="p">)</span>
+    
+<span class="n">Neo</span><span class="o">=</span><span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span><span class="s2">&quot;19620311&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Neo tiene&quot;</span><span class="p">,</span><span class="n">Neo</span><span class="o">.</span><span class="n">edad</span><span class="p">(),</span><span class="s2">&quot;años&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Usuario</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-imprimiendo-contenidos-de-una-clase-por-defecto-span">
+<h3><span style="color:#4CC9F0">Imprimiendo contenidos de una clase por defecto</span><a class="headerlink" href="#span-style-color-4cc9f0-imprimiendo-contenidos-de-una-clase-por-defecto-span" title="Permalink to this headline">¶</a></h3>
+<p>Para establecer una forma de print por defecto en una clase, puede agregar el método reservado <code class="docutils literal notranslate"><span class="pre">__str__</span></code>. Vamos a redefinir nuestra clase para incluirlo.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Un usuario de nuestra plataforma. Por ahora</span>
+<span class="sd">    sólo recolectamos nombre y cumpleaños.</span>
+<span class="sd">    Pero pronto tendremos mucho más que eso.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">edad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Regresa la edad de nuestro usuario en años.&quot;&quot;&quot;</span>
+        <span class="n">hoy</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="n">año</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">mes</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="n">dia</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+        <span class="n">fecha_cumple</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">año</span><span class="p">,</span><span class="n">mes</span><span class="p">,</span><span class="n">dia</span><span class="p">)</span>
+        <span class="n">edad_dias</span><span class="o">=</span><span class="p">(</span><span class="n">hoy</span><span class="o">-</span><span class="n">fecha_cumple</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+        <span class="n">edad_años</span><span class="o">=</span><span class="n">edad_dias</span><span class="o">/</span><span class="mi">365</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">edad_años</span><span class="p">)</span>
+     
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">+</span> <span class="s1">&#39;  tiene &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edad</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; años&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Neo</span><span class="o">=</span><span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span><span class="s2">&quot;19620311&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-ejecucion-de-una-tarea-por-defecto-en-una-instancia-de-clase-call-span">
+<h3><span style="color:#4CC9F0">Ejecución de una tarea por defecto en una instancia de clase: call</span><a class="headerlink" href="#span-style-color-4cc9f0-ejecucion-de-una-tarea-por-defecto-en-una-instancia-de-clase-call-span" title="Permalink to this headline">¶</a></h3>
+<p>Puede usar el método reservado <code class="docutils literal notranslate"><span class="pre">__call__</span></code> para ejecutar uan tarea por defecto cuando se llama a un objeto.</p>
+<p>Por ejemplo supongamos que deseamos ver cuantas veces ha sido llamado un objeto.</p>
+<p>Agrandamos una vez más nuestra clase <em>Usuario</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="k">class</span> <span class="nc">Usuario</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;Un usuario de nuestra plataforma. Por ahora</span>
+<span class="sd">    sólo recolectamos nombre y cumpleaños.</span>
+<span class="sd">    Pero pronto tendremos mucho más que eso.&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        
+        <span class="bp">self</span><span class="o">.</span><span class="n">llamadas</span> <span class="o">=</span> <span class="mi">0</span>
+        
+        <span class="c1">#Extraer partes</span>
+        <span class="n">piezas_nombre</span><span class="o">=</span><span class="n">nombre_completo</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apellido</span><span class="o">=</span><span class="n">piezas_nombre</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+        
+    <span class="k">def</span> <span class="nf">edad</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Regresa la edad de nuestro usuario en años.&quot;&quot;&quot;</span>
+        <span class="n">hoy</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span>
+        <span class="n">año</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">mes</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="n">dia</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+        <span class="n">fecha_cumple</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">año</span><span class="p">,</span><span class="n">mes</span><span class="p">,</span><span class="n">dia</span><span class="p">)</span>
+        <span class="n">edad_dias</span><span class="o">=</span><span class="p">(</span><span class="n">hoy</span><span class="o">-</span><span class="n">fecha_cumple</span><span class="p">)</span><span class="o">.</span><span class="n">days</span>
+        <span class="n">edad_años</span><span class="o">=</span><span class="n">edad_dias</span><span class="o">/</span><span class="mi">365</span>
+        <span class="k">return</span> <span class="nb">int</span><span class="p">(</span><span class="n">edad_años</span><span class="p">)</span>
+     
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">+</span> <span class="s1">&#39;  tiene &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">edad</span><span class="p">())</span> <span class="o">+</span> <span class="s1">&#39; años&#39;</span>
+    
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">llamadas</span> <span class="o">+=</span><span class="mi">1</span>
+        <span class="k">return</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">llamadas</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Neo</span><span class="o">=</span><span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Thomas Anderson&quot;</span><span class="p">,</span><span class="s2">&quot;19620311&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-referencias-y-copia-de-objetos-span">
+<h2><span style="color:#4361EE">Referencias y copia de objetos</span><a class="headerlink" href="#span-style-color-4361ee-referencias-y-copia-de-objetos-span" title="Permalink to this headline">¶</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Smith</span><span class="o">=</span><span class="n">Usuario</span><span class="p">(</span><span class="s2">&quot;Agente Smith&quot;</span><span class="p">,</span><span class="s2">&quot;20100515&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Smith</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>ahora una referencia a Neo</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">px</span> <span class="o">=</span> <span class="n">Neo</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">px</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Pero ahora observe lo que pasa si modifica <em>px</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">px</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span><span class="s1">&#39;19500319&#39;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">px</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Esto ocurre porque en realidad px es una referencia al objeto Neo. Si desea una copia física puede por ejemplo usar la función <em>copy</em> del módulo estándar <em>copy</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">copy</span> <span class="kn">import</span> <span class="n">copy</span>
+
+<span class="n">px</span> <span class="o">=</span> <span class="n">copy</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+<span class="n">Neo</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="s2">&quot;19600311&quot;</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">px</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Neo</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-eliminacion-de-objetos-del-span">
+<h3><span style="color:#4CC9F0">Eliminación de objetos: del</span><a class="headerlink" href="#span-style-color-4cc9f0-eliminacion-de-objetos-del-span" title="Permalink to this headline">¶</a></h3>
+<p>Se usa para eliminar un objeto. Por ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">del</span> <span class="n">px</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">px</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-atributos-intrinsecos-de-clases-y-objetos-span">
+<h2><span style="color:#4361EE">Atributos Intrínsecos de clases y objetos</span><a class="headerlink" href="#span-style-color-4361ee-atributos-intrinsecos-de-clases-y-objetos-span" title="Permalink to this headline">¶</a></h2>
+<p>Cada clase y objeto de Python tiene una conjunto de atributos intrínsecos que pueden ser llamados.</p>
+<p>Los atributos intrínsecos de clase son:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__name__</span></code>: nombre de la clase</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__module__</span></code>: módulo al cual pertenece la clase</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__bases__</span></code>: clases base de ésta clase</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__dict__</span></code>: diccionario conteniendo un conjunto <em>clave/valor</em> con todos los atributos de la clase incluídos los métodos.</p></li>
+</ul>
+<p>Los atributos intrínsecos de los objetos son:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">__class__</span></code>: nombre de la clase del objeto</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__dict__</span></code>: diccionario conteniendo un conjunto <em>clave/valor</em> con todos los atributos</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Atributos de clase</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Nombre de la clase: &#39;</span><span class="p">,</span><span class="n">Usuario</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Módulo: &#39;</span><span class="p">,</span> <span class="n">Usuario</span><span class="o">.</span><span class="vm">__module__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Documentación:</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">Usuario</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Diccionario de la clase: </span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span><span class="n">Usuario</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Clases Base: &#39;</span><span class="p">,</span><span class="n">Usuario</span><span class="o">.</span><span class="vm">__bases__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">Atributos del objeto Neo</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Clase: &#39;</span><span class="p">,</span><span class="n">Neo</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1"> Diccionario: &#39;</span><span class="p">,</span> <span class="n">Neo</span><span class="o">.</span><span class="vm">__dict__</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-herencia-de-clases-span">
+<h2><span style="color:#4361EE">Herencia de clases</span><a class="headerlink" href="#span-style-color-4361ee-herencia-de-clases-span" title="Permalink to this headline">¶</a></h2>
+<p>Una de las grandes ventajas de usar clases en programación es poder generar clases más especializadas a partir de una o más clases base.</p>
+<p>Esto característica permite re-utilizar código y también permite escribir un código más limpio y legible.</p>
+<p>Supongamos que a la clase Usuario le queremos dar un tipo de publicidad en específico.</p>
+<p>Creemos entonces una clase que hable sobre los gustos del usuario, pero referenciando a la clase ya creada.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lector</span><span class="p">(</span><span class="n">Usuario</span><span class="p">):</span>
+    <span class="k">pass</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">Lector</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">Lector</span><span class="p">(</span><span class="s2">&quot;Daniel Montenegro&quot;</span><span class="p">,</span><span class="s2">&quot;19901026&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">nombre</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">edad</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Al intentar colocar un constructor sobre la clase heredada, se perderá la función constructora heredada de Usuario:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lector</span><span class="p">(</span><span class="n">Usuario</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span> <span class="o">=</span> <span class="n">nombre_completo</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">cumple</span> <span class="o">=</span> <span class="n">cumple</span>
+        <span class="c1"># Agregar cositas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">Lector</span><span class="p">(</span><span class="s2">&quot;Daniel Montenegro&quot;</span><span class="p">,</span><span class="s2">&quot;19901026&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">edad</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-referencia-a-la-clase-base-super-span">
+<h3><span style="color:#4CC9F0">Referencia a la clase base: super()</span><a class="headerlink" href="#span-style-color-4cc9f0-referencia-a-la-clase-base-super-span" title="Permalink to this headline">¶</a></h3>
+<p>Dado que al heredar una clase de otra, estamos pensando en conservar la funcionalidad de la clase base, es importante poder usar el constructor de la clase base junto con el constructor extendido en la clase heredada. Para hacer esta característica posible se utiliza  <code class="docutils literal notranslate"><span class="pre">super()</span></code> como se muestra a continuación. <em>super()</em> es un enlace o referencia a la clase base. Entonces, si deseamos usar el constructor de la clase base se puede escribir</p>
+<p>super().__init__(…)</p>
+<p>Veamos el uso de <em>super()</em> en nuestra clase Lector, la cual heredamos de la clase Usuario.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lector</span><span class="p">(</span><span class="n">Usuario</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">,</span> <span class="n">gustos</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gustos</span><span class="o">=</span><span class="n">gustos</span>
+        <span class="c1"># Agregar otras cosas</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">Lector</span><span class="p">(</span><span class="s2">&quot;Daniel Montenegro&quot;</span><span class="p">,</span><span class="s2">&quot;19901026&quot;</span><span class="p">,</span><span class="s2">&quot;Jack Kerouac&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">edad</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="o">.</span><span class="n">gustos</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">l</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Finalmente, agreguemos un método a la clase Lector para extender su funcionalidad:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Lector</span><span class="p">(</span><span class="n">Usuario</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">,</span> <span class="n">gustos</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">nombre_completo</span><span class="p">,</span> <span class="n">cumple</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">gustos</span><span class="o">=</span><span class="n">gustos</span>
+        <span class="n">año</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="mi">4</span><span class="p">])</span>
+        <span class="n">mes</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">4</span><span class="p">:</span><span class="mi">6</span><span class="p">])</span>
+        <span class="n">dia</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cumple</span><span class="p">[</span><span class="mi">6</span><span class="p">:</span><span class="mi">8</span><span class="p">])</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fecha_cumple</span><span class="o">=</span><span class="n">datetime</span><span class="o">.</span><span class="n">date</span><span class="p">(</span><span class="n">año</span><span class="p">,</span><span class="n">mes</span><span class="p">,</span><span class="n">dia</span><span class="p">)</span>
+        
+    <span class="k">def</span> <span class="nf">info</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; El Usuario&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">nombre_c</span><span class="p">,</span><span class="s2">&quot;, nacido en&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">fecha_cumple</span><span class="p">,</span> <span class="s2">&quot;, tiene&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">edad</span><span class="p">(),</span><span class="s2">&quot;años&quot;</span><span class="p">,</span> <span class="s2">&quot;y le gustan las obras de&quot;</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">gustos</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span><span class="o">=</span><span class="n">Lector</span><span class="p">(</span><span class="s2">&quot;Daniel Montenegro&quot;</span><span class="p">,</span><span class="s2">&quot;19901026&quot;</span><span class="p">,</span><span class="s2">&quot;Jack Kerouac&quot;</span><span class="p">)</span>
+<span class="n">l</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
+</div>
+<div class="section" id="span-style-color-4361ee-asesora-medios-y-marketing-digital-span">
+<h2><span style="color:#4361EE">Asesora Medios y Marketing digital</span><a class="headerlink" href="#span-style-color-4361ee-asesora-medios-y-marketing-digital-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Maria del Pilar Montenegro, <a class="reference external" href="mailto:pmontenegro88&#37;&#52;&#48;gmail&#46;com">pmontenegro88<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
+</div>
+<div class="section" id="span-style-color-4361ee-espacio-asistentes-span">
+<h2><span style="color:#4361EE">Espacio Asistentes</span><a class="headerlink" href="#span-style-color-4361ee-espacio-asistentes-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Oleg Jarma, <a class="reference external" href="mailto:ojarmam&#37;&#52;&#48;unal&#46;edu&#46;co">ojarmam<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Laura Lizarazo, <a class="reference external" href="mailto:ljlizarazore&#37;&#52;&#48;unal&#46;edu&#46;co">ljlizarazore<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+</ol>
+</div>
+<div class="section" id="span-style-color-4361ee-bibliografia-span">
+<h2><span style="color:#4361EE">Bibliografía</span><a class="headerlink" href="#span-style-color-4361ee-bibliografia-span" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="span-style-color-4361ee-comentarios-span">
+<h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="py4.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span style="color:#F72585">Inspección, Instalación y Carga de Módulos y Paquetes</span></p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="py6.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span style="color:#F72585">Introducción a Decoradores (Decorators) en Python</span></p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Universidad_Nacional<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

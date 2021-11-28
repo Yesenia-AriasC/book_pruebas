@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# (probabilidad:basicos)=
+# (1:prob1)=
 # # <span style="color:#F72585">Conceptos básicos de probabilidad</span>
 
 # ## <span style="color:#4361EE">Introducción</span>

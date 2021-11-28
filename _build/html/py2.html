@@ -1,0 +1,911 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funciones en Python &#8212; IA y Aprendizaje profundo</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "Yesenia-AriasC/book_pruebas");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Listas, Tuplas y Diccionarios en Python" href="py3.html" />
+    <link rel="prev" title="Introducción al lenguaje Python" href="py1.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">IA y Aprendizaje profundo</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Bienvenido
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  probabilidad
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob1.html">
+   <span style="color:#F72585">
+    Conceptos básicos de probabilidad
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob2.html">
+   <span style="color:#F72585">
+    Variables Aleatorias
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob3.html">
+   <span style="color:#F72585">
+    Probabilidad Conjunta y Entropía Cruzada
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob4.html">
+   <span style="color:#F72585">
+    Distribuciones de probabilidad continuas
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Programación
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="py1.html">
+   <span style="color:#F72585">
+    Introducción al lenguaje Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   <span style="color:#F72585">
+    Funciones en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py3.html">
+   <span style="color:#F72585">
+    Listas, Tuplas y Diccionarios en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py4.html">
+   <span style="color:#F72585">
+    Inspección, Instalación y Carga de Módulos y Paquetes
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py5.html">
+   <span style="color:#F72585">
+    Introducción a Clases en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py6.html">
+   <span style="color:#F72585">
+    Introducción a Decoradores (Decorators) en Python
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py7.html">
+   <span style="color:#F72585">
+    Taller de manejo de Datos en Pandas
+   </span>
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="py8.html">
+   <span style="color:#F72585">
+    Introducción a tensores
+   </span>
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Conceptos
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="prob_basicos.html">
+   <span style="color:#F72585">
+    Definiciones
+   </span>
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/py2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/py2.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-parametros-y-variables-en-funciones-span">
+   <span style="color:#4361EE">
+    Parámetros y Variables en Funciones:
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-creacion-de-funciones-span">
+   <span style="color:#4361EE">
+    Creación de Funciones
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-cual-es-la-diferencia-y-utilidad-de-la-funcion-lambda-span">
+   <span style="color:#4361EE">
+    ¿Cuál es la diferencia y utilidad de la función lambda?
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-programacion-funcional-span">
+   <span style="color:#4361EE">
+    Programación Funcional
+   </span>
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-funciones-puras-span">
+     <span style="color:#4CC9F0">
+      Funciones puras
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-recursion-span">
+     <span style="color:#4CC9F0">
+      Recursión
+     </span>
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-las-funciones-son-de-primera-clase-y-pueden-ser-de-orden-superior-span">
+     <span style="color:#4CC9F0">
+      Las funciones son de primera clase y pueden ser de orden superior
+     </span>
+    </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#objetos-de-primera-clase">
+       Objetos de primera clase
+      </a>
+     </li>
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#propiedades-de-las-funciones-de-primera-clase">
+       Propiedades de las funciones de primera clase:
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-funciones-integradas-de-orden-superior-span">
+     <span style="color:#4CC9F0">
+      Funciones integradas de orden superior
+     </span>
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
+   <span style="color:#4361EE">
+    Comentarios
+   </span>
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <div class="section" id="span-style-color-f72585-funciones-en-python-span">
+<h1><span style="color:#F72585">Funciones en Python</span><a class="headerlink" href="#span-style-color-f72585-funciones-en-python-span" title="Permalink to this headline">¶</a></h1>
+<p>Para entender funciones en Python (Paquetes dentro de módulos de Python), debemos pensar en actos reales para poder hacer una <strong>analogía</strong> en el ambiente de programación.</p>
+<p>Imagínese cuando se levanta.</p>
+<p>Lo que ocurre primero, es que uno se siente vivo, se abren los ojos (no siempre), se hace pereza un rato, se levanta de la cama y luego se incia el día (cada persona tiene sus maneras diferentes de lograrlo).</p>
+<p>Esta serie de <strong>pasos consecutivos</strong> conforman lo que se llama una <strong>función</strong>.</p>
+<p>En el común, una <strong>función es en realidad una acción</strong> o una serie de acciones que gneran un resultado a través de un proceso intermedio.</p>
+<p>Para poder distinguir funciones, unas de otras, se le dan dotado de nombres diferentes.</p>
+<p>Por ejemplo, la función antes descrita podría nombrarse como <strong>Levantarse</strong>:</p>
+<p>Está función se compone de los siguientes pasos:</p>
+<ol class="simple">
+<li><p><strong>Sentirse vivo.</strong></p></li>
+<li><p><strong>Abrir los ojos.</strong></p></li>
+<li><p><strong>Hacer pereza.</strong></p></li>
+<li><p><strong>Levantarse.</strong></p></li>
+</ol>
+<p>En el lenguaje de promgramación, ésto se podría escribir como</p>
+<p><code class="docutils literal notranslate"><span class="pre">Levantarse(x)</span></code></p>
+<p>donde <span class="math notranslate nohighlight">\(x\)</span> representa el individuo que hace la acción y los paréntesis significan que se habla de una función, y por lo tanto, <strong>no se confunde</strong> con una variable.</p>
+<p><strong>Ejemplo:</strong></p>
+<p>Función <code class="docutils literal notranslate"><span class="pre">CortarManzana(x)</span></code>:</p>
+<p>Esta función se puede ilustrar dela siguiente manera:</p>
+<p><img alt="Manzanita" src="https://photos1.blogger.com/blogger/1290/1572/1600/Apple_slicing_function.png" /></p>
+<p>Como podemos ver, una función es realmente es una <strong>“Caja Negra”</strong>:</p>
+<p>La podemos usar, sin importar qué hay dentro de ella.</p>
+<p>Ya hemos visto algunas <strong>funciones básicas</strong> de Python (Built-in):</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">len()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list()</span></code></p></li>
+</ul>
+<p>En <a class="reference external" href="https://docs.python.org/3/library/functions.html">este link</a>, se encuentra un manual de todas las funciones <strong>básicas</strong> de Python.</p>
+<p>Veamos algunas de ellas:</p>
+<p><strong>Ejercicio</strong></p>
+<p>Viendo la entra y salida dl código, infiera qué hace la función correspondiente:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your Code Here</span>
+<span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">5</span>
+<span class="n">y</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">x =&quot;</span><span class="p">,</span> <span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y = &quot;</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Your Code Here</span>
+
+<span class="n">d</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">({</span><span class="s2">&quot;Saludo&quot;</span><span class="p">:</span> <span class="s2">&quot;Hola&quot;</span><span class="p">,</span> <span class="s2">&quot;Despido&quot;</span><span class="p">:</span> <span class="s2">&quot;Adiós&quot;</span><span class="p">,</span> <span class="s2">&quot;Palabra&quot;</span><span class="p">:</span> <span class="s2">&quot;Extraño&quot;</span><span class="p">})</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Dicionario: &quot;</span><span class="p">,</span><span class="n">d</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Suma</span>
+<span class="n">v</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">]</span>
+<span class="n">s</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;resultado:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="c1"># Your Code Here</span>
+
+<span class="n">a1</span><span class="o">=</span><span class="nb">max</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+<span class="n">a2</span><span class="o">=</span><span class="nb">min</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;a1:&quot;</span><span class="p">,</span><span class="n">a1</span><span class="p">,</span><span class="s2">&quot;, a2:&quot;</span><span class="p">,</span><span class="n">a2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x = -5
+y =  5 
+
+Dicionario:  {&#39;Saludo&#39;: &#39;Hola&#39;, &#39;Despido&#39;: &#39;Adiós&#39;, &#39;Palabra&#39;: &#39;Extraño&#39;} 
+
+resultado: 21 
+
+a1: 6 , a2: 1
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-parametros-y-variables-en-funciones-span">
+<h2><span style="color:#4361EE">Parámetros y Variables en Funciones:</span><a class="headerlink" href="#span-style-color-4361ee-parametros-y-variables-en-funciones-span" title="Permalink to this headline">¶</a></h2>
+<p>Las funciones pueden tener uno o más parámetros asociados.</p>
+<p>Por ejemplo la función <span class="math notranslate nohighlight">\(f(x,y,z)=w\)</span>, recibe los argumentos <span class="math notranslate nohighlight">\(x,y,z\)</span> y produce el resultado <span class="math notranslate nohighlight">\(w\)</span>.</p>
+<p><strong>Ejemplo:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comente adecuadamente las siguientes líneas de código</span>
+
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="p">,</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">y</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;x=</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">x</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;y=</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">aabe9f52ce75</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Comente adecuadamente las siguientes líneas de código</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> 
+<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Ejercicio:</strong></p>
+<ol class="simple">
+<li><p>Investigue las funciones y atributos internos de matplotlib para hacer una matriz 3x1 que contengan:</p></li>
+</ol>
+<ul class="simple">
+<li><p>Una función matemática.</p></li>
+<li><p>Una foto.</p></li>
+<li><p>Una esfera con puntos aleatorios en su frontera.</p></li>
+</ul>
+<ol class="simple">
+<li><p>Investigue sobre 5 funciones de Python que acepten al menos 3 parámetros.</p></li>
+<li><p>Use la libreria <code class="docutils literal notranslate"><span class="pre">pandas</span></code> para hacer gráficos útiles sobre el <code class="docutils literal notranslate"><span class="pre">Predio_206.csv</span></code>.</p></li>
+</ol>
+</div>
+<div class="section" id="span-style-color-4361ee-creacion-de-funciones-span">
+<h2><span style="color:#4361EE">Creación de Funciones</span><a class="headerlink" href="#span-style-color-4361ee-creacion-de-funciones-span" title="Permalink to this headline">¶</a></h2>
+<p>También es posible crear funciones para generar rutinas específicas.</p>
+<p>Hay dos maneras de generar funciones en Python:</p>
+<ol class="simple">
+<li><p><strong>def</strong></p></li>
+<li><p><strong>lambda</strong></p></li>
+</ol>
+<p><strong>Ejemplo:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explicar las siguientes líneas de código</span>
+<span class="k">def</span> <span class="nf">mysum_prod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="k">return</span> <span class="n">s</span><span class="p">,</span><span class="n">p</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">suma</span><span class="p">,</span> <span class="n">prod</span> <span class="o">=</span> <span class="n">mysum_prod</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El suma es:&quot;</span><span class="p">,</span> <span class="n">suma</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El producto es:&quot;</span><span class="p">,</span> <span class="n">prod</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  Use la función correspodiente de forma inteligente</span>
+<span class="k">def</span> <span class="nf">mysum_prod</span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">):</span>
+    <span class="n">s</span><span class="o">=</span><span class="n">x</span><span class="o">+</span><span class="n">y</span>
+    <span class="n">p</span><span class="o">=</span><span class="n">x</span><span class="o">*</span><span class="n">y</span>
+    <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explique qué diferencias hay entre éste método y el anterior</span>
+
+<span class="n">sumita</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">arg1</span><span class="p">,</span><span class="n">arg2</span><span class="p">:</span> <span class="n">arg1</span><span class="o">+</span><span class="n">arg2</span>
+
+<span class="n">a</span><span class="o">=</span><span class="mi">6</span>
+<span class="n">b</span><span class="o">=</span><span class="mi">65</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sumita</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;la suma es:&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-cual-es-la-diferencia-y-utilidad-de-la-funcion-lambda-span">
+<h2><span style="color:#4361EE">¿Cuál es la diferencia y utilidad de la función lambda?</span><a class="headerlink" href="#span-style-color-4361ee-cual-es-la-diferencia-y-utilidad-de-la-funcion-lambda-span" title="Permalink to this headline">¶</a></h2>
+<p><strong>Pista:</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Explicar adecuadamente</span>
+
+<span class="k">def</span> <span class="nf">myfunc</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="k">lambda</span> <span class="n">a</span> <span class="p">:</span> <span class="n">a</span> <span class="o">*</span> <span class="n">n</span> 
+
+
+<span class="n">mydoubler</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="c1">#print(mydoubler)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">mydoubler</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-programacion-funcional-span">
+<h2><span style="color:#4361EE">Programación Funcional</span><a class="headerlink" href="#span-style-color-4361ee-programacion-funcional-span" title="Permalink to this headline">¶</a></h2>
+<p>Esta sección es una adaptación de <a class="reference external" href="https://www.geeksforgeeks.org/functional-programming-in-python/#:~:text=Functional%20programming%20is%20a%20programming,is%20%E2%80%9Chow%20to%20solve%E2%80%9C.">geeksforgeeks</a>.</p>
+<div class="section" id="span-style-color-4cc9f0-funciones-puras-span">
+<h3><span style="color:#4CC9F0">Funciones puras</span><a class="headerlink" href="#span-style-color-4cc9f0-funciones-puras-span" title="Permalink to this headline">¶</a></h3>
+<p>Las funciones puras tienen dos propiedades.</p>
+<ul class="simple">
+<li><p>Siempre produce la misma salida para los mismos argumentos. Por ejemplo, 3 + 7 siempre será 10 pase lo que pase.</p></li>
+<li><p>No cambia ni modifica la variable de entrada.</p></li>
+</ul>
+<p>La segunda propiedad también se conoce como inmutabilidad. El único resultado de la función pura es el valor que devuelve. Son deterministas. Los programas realizados mediante programación funcional son fáciles de depurar porque las funciones puras no tienen efectos secundarios ni E / S ocultas. Las funciones puras también facilitan la escritura de aplicaciones paralelas / concurrentes. Cuando el código está escrito en este estilo, un compilador inteligente puede hacer muchas cosas: puede paralelizar las instrucciones, esperar a evaluar los resultados cuando los necesite y memorizar los resultados, ya que los resultados nunca cambian mientras la entrada no cambie.</p>
+<p>Revise el siguiente ejemplo. Recibe una lista de número y regresa una nueva lista con los valores elevado al cuadrado.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejemplo de una función pura</span>
+
+<span class="c1"># Una función pura que no</span>
+<span class="c1"># cambia la lista de entrada y</span>
+<span class="c1"># devuelve la nueva lista</span>
+
+<span class="k">def</span> <span class="nf">pure_func</span><span class="p">(</span><span class="n">List</span><span class="p">):</span>
+    <span class="n">New_List</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">List</span><span class="p">:</span>
+        <span class="n">New_List</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">New_List</span>
+
+<span class="c1"># La función en acción</span>
+<span class="n">Original_List</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">]</span>
+<span class="n">Modified_List</span> <span class="o">=</span> <span class="n">pure_func</span><span class="p">(</span><span class="n">Original_List</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lista original:&quot;</span><span class="p">,</span> <span class="n">Original_List</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Lista modifciada:&quot;</span><span class="p">,</span> <span class="n">Modified_List</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Lista original: [1, 2, 3, 4]
+Lista modifciada: [1, 4, 9, 16]
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-recursion-span">
+<h3><span style="color:#4CC9F0">Recursión</span><a class="headerlink" href="#span-style-color-4cc9f0-recursion-span" title="Permalink to this headline">¶</a></h3>
+<p>En la programación funcional, no existe el concepto de bucle for o bucle while, sino que se utiliza la recursividad. La recursividad es un proceso en el que una función se llama a sí misma directa o indirectamente. En el programa recursivo, se proporciona la solución al caso base y la solución al problema mayor se expresa en términos de problemas menores. Puede surgir una pregunta ¿cuál es el caso base? El caso base puede considerarse como una condición que le dice al compilador o intérprete que salga de la función.</p>
+<p>Ejemplo: consideremos un programa que encontrará la suma de todos los elementos de una lista sin usar ningún bucle for.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejemplo de recursión</span>
+
+<span class="c1"># Función recursiva para encontrar</span>
+<span class="c1"># suma de una lista</span>
+
+<span class="k">def</span> <span class="nf">Sum</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">count</span><span class="p">):</span>
+
+    <span class="c1"># Caso base</span>
+    <span class="k">if</span> <span class="n">n</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">count</span>
+
+    <span class="n">count</span> <span class="o">+=</span> <span class="n">L</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+
+    <span class="c1"># Proceso recursivo</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">Sum</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">count</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># Ejemplo de uso</span>
+<span class="n">L</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">L</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Sum</span><span class="p">(</span><span class="n">L</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">count</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>15
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-las-funciones-son-de-primera-clase-y-pueden-ser-de-orden-superior-span">
+<h3><span style="color:#4CC9F0">Las funciones son de primera clase y pueden ser de orden superior</span><a class="headerlink" href="#span-style-color-4cc9f0-las-funciones-son-de-primera-clase-y-pueden-ser-de-orden-superior-span" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="objetos-de-primera-clase">
+<h4>Objetos de primera clase<a class="headerlink" href="#objetos-de-primera-clase" title="Permalink to this headline">¶</a></h4>
+<p>Los objetos de primera clase se manejan uniformemente en todo momento. Pueden almacenarse en estructuras de datos, pasarse como argumentos o usarse en estructuras de control. Se dice que un lenguaje de programación admite funciones de primera clase si trata las funciones como objetos de primera clase.</p>
+</div>
+<div class="section" id="propiedades-de-las-funciones-de-primera-clase">
+<h4>Propiedades de las funciones de primera clase:<a class="headerlink" href="#propiedades-de-las-funciones-de-primera-clase" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Una función es una instancia del tipo de objeto.</p></li>
+<li><p>Puede almacenar la función en una variable.</p></li>
+<li><p>Puede pasar la función como parámetro a otra función.</p></li>
+<li><p>Puede devolver la función desde una función.</p></li>
+<li><p>Puede almacenarlos en estructuras de datos como tablas hash, listas,…</p></li>
+</ul>
+<p>Ejemplo:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Programa Python program para ilustrar</span>
+<span class="c1"># funciones de orden mayor</span>
+
+
+<span class="k">def</span> <span class="nf">shout</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">upper</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">whisper</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">greet</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+    <span class="c1"># almacena la función en una variable</span>
+    <span class="n">greeting</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="s2">&quot;Hola, soy creada por una función pasada como argumento.&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">greeting</span><span class="p">)</span>
+
+<span class="n">greet</span><span class="p">(</span><span class="n">shout</span><span class="p">)</span>
+<span class="n">greet</span><span class="p">(</span><span class="n">whisper</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HI, I AM CREATED BY A FUNCTION PASSED AS AN ARGUMENT.
+hi, i am created by a function passed as an argument.
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4cc9f0-funciones-integradas-de-orden-superior-span">
+<h3><span style="color:#4CC9F0">Funciones integradas de orden superior</span><a class="headerlink" href="#span-style-color-4cc9f0-funciones-integradas-de-orden-superior-span" title="Permalink to this headline">¶</a></h3>
+<p>Para facilitar mucho el procesamiento de objetos iterables como listas e iteradores, Python ha implementado algunas funciones de orden superior de uso común. Estas funciones devuelven un iterador que ahorra espacio. Algunas de las funciones integradas de orden superior son:</p>
+<ul class="simple">
+<li><p><em>map()</em>: la función <em>map()</em> devuelve una lista de los resultados después de aplicar la función dada a cada elemento de un iterable dado (lista, tupla, etc.)</p></li>
+<li><p><em>filter()</em>: El método <em>filter()</em> filtra la secuencia dada con la ayuda de una función que prueba que cada elemento de la secuencia sea verdadero o no.</p></li>
+</ul>
+<p>Veamos los siguientes dos ejemplos que ilustran <em>map()</em> y <em>filter()</em>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejemplo del uso de map()</span>
+
+<span class="c1"># Retorna el doble de n</span>
+<span class="k">def</span> <span class="nf">addition</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">n</span> <span class="o">+</span> <span class="n">n</span>
+
+<span class="c1"># doblamos todos los valores de una lista usando map</span>
+<span class="n">numbers</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
+<span class="n">results</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="n">addition</span><span class="p">,</span> <span class="n">numbers</span><span class="p">)</span>
+
+<span class="c1">#  Print no imprime los resultados</span>
+<span class="c1"># porque se recibe un iterable</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">results</span><span class="p">)</span>
+
+<span class="c1"># Asi recuperamos del iterable los valores e imprimimos</span>
+<span class="k">for</span> <span class="n">result</span> <span class="ow">in</span> <span class="n">results</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">end</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;map object at 0x7fb6c6ff0df0&gt;
+2 4 6 8 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ejemplo de uso de filter()</span>
+
+<span class="c1"># función que filtra las vocales en una lista</span>
+<span class="k">def</span> <span class="nf">fun</span><span class="p">(</span><span class="n">variable</span><span class="p">):</span>
+
+    <span class="n">letters</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;a&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="s1">&#39;u&#39;</span><span class="p">]</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">variable</span> <span class="ow">in</span> <span class="n">letters</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="c1"># secuencia</span>
+<span class="n">sequence</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;g&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;e&#39;</span><span class="p">,</span> <span class="s1">&#39;j&#39;</span><span class="p">,</span> <span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="s1">&#39;i&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">]</span>
+
+<span class="c1"># uso de la función filter</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="nb">filter</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">sequence</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Las letras filtradas son:&#39;</span><span class="p">)</span>
+
+<span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">filtered</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Las letras filtradas son:
+e
+e
+i
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section" id="span-style-color-4361ee-comentarios-span">
+<h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+            
+
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="py1.html" title="previous page">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">previous</p>
+                <p class="prevnext-title"><span style="color:#F72585">Introducción al lenguaje Python</span></p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="py3.html" title="next page">
+            <div class="prevnext-info">
+                <p class="prevnext-label">next</p>
+                <p class="prevnext-title"><span style="color:#F72585">Listas, Tuplas y Diccionarios en Python</span></p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Universidad_Nacional<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
