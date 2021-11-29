@@ -62,12 +62,10 @@ html:
 
 #######################################################################################
 # Launch button settings
-# Information about where the book exists on the web
 launch_buttons:
   notebook_interface: classic
+  thebe: true  
+  binderhub_url: https://mybinder.org
+  colab_url: https://colab.research.google.com
 
-repository:
-  url                       : https://github.com/Yesenia-AriasC/book_pruebas  # Online location of your book
-  branch                    : Venus  # Which branch of the repository should be used when creating links (optional)
-#launch_buttons:
-  thebe                  : true  
+  
