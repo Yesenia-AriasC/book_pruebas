@@ -10,6 +10,7 @@ parts:
     - file: prob2
     - file: prob3
     - file: prob4
+    - file: ejprob
   - caption: Programación
     chapters:
     - file: py1
