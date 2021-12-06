@@ -1,14 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# (launch:thebe)=
+# (1:prob2)=
 # # <span style="color:#F72585">Variables Aleatorias</span>
 
 # ## <span style="color:#4361EE">Introducción</span>
 
 # ## <span style="color:#4361EE">Ejemplo de los dados</span>
 
-# Recordemos el ejercicio de la sección anterior {ref}`probabilidad:basicos`. La imagen muestra dos dados de seis caras de distinto color. 
+# Recordemos el ejercicio de la sección anterior {ref}`1:prob1`. La imagen muestra dos dados de seis caras de distinto color. 
 
 # 
 # ```{figure} https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png
@@ -528,3 +528,6 @@ plt.show()
 # Como se observa la entropía mide de la misma forma que la varianza pero en una escala diferente. Por otro lado observe que en el cálculo de la entropía no se utilizan los valores que toma la variable aleatoria. Solamente se requiere la función de probabilidad de la variable. 
 # 
 # En palabras se dice que **la entropía no depende de la escala de la  variable**. Solamente de su estructura de probabilidad. Por su parte la varianza si es dependiente de la escala de la variable aleatoria.
+
+# ## <span style="color:#4361EE">Comentarios</span>
+# 
