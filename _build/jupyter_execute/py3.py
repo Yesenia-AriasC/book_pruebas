@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (2:py3)=
+# 
+
 # # <span style="color:#F72585">Listas, Tuplas y Diccionarios en Python</span>
 
 # ## <span style="color:#4361EE">Introducción</span>
@@ -76,7 +79,7 @@ for i in gen_numbers():
     print(i)
 
 
-# Para enteder un poco mejor como se ejecuta *yield* discuta en clase el siguiente fragmento (snnipet) de código.
+# Para enteder un poco mejor como se ejecuta *yield* discuta en clase el siguiente fragmento (snippet) de código.
 
 # In[3]:
 
@@ -124,13 +127,13 @@ class Evens(object):
 # Solamente vamos a resaltar unas pocas cosas de esta clase *Events*
 # 
 # + El método  \_\_iter__()  retorna *self*; este es un patrón muy común y asume que la clase también implementa el protocolo iterador.
-# + El método  \_\_next__() retorna el siguiente valor en la secuencia o dispara una excepción con *StopIteration* para indicar que no hay más valores dsiponibles.
+# + El método  \_\_next__() retorna el siguiente valor en la secuencia o dispara una excepción con *StopIteration* para indicar que no hay más valores disponibles.
 # 
 # 
-# El protocolo implica que cuando Python encuentra la definción de la función \_\_iter__() construye la maquinaria para que la clase sea un iterable. De la misma forma, cuando encuentra la función \_\_next__() construye la maquinaria para que la clase entregue un iterador.
+# El protocolo implica que cuando Python encuentra la definición de la función \_\_iter__() construye la maquinaria para que la clase sea un iterable. De la misma forma, cuando encuentra la función \_\_next__() construye la maquinaria para que la clase entregue un iterador.
 # 
 # 
-# Veámos en acción *Evens*. Discuta en la clase.
+# Veamos en acción *Evens*. Discuta en la clase.
 
 # In[5]:
 
@@ -151,7 +154,7 @@ print('\nHecho!')
 # 
 # - **Conjuntos (set).** Son contenedores de datos que no son ordenados ni indexados. Son mutables, pero no admiten duplicados.
 # 
-# - **Diccionarios (dictionary)** Son contendores no ordenados, que son indexados mediante una clave, la cual referencia a un valor. El valor es retornado cuando se le solicita con la clave. No se admiten claves repetidas, pero si valores repetidos.
+# - **Diccionarios (dictionary)** Son contenedores no ordenados, que son indexados mediante una clave, la cual referencia a un valor. El valor es retornado cuando se le solicita con la clave. No se admiten claves repetidas, pero si valores repetidos.
 # 
 # Recuerde que todo en Python es realmente un tipo de objeto.
 
@@ -248,7 +251,7 @@ for i in tup2:
 
 # # <span style="color:#F72585">Listas</span>
 
-# Las listas son contenedores mutables y ordenados de objetos. Las listas se distingen porque sus elementos están encerrados entre paréntesis cuadrados. Por ejemplo:
+# Las listas son contenedores mutables y ordenados de objetos. Las listas se distinguen porque sus elementos están encerrados entre paréntesis cuadrados. Por ejemplo:
 
 # In[ ]:
 
@@ -354,7 +357,7 @@ alfabeto = 'abcdefghijklmnñopqrstuvwxyz'
 print( 'alfabeto es un objeto string: ',type(alfabeto))
 
 
-# Vamos a crear una lista vacia y la vamos a llenar con cada uno de los elementos de *alpfabeto*
+# Vamos a crear una lista vacía y la vamos a llenar con cada uno de los elementos de *alpfabeto*
 
 # In[ ]:
 
@@ -450,7 +453,7 @@ print(alfanumLL)
 
 # # <span style="color:#F72585">Diccionarios</span>
 
-# Los diccionarios se distinguen por dos conceptos claves: están encapsulado en {} y poseeen el concepto de llave e ítem.
+# Los diccionarios se distinguen por dos conceptos claves: están encapsulado en {} y poseen el concepto de llave e ítem.
 # 
 # :::{admonition} Consideraciones importantes:
 # :class: warning
@@ -691,7 +694,7 @@ d = {int: 1, float: 2, bool: 3}
 d[int]
 
 
-# Sin embargo, las llaves son únicas y no se peuden repetir (com un diccionario clásico al que estamos acostumbrados):
+# Sin embargo, las llaves son únicas y no se pueden repetir (com un diccionario clásico al que estamos acostumbrados):
 
 # In[ ]:
 
@@ -991,6 +994,11 @@ fruta_congelada = frozenset(frutas)
 
 fruta_congelada.add('pera')
 
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

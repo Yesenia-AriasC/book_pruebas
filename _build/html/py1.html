@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introducción al lenguaje Python &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,23 +75,27 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Funciones en Python" href="py2.html" />
-    <link rel="prev" title="Distribuciones de probabilidad continuas" href="prob4.html" />
+    <link rel="prev" title="Ejercicios" href="ejprob.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -108,6 +112,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -122,11 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -160,8 +170,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -224,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -297,8 +314,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fpy1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/py1.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -316,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/py1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/py1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -324,6 +346,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/py1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -381,8 +411,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejercicio">
-       Ejercicio
+      <a class="reference internal nav-link" href="#span-style-color-4cc9f0-variables-en-python-span">
+       <span style="color:#4CC9F0">
+        Variables en Python
+       </span>
       </a>
      </li>
     </ul>
@@ -570,13 +602,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
     <ul class="nav section-nav flex-column">
      <li class="toc-h3 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#span-style-color-4cc9f0-pregunta-span">
-       <span style="color:#4CC9F0">
-        Pregunta
-       </span>
-      </a>
-     </li>
-     <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#id5">
        <span style="color:#4CC9F0">
         Ejercicio
@@ -644,13 +669,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         Ciclo while
        </span>
       </a>
-      <ul class="nav section-nav flex-column">
-       <li class="toc-h4 nav-item toc-entry">
-        <a class="reference internal nav-link" href="#id8">
-         Ejercicio
-        </a>
-       </li>
-      </ul>
+     </li>
+     <li class="toc-h3 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#id8">
+       <span style="color:#4CC9F0">
+        Ejercicio
+       </span>
+      </a>
      </li>
      <li class="toc-h3 nav-item toc-entry">
       <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ciclo-for-span">
@@ -692,6 +717,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     </ul>
    </li>
    <li class="toc-h2 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
+     <span style="color:#4361EE">
+      Autores
+     </span>
+    </a>
+   </li>
+   <li class="toc-h2 nav-item toc-entry">
     <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
      <span style="color:#4361EE">
       Comentarios
@@ -711,8 +743,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-introduccion-al-lenguaje-python-span">
-<h1><span style="color:#F72585">Introducción al lenguaje Python</span><a class="headerlink" href="#span-style-color-f72585-introduccion-al-lenguaje-python-span" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-introduccion-al-lenguaje-python-span">
+<span id="py1"></span><h1><span style="color:#F72585">Introducción al lenguaje Python</span><a class="headerlink" href="#span-style-color-f72585-introduccion-al-lenguaje-python-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-introduccion-span">
 <h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
 <p>Este es un cuaderno introductorio a Python diseñado en JupyterLab, exploraremos las funciones básicas disponibles de <strong>Python</strong> y la programación básica para su posterior uso en el diplomado. Comencemos con un ambiente de <strong>Python 3</strong>. Para una introducción más extensa, ir <a class="reference external" href="https://www.w3schools.com/python/">aquí</a>.</p>
@@ -777,8 +809,8 @@ Mundo
 </div>
 </div>
 </div>
-<div class="section" id="ejercicio">
-<h3>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="span-style-color-4cc9f0-variables-en-python-span">
+<h3><span style="color:#4CC9F0">Variables en Python</span><a class="headerlink" href="#span-style-color-4cc9f0-variables-en-python-span" title="Permalink to this headline">¶</a></h3>
 <p>Escriba un código que le diga a Python que devuelva el texto:</p>
 <hr class="docutils" />
 <blockquote>
@@ -796,7 +828,7 @@ Mundo
 </div>
 </div>
 </div>
-<div class="section" id="span-style-color-f72585-variables-en-python-span">
+<div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-variables-en-python-span">
 <h1><span style="color:#F72585">Variables en Python</span><a class="headerlink" href="#span-style-color-f72585-variables-en-python-span" title="Permalink to this headline">¶</a></h1>
 <p>Una variable sirve para <strong>guardar un valor específico</strong>, ya sea <strong>numérico</strong>, <strong>texto</strong> u otro <strong>tipo de Dato</strong> con el nombre con la que se nombre dicha variable. Observe el siguiente ejemplo.</p>
 <div class="cell docutils container">
@@ -826,7 +858,7 @@ El valor de la variable y es ¡Vamos a programar!
 <div class="section" id="span-style-color-4361ee-asignacion-dinamica-en-python-span">
 <h2><span style="color:#4361EE">Asignación dinámica en Python</span><a class="headerlink" href="#span-style-color-4361ee-asignacion-dinamica-en-python-span" title="Permalink to this headline">¶</a></h2>
 <p>En Python, como en R, Julia, Matlab y otros lenguajes no es necesario declarar una variable de antemano, como ocurre en otros lenguajes como C, C++ y muchos otros lenguajes de bajo nivel.
-La asignación dińamica implica que es posible cambiar el tipo de dato de una variable con tan solo reasignarle un valor. En Python, se delega al programador la responsabilidad de cuidarse de efectos no esperados al cambiar el tipo de una variable. Vea el sigueinte ejemplo.</p>
+La asignación dinámica implica que es posible cambiar el tipo de dato de una variable con tan solo reasignarle un valor. En Python, se delega al programador la responsabilidad de cuidarse de efectos no esperados al cambiar el tipo de una variable. Vea el siguiente ejemplo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mf">5.6</span>
@@ -850,7 +882,7 @@ En cambio ahora x es un string: 25 de mayo
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-reglas-para-la-creacion-de-variables-span">
-<h2><span style="color:#4361EE">Reglas para la creación de variables</span><a class="headerlink" href="#span-style-color-4361ee-reglas-para-la-creacion-de-variables-span" title="Permalink to this headline">¶</a></h2>
+<span id="py1-ej1"></span><h2><span style="color:#4361EE">Reglas para la creación de variables</span><a class="headerlink" href="#span-style-color-4361ee-reglas-para-la-creacion-de-variables-span" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>El nombre de una variable <strong>debe comenzar</strong> con una letra ó con _.</p></li>
 <li><p>El nombre de una variable <strong>no puede comenzar</strong> con un número.</p></li>
@@ -894,8 +926,8 @@ En cambio ahora x es un string: 25 de mayo
 </div>
 </div>
 </div>
-<p>Se observan dos cosas interesantes. Primero, el tipo de dato es una clase ‘int’. Todo en Pyhon son objetos, incluidos la variables simples. En otro cuaderno estudiaremos las clases y objetos en detalle.</p>
-<p>Segundo, En pyhton puede tener números enteros tan grandes como desee, a diferencia de otros lenguajes. de otros lenguajes.</p>
+<p>Se observan dos cosas interesantes. Primero, el tipo de dato es una clase ‘int’. Todo en Python son objetos, incluidos la variables simples. En otro cuaderno estudiaremos las clases y objetos en detalle.</p>
+<p>Segundo, En Python puede tener números enteros tan grandes como desee, a diferencia de otros lenguajes. de otros lenguajes.</p>
 <p>Para convertir un tipo de dato diferente a int, siempre que sea posible se usa el <em>cast</em> int. Por ejemplo</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -934,17 +966,17 @@ En cambio ahora x es un string: 25 de mayo
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">StdinNotImplementedError</span><span class="g g-Whitespace">                  </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">9</span><span class="o">-</span><span class="n">ddace3a48bb5</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">w7</span><span class="o">/</span><span class="n">ws1ycc_x4ldf54pl86v3j8xr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_78844</span><span class="o">/</span><span class="mf">3882946908.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">edad</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s1">&#39;Por favor entre su edad:&#39;</span><span class="p">))</span>
 <span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="nb">print</span><span class="p">(</span><span class="n">edad</span><span class="p">)</span>
 <span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="nb">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">edad</span><span class="p">))</span>
 
-<span class="nn">~/Library/Python/3.9/lib/python/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
-<span class="g g-Whitespace">    </span><span class="mi">843</span>         <span class="s2">&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">844</span><span class="s2">         if not self._allow_stdin:</span>
-<span class="ne">--&gt; </span><span class="mi">845</span><span class="s2">             raise StdinNotImplementedError(</span>
-<span class="g g-Whitespace">    </span><span class="mi">846</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
-<span class="g g-Whitespace">    </span><span class="mi">847</span><span class="s2">             )</span>
+<span class="nn">/opt/anaconda3/lib/python3.8/site-packages/ipykernel/kernelbase.py</span> in <span class="ni">raw_input</span><span class="nt">(self, prompt)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1001</span>         <span class="s2">&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1002</span><span class="s2">         if not self._allow_stdin:</span>
+<span class="ne">-&gt; </span><span class="mi">1003</span><span class="s2">             raise StdinNotImplementedError(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1004</span><span class="s2">                 &quot;raw_input was called, but this frontend does not support input requests.&quot;</span>
+<span class="g g-Whitespace">   </span><span class="mi">1005</span><span class="s2">             )</span>
 
 <span class="ne">StdinNotImplementedError</span>: raw_input was called, but this frontend does not support input requests.
 </pre></div>
@@ -1134,7 +1166,7 @@ ombresrchivo.ipynb
 </div>
 </div>
 </div>
-<p>En este caso la aparición del símbolo  \  daño el mensaje. La primera solución es la siguiente. ¿puede explicarla por favor?</p>
+<p>En este caso la aparición del símbolo  \  dañó el mensaje. La primera solución es la siguiente. ¿puede explicarla por favor?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;La ruta del archivo es C:</span><span class="se">\\</span><span class="s1">nombres</span><span class="se">\\</span><span class="s1">archivo.ipynb&#39;</span><span class="p">)</span>
@@ -1147,7 +1179,7 @@ ombresrchivo.ipynb
 </div>
 </div>
 </div>
-<p>Una segunda solución para resolver el problema consiste en escribimos r antes del string, así::</p>
+<p>Una segunda solución para resolver el problema consiste en escribimos r antes del string, así:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Qué significa la r???</span>
@@ -1242,7 +1274,7 @@ ombresrchivo.ipynb
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-asignacion-multiple-span">
-<h2><span style="color:#4361EE">Asignación múltiple</span><a class="headerlink" href="#span-style-color-4361ee-asignacion-multiple-span" title="Permalink to this headline">¶</a></h2>
+<span id="py1-ej2"></span><h2><span style="color:#4361EE">Asignación múltiple</span><a class="headerlink" href="#span-style-color-4361ee-asignacion-multiple-span" title="Permalink to this headline">¶</a></h2>
 <p>Es posible asignar valores a diferentes variables en una línea de código:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1290,7 +1322,7 @@ x3 = 0.5
 </div>
 <div class="section" id="id1">
 <h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Explique que hace el siguinete código. Imprima</p>
+<p>Explique qué hace el siguiente código. Imprima</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">10</span>
@@ -1563,7 +1595,7 @@ Python is the number 1
 </div>
 </div>
 </div>
-<div class="section" id="span-style-color-f72585-estructuras-de-control-span">
+<div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-estructuras-de-control-span">
 <h1><span style="color:#F72585">Estructuras de control</span><a class="headerlink" href="#span-style-color-f72585-estructuras-de-control-span" title="Permalink to this headline">¶</a></h1>
 <p>En cualquier lenguaje de programación existen tres estructuras de control básicas que corresponden a</p>
 <ul class="simple">
@@ -1655,8 +1687,8 @@ Martes
 </div>
 </div>
 </div>
-<div class="section" id="span-style-color-4cc9f0-pregunta-span">
-<h3><span style="color:#4CC9F0">Pregunta</span><a class="headerlink" href="#span-style-color-4cc9f0-pregunta-span" title="Permalink to this headline">¶</a></h3>
+<div class="question admonition">
+<p class="admonition-title">Pregunta</p>
 <p>De acuerdo al script anterior, ¿cuál es la función de la clúsula <strong>else</strong>?</p>
 </div>
 <div class="section" id="id5">
@@ -1852,16 +1884,16 @@ Martes
 </table>
 <div class="section" id="id7">
 <h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id7" title="Permalink to this headline">¶</a></h3>
-<p>Verifique que entiende que hace el siguiente código. ¿Cuál es la salida?</p>
+<p>Verifique que entiende qué hace el siguiente código. ¿Cuál es la salida?</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">edad</span> <span class="o">=</span> <span class="mi">15</span>
 <span class="n">status</span> <span class="o">=</span> <span class="kc">None</span>
 
 <span class="k">if</span> <span class="p">(</span><span class="n">edad</span> <span class="o">&gt;</span><span class="mi">12</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">edad</span><span class="o">&lt;</span><span class="mi">20</span><span class="p">):</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;adolecente&#39;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;adolescente&#39;</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;no adolecente&#39;</span>
+    <span class="n">status</span> <span class="o">=</span> <span class="s1">&#39;no adolescente&#39;</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="n">status</span><span class="p">)</span>
 </pre></div>
@@ -1904,10 +1936,10 @@ Done
 </div>
 </div>
 </div>
-<div class="section" id="id8">
-<h4>Ejercicio<a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h4>
-<p>¿Qué hace el parámetro  <em>end</em> en el <em>print</em> anterior?</p>
 </div>
+<div class="section" id="id8">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id8" title="Permalink to this headline">¶</a></h3>
+<p>¿Qué hace el parámetro  <em>end</em> en el <em>print</em> anterior?</p>
 </div>
 <div class="section" id="span-style-color-4cc9f0-ciclo-for-span">
 <h3><span style="color:#4CC9F0">Ciclo for</span><a class="headerlink" href="#span-style-color-4cc9f0-ciclo-for-span" title="Permalink to this headline">¶</a></h3>
@@ -1931,8 +1963,10 @@ Done.
 </div>
 </div>
 </div>
-<p><strong>Pregunta:</strong></p>
+<div class="question admonition">
+<p class="admonition-title">Pregunta</p>
 <p>¿Cuál es la diferencia entre while y for?</p>
+</div>
 <div class="section" id="break">
 <h4>Break<a class="headerlink" href="#break" title="Permalink to this headline">¶</a></h4>
 <p>Se usa para terminar la ejecución de un ciclo while o for. Corra el siguiente ejemplo dadno difentes valores.</p>
@@ -2150,6 +2184,13 @@ Tabla del 4
 </div>
 </div>
 </div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
+</div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
 <h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -2159,8 +2200,8 @@ Tabla del 4
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -2178,36 +2219,27 @@ Tabla del 4
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="prob4.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span style="color:#F72585">Distribuciones de probabilidad continuas</span></p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="ejprob.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Ejercicios</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="py2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Funciones en Python</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="py2.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Funciones en Python</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -2223,8 +2255,7 @@ Tabla del 4
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

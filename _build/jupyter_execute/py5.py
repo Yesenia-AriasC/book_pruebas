@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# (1:py5)=
+# (2:py5)=
 
 # # <span style="color:#F72585">Introducción a Clases en Python</span> 
 
@@ -82,7 +82,7 @@ print(u2.edad)
 # :::{admonition} OJO
 # :class: warning
 # 
-# nombre y apellido no son variables existentes en el ambiente de trabajo.
+# Nombre y apellido no son variables existentes en el ambiente de trabajo.
 # :::
 
 # :::{admonition} Consejo
@@ -99,7 +99,7 @@ print(u2.edad)
 u1.nombre
 
 
-# Una bonita consecuencia, es que podemos crear muchos objetos con campos del mismo nombre sin tener que defiinir una variable diferente para cada dato adjuntado del objeto.
+# Una bonita consecuencia, es que podemos crear muchos objetos con campos del mismo nombre sin tener que definir una variable diferente para cada dato adjuntado del objeto.
 # 
 # Hagamos otro objeto:
 
@@ -462,7 +462,7 @@ print(px)
 # +  ```__name__```: nombre de la clase
 # +  ```__module__```: módulo al cual pertenece la clase
 # +  ```__bases__```: clases base de ésta clase
-# +  ```__dict__```: diccionario conteniendo un conjunto *clave/valor* con todos los atributos de la clase incluídos los métodos.
+# +  ```__dict__```: diccionario conteniendo un conjunto *clave/valor* con todos los atributos de la clase incluidos los métodos.
 # 
 # Los atributos intrínsecos de los objetos son:
 # 
@@ -600,15 +600,5 @@ l.info()
 # 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
 # 2. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 # 
-
-# ## <span style="color:#4361EE">Asesora Medios y Marketing digital</span>
-#  
-# 1. Maria del Pilar Montenegro, pmontenegro88@gmail.com 
-
-# ## <span style="color:#4361EE">Espacio Asistentes</span>
-# 1. Oleg Jarma, ojarmam@unal.edu.co 
-# 2. Laura Lizarazo, ljlizarazore@unal.edu.co 
-
-# ## <span style="color:#4361EE">Bibliografía</span>
 
 # ## <span style="color:#4361EE">Comentarios</span>

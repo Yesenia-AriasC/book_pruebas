@@ -48,18 +48,4 @@ Para visualizar u ocultar los comentarios y anotaciones hechos por otros usuario
 :name: Cómo visualizar comentarios
 Cómo visualizar comentarios
 ```
-```{admonition} Cambios realizados
-
-* Se anexó la segunda clase de probabilidad / variables aleatorias.
-
-* Aprendí a hacer links dentro del libro. A partir de esto se creó una sección de definiciones para  dar una definición y ejemplos de x conceptos.
-
-*subo a github para hacer pruebas con thebe.
-
-
-
-```
-Espero les guste.
-
-
 

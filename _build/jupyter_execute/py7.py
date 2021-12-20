@@ -14,6 +14,12 @@
 # In[1]:
 
 
+get_ipython().system('pip install pandas openpyxl')
+
+
+# In[2]:
+
+
 import pandas as pd
 
 
@@ -27,31 +33,31 @@ import pandas as pd
 #       drive.mount('/content/gdrive')
 # ```
 
-# In[2]:
+# In[3]:
 
 
 #from google.colab import ##drive correr solo en colab
 #drive.mount('/content/gdrive')
-counties= pd.read_excel("C:/Users/LENOVO/Desktop/Laurita/Cosas extra/Github/Diplomado/Temas/Módulo 13- Talleres/Datos/counties.xlsx")#cambiar dirección
+counties= pd.read_excel("https://github.com/Yesenia-AriasC/book_pruebas/blob/Venus/counties.xlsx?raw=true")#cambiar dirección
 
 
 # Para tener una idea de qué variables y datos tengo en lo base de datos, sólo debemos llamarla.
 
-# In[3]:
+# In[4]:
 
 
 counties
 
 
-# En lo anterior veiamos todas las variables con las 5 primeras y 5 últimas filas. Pero, podemos ver una cantidad  determinada de registros tanto del inicio de la tabla como del final. Utlizando *.head()* y *.tail()* respectivamente.
+# En lo anterior veiamos todas las variables con las 5 primeras y 5 últimas filas. Pero, podemos ver una cantidad  determinada de registros tanto del inicio de la tabla como del final. Utilizando *.head()* y *.tail()* respectivamente.
 
-# In[4]:
+# In[5]:
 
 
 counties.head(3) #por defecto salen 5 primeros
 
 
-# In[5]:
+# In[6]:
 
 
 counties.tail(2)
@@ -59,7 +65,7 @@ counties.tail(2)
 
 # Si aparte de ver solamente la tabla, queremos más información de la base de datos, por ejemplo sus dimensiones y tipo de variables podemos  utilizar lo siguiente:
 
-# In[6]:
+# In[7]:
 
 
 counties.info()
@@ -67,7 +73,7 @@ print("\n")
 print("La forma de la base de datos es:",counties.shape)  #shape:forma de un array
 
 
-# In[7]:
+# In[8]:
 
 
 print(counties.dtypes) #tipo de objeto en cada columna
@@ -83,7 +89,7 @@ print(counties.describe(include="all")) #summary, si no se pone el include solo 
 
 # Para ver el nombre de las columnas que existen, podemos utilizar *.columns*.
 
-# In[8]:
+# In[9]:
 
 
 counties.columns
@@ -91,13 +97,13 @@ counties.columns
 
 # Escoger una columna específica o un conjunto de ellas
 
-# In[9]:
+# In[10]:
 
 
 condado = counties["county"]
 
 
-# In[10]:
+# In[11]:
 
 
 print(condado.shape) #array unidimensional con 3234 elementos
@@ -105,7 +111,7 @@ print(counties["county"].shape)
 print(type(condado))
 
 
-# In[11]:
+# In[12]:
 
 
 codi_condado=counties[["codecounty","county"]]
@@ -117,20 +123,26 @@ print(type(codi_condado))
 
 # Podemos escoger ciertas filas a través de su posición. utilizando *.iloc*
 
-# In[12]:
+# In[13]:
+
+
+get_ipython().system('pip install seaborn')
+
+
+# In[14]:
 
 
 from seaborn import load_dataset
 
 
-# In[13]:
+# In[15]:
 
 
 print(counties.iloc[0:1,])
 print(type(counties.iloc[0:1,]))
 
 
-# In[14]:
+# In[16]:
 
 
 print(counties.iloc[8:12,1:3])
@@ -138,19 +150,19 @@ print(counties.iloc[8:12,1:3])
 
 # O también escoger filas con base a alguna condicion o característica específica.
 
-# In[15]:
+# In[17]:
 
 
 counties.tail()
 
 
-# In[16]:
+# In[18]:
 
 
 counties["codestate"] > 72 #Verdadero o falso si cumple la condición
 
 
-# In[17]:
+# In[19]:
 
 
 codsat72 = counties[counties["codestate"] > 72] # Llama aquellos cuyo valor es verdadero
@@ -159,7 +171,7 @@ codsat72.info()
 
 # Filas que no tengan valores faltantes en determinada columna
 
-# In[18]:
+# In[20]:
 
 
 no_na = counties[counties["population"].notna()]
@@ -171,14 +183,14 @@ print(counties.shape)
 
 # Existen varias maneras de realizar estas búsquedas, algunas de ellas son utilizando *isin*, *loc* de la librería seaborn y *or*.
 
-# In[19]:
+# In[21]:
 
 
 codcou1 = counties[counties["codecounty"].isin([78010, 72151])]
 codcou1
 
 
-# In[20]:
+# In[22]:
 
 
 codcou2 = counties.loc[:, 'codecounty'] == 78010
@@ -186,7 +198,7 @@ codcou2_ = counties.loc[codcou2]
 codcou2_
 
 
-# In[21]:
+# In[23]:
 
 
 counties[(counties["codecounty"] == 78010) | (counties["codecounty"] == 72151)]
@@ -194,7 +206,8 @@ counties[(counties["codecounty"] == 78010) | (counties["codecounty"] == 72151)]
 
 # Filas con más de una característica específica.
 
-# In[22]:
+# In[24]:
+
 
 
 counties[(counties["codestate"] == 72) & (counties["area"] >= 60)].info()
@@ -202,7 +215,7 @@ counties[(counties["codestate"] == 72) & (counties["area"] >= 60)].info()
 
 # ### <span style="color:#4CC9F0">Eliminar valores omitidos </span>
 
-# In[23]:
+# In[25]:
 
 
 #Eliminar valores omitidos: dropna
@@ -220,7 +233,7 @@ counties.dropna(subset=["population"], axis=0, inplace=False) #inplace:modifique
 # * **strip:**Eliminar los espacios al principio y al final de la cadena.
 # * **title:**Poner primera letra de cada palabra en mayúscula.
 
-# In[24]:
+# In[26]:
 
 
 counties["county"] = (counties["county"]
@@ -232,7 +245,7 @@ counties["county"] = (counties["county"]
                            ) 
 
 
-# In[25]:
+# In[27]:
 
 
 print(counties)
@@ -240,7 +253,7 @@ print(counties)
 
 # ## <span style="color:#4361EE">Creación de columnas a partir de otras</span>
 
-# In[26]:
+# In[28]:
 
 
 counties["densidad"]= counties["population"]/counties["area"]
@@ -249,7 +262,7 @@ print(counties[["densidad","population","area"]])
 
 # ### <span style="color:#4CC9F0">Renombrar columnas</span>
 
-# In[27]:
+# In[29]:
 
 
 print(counties.columns)
@@ -259,7 +272,7 @@ print(counties.columns) #Verificación
 
 # ### <span style="color:#4CC9F0">Modificar tipo de dato de una columna</span>
 
-# In[28]:
+# In[30]:
 
 
 print(counties.info())
@@ -272,7 +285,7 @@ print(counties.info())
 
 # Eliminación filas, puede ser por posición o que cumpla una característica.
 
-# In[29]:
+# In[31]:
 
 
 print(counties.shape)
@@ -281,7 +294,7 @@ counties = counties.drop(counties[counties['codecounty']==70].index)
 print(counties.shape)
 
 
-# In[30]:
+# In[32]:
 
 
 counties.drop(['densidad_pob'], axis=1,inplace=True) #inplace=True, para que me modifique la BD
@@ -290,7 +303,7 @@ counties.columns
 
 # ### <span style="color:#4CC9F0">Conteos</span>
 
-# In[31]:
+# In[33]:
 
 
 counties.groupby("codestate")["codecounty"].count().head(10)
@@ -300,22 +313,16 @@ counties.groupby("codestate")["codecounty"].count().head(10)
 # 
 # es posible hacer cambios de orden y estructura en las tablas de pandas.
 
-# In[32]:
+# In[34]:
 
 
-folder_path="C:/Users/LENOVO/Desktop/Laurita/Cosas extra/Github/Diplomado/Temas/Módulo 13- Talleres/Datos/"
-
-
-# In[33]:
-
-
-elections=pd.read_excel(folder_path+"elections.xlsx")
+elections=pd.read_excel("https://github.com/AprendizajeProfundo/Diplomado/blob/master/Temas/M%C3%B3dulo%2013-%20Talleres/Datos/elections.xlsx?raw=true")
 elections.head(5)
 
 
 # organicemos los datos descendentemente depende de la cantidad de votos democratas
 
-# In[34]:
+# In[35]:
 
 
 elections.sort_values(["democrat"], ascending=False)
@@ -323,7 +330,7 @@ elections.sort_values(["democrat"], ascending=False)
 
 # usando `groupby()` podemos juntar los datos por año y sumarlos para tener el total de votos por año
 
-# In[35]:
+# In[36]:
 
 
 elections.groupby('year')[['democrat', 'republic']].sum()
@@ -331,7 +338,7 @@ elections.groupby('year')[['democrat', 'republic']].sum()
 
 # Podemos aplicar ambos métodos en un mismo código
 
-# In[36]:
+# In[37]:
 
 
 elections_sort=(elections.groupby('year')[['democrat', 'republic']]
@@ -342,7 +349,7 @@ display(elections_sort)
 
 # Para reestructurar los datos usamos la función `pivot()`.
 
-# In[37]:
+# In[38]:
 
 
 pivot_elections=elections.pivot(index='codecounty',
@@ -355,19 +362,19 @@ pivot_elections.head()
 # 
 # Se pueden elegir múltiples variables como índice del dataframe. Esto es util para facilitar la extracción de información en ciertos casos
 
-# In[38]:
+# In[39]:
 
 
-counties_multi=pd.read_excel(folder_path+"counties.xlsx", index_col=[0, 1])
+counties_multi=pd.read_excel("https://github.com/Yesenia-AriasC/book_pruebas/blob/Venus/counties.xlsx?raw=true", index_col=[0, 1])
 display(counties_multi)
 
 
 # Podemos obtener la suma de población de cada estado
 
-# In[39]:
+# In[40]:
 
 
-counties_multi['population'].sum(level='codestate').head(5)
+counties_multi["population"].sum(level='codestate').head(5)
 
 
 # ### <span style="color:#4CC9F0">Concatenar y Unir</span>
@@ -377,14 +384,14 @@ counties_multi['population'].sum(level='codestate').head(5)
 # 
 # En ambos casos, podemos usar `concat()`, y se juntarán las bases con bases a los nombres de columnas o los indices de las filas
 
-# In[40]:
+# In[41]:
 
 
 elections_2000=elections[elections['year']==2000]
 display(elections_2000) #display:ejecuta el método dunder apropiado para obtener los datos apropiados para mostrar
 
 
-# In[41]:
+# In[42]:
 
 
 elections_2004=elections[elections['year']==2004]
@@ -394,7 +401,7 @@ display(elections_2004)
 
 # Si se hace la concatenación sin más, se tomarán todas las columnas y se agregarán NaN
 
-# In[42]:
+# In[43]:
 
 
 elections_00_04=pd.concat([elections_2000, elections_2004])
@@ -409,34 +416,34 @@ display(elections_00_04)
 # Tipos de Join
 # :::
 
-# In[43]:
+# In[44]:
 
 
 display(counties)
 
 
-# In[44]:
+# In[45]:
 
 
 inner_joined=pd.merge(elections, counties)
 inner_joined.head(10)
 
 
-# In[45]:
+# In[46]:
 
 
 outer_joined=pd.merge(elections, counties, how='outer')
 outer_joined.head(10)
 
 
-# In[46]:
+# In[47]:
 
 
 left_joined=pd.merge(elections, counties, how='left')
 left_joined.head(10)
 
 
-# In[47]:
+# In[48]:
 
 
 right_joined=pd.merge(elections, counties, how='right')
@@ -448,17 +455,17 @@ right_joined.head(10)
 
 # Existe un tipo de datos llamado "timestamp" que se usa para medir registros de tiempo. Es posible pasar strings a este tipo de dato en diferentes formatos y trabajar con este usándolo como indice
 
-# In[48]:
+# In[49]:
 
 
-airrpm=pd.read_csv(folder_path+'airrpm.txt', header=None, delimiter= '\s+', decimal=",")
+airrpm=pd.read_csv("https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/airrpm.txt", header=None, delimiter= '\s+', decimal=",")
 airrpm.columns=["Time", "R1", "R2", "R3"]
 airrpm.head()
 
 
 # La variable "Time" en este momento es un string. Pero podemos transformarlo usando `to_datetime()`. Para obtener más información de qué se podría poner en `format`, pueden revisar este [link](https://docs.python.org/3/library/datetime.html#strftime-and-strptime-behavior)
 
-# In[49]:
+# In[50]:
 
 
 airrpm['Time']=pd.to_datetime(airrpm['Time'], format='%b-%y')
@@ -469,13 +476,13 @@ airrpm.head()
 
 # Definiendo la fecha como índice, podemos extraer información con respecto al año y respecto al mes
 
-# In[50]:
+# In[51]:
 
 
 airrpm.groupby([airrpm.index.month])['R1'].describe()
 
 
-# In[51]:
+# In[52]:
 
 
 airrpm.groupby([airrpm.index.year]).sum().head(10)
@@ -484,17 +491,6 @@ airrpm.groupby([airrpm.index.year]).sum().head(10)
 # ## <span style="color:#4361EE">Autores</span>
 # 1. Oleg Jarma, ojarmam@unal.edu.co 
 # 2. Laura Lizarazo, ljlizarazore@unal.edu.co 
-# 
-
-# ##   <span style="color:#4361EE">Profesores</span>
-# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
-# 2. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
-# 3. Campo Elías Pardo Turriago, cepardot@unal.edu.co 
-
-# ##   <span style="color:#4361EE">Asesora Medios y Marketing digital</span>
-# 1. Maria del Pilar Montenegro, pmontenegro88@gmail.com 
-
-# ##   <span style="color:#4361EE">Bibliografía</span>
 # 
 
 # ##   <span style="color:#4361EE">Comentarios</span>

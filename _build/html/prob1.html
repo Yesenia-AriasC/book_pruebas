@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Conceptos básicos de probabilidad &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,23 +75,27 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Variables Aleatorias" href="prob2.html" />
-    <link rel="prev" title="Bienvenido" href="intro.html" />
+    <link rel="prev" title="Bienvenido(a)" href="intro.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -108,6 +112,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -122,11 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -160,8 +170,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -224,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -297,8 +314,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fprob1.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/prob1.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -316,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/prob1.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/prob1.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -324,6 +346,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/prob1.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -374,13 +404,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejercicio-span">
-     <span style="color:#4CC9F0">
-      Ejercicio
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span">
      <span style="color:#4CC9F0">
       Medida de todo el espacio muestral
@@ -402,15 +425,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     Probabilidad condicional
    </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     <span style="color:#4CC9F0">
-      Ejercicio
-     </span>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-regla-multiplicativa-de-la-probabilidad-span">
@@ -434,20 +448,11 @@ commentsRunWhenDOMLoaded(addUtterances);
     Independencia
    </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
-     <span style="color:#4CC9F0">
-      Ejercicio
-     </span>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-style-color-4361ee-ejercicios-span">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
    <span style="color:#4361EE">
-    Ejercicios
+    Autores
    </span>
   </a>
  </li>
@@ -469,12 +474,12 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-conceptos-basicos-de-probabilidad-span">
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-conceptos-basicos-de-probabilidad-span">
 <span id="prob1"></span><h1><span style="color:#F72585">Conceptos básicos de probabilidad</span><a class="headerlink" href="#span-style-color-f72585-conceptos-basicos-de-probabilidad-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-introduccion-span">
 <h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
 <p>En esta sección se introducen los conceptos básicos de probabilidad requeridos para entender la inteligencia artificial.</p>
-<p>El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentar los cálculos que se consideran necesarios para entender el concepto.</p>
+<p>El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentarán los cálculos que se consideran necesarios para entender el concepto.</p>
 </div>
 <div class="section" id="span-style-color-4361ee-espacio-muestral-span">
 <h2><span style="color:#4361EE">Espacio muestral</span><a class="headerlink" href="#span-style-color-4361ee-espacio-muestral-span" title="Permalink to this headline">¶</a></h2>
@@ -486,7 +491,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="figure align-default" id="espacio-muestral">
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png"><img alt="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png" src="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolsa_bolas.png" style="height: 250px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Ejemplo de Espacio Muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span></span><a class="headerlink" href="#espacio-muestral" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 6 </span><span class="caption-text">Ejemplo de Espacio Muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span></span><a class="headerlink" href="#espacio-muestral" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-evento-span">
@@ -504,11 +509,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>La gráfica muestra los 6 eventos (subconjuntos) del espacio muestral.</p>
 <div class="figure align-default" id="markdown-fig">
 <a class="bg-primary mb-1 reference internal image-reference" href="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolas_subconjuntos.png"><img alt="evento" class="bg-primary mb-1" src="https://raw.githubusercontent.com/AprendizajeProfundo/Diplomado/master/Temas/Módulo%201-%20Matemáticas%20y%20Estad%C3%ADstica/2.%20Estad%C3%ADsica%2C%20Teor%C3%ADa%20de%20la%20Decisión%20y%20Teor%C3%ADa%20de%20la%20información/Imagenes/prob_bolas_subconjuntos.png" style="width: 600px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Ejemplos de <strong>eventos</strong> del Espacio Muestral</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">¶</a></p>
+<p class="caption"><span class="caption-number">Fig. 7 </span><span class="caption-text">Ejemplos de <strong>eventos</strong> del Espacio Muestral</span><a class="headerlink" href="#markdown-fig" title="Permalink to this image">¶</a></p>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-probabilidad-span">
-<h2><span style="color:#4361EE">Probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-span" title="Permalink to this headline">¶</a></h2>
+<span id="prob1-ej1"></span><h2><span style="color:#4361EE">Probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-span" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="span-style-color-4361ee-regla-aditiva-de-la-probabilidad-span">
 <h2><span style="color:#4361EE">Regla aditiva de la probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-regla-aditiva-de-la-probabilidad-span" title="Permalink to this headline">¶</a></h2>
@@ -532,12 +537,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 \[
 \text{Prob}[\text{azul}\cup\text{pares}] = 5/20 + 10/20 - 3/20 = 12/20
 \]</div>
-<div class="section" id="span-style-color-4cc9f0-ejercicio-span">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#span-style-color-4cc9f0-ejercicio-span" title="Permalink to this headline">¶</a></h3>
-<p>Que piensa de la siguiente afirmación. ¿Verdadero o falso? Justifique su respuesta.</p>
-<p>Si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> son conjuntos disyuntos, entonces <span class="math notranslate nohighlight">\(\text{Prob}[A\cap B] = 0\)</span>.</p>
-<p><em>Por favor comente su respuesta.</em></p>
-</div>
 <div class="section" id="span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span">
 <h3><span style="color:#4CC9F0">Medida de todo el espacio muestral</span><a class="headerlink" href="#span-style-color-4cc9f0-medida-de-todo-el-espacio-muestral-span" title="Permalink to this headline">¶</a></h3>
 <p>Vamos a denotar por <span class="math notranslate nohighlight">\(\emptyset\)</span> al conjunto vacío, es decir un conjunto que no tiene elementos.</p>
@@ -573,7 +572,7 @@ Prob[A^c] = 1 - Prob[A].
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-probabilidad-condicional-span">
-<h2><span style="color:#4361EE">Probabilidad condicional</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-condicional-span" title="Permalink to this headline">¶</a></h2>
+<span id="prob1-ej2"></span><h2><span style="color:#4361EE">Probabilidad condicional</span><a class="headerlink" href="#span-style-color-4361ee-probabilidad-condicional-span" title="Permalink to this headline">¶</a></h2>
 <p>El concepto de probabilidad condicional es de vital importancia en el estudio del aprendizaje profundo y la inteligencia artificial.</p>
 <p>Como el nombre parece indicar, es trata de calcular la probabilidad de un evento sujeto a una restricción. En realidad es así y la restricción normalmente está asociada con otro evento.</p>
 <p>Para ilustrar el asunto, supongamos que se pregunta por la probabilidad que una bola extraída sea par, dado que la bola es azul.</p>
@@ -598,10 +597,6 @@ Prob[A^c] = 1 - Prob[A].
 \[
 \text{Prob}(\text{par}|\text{azul}) = \frac{\text{Prob}[\text{par}\cap \text{azul}]}{\text{Prob}[\text{azul}]}
 \]</div>
-<div class="section" id="id1">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<p>Imagínese como se podría verificar esta última ecuación.  Calcule <span class="math notranslate nohighlight">\(\text{Prob}(\text{par}|\text{azul})\)</span> usando la dicha ecuación.</p>
-<p><em>Por favor comente su respuesta.</em></p>
 <div class="tip admonition">
 <p class="admonition-title">Importante</p>
 <p>Esta es una regla general, que se enuncia así:
@@ -610,7 +605,6 @@ Si <span class="math notranslate nohighlight">\(A\)</span> y <span class="math n
 \[
 \text{Prob}[A|B] = \frac{\text{Prob}[A\cap B]}{\text{Prob}[B]}
 \]</div>
-</div>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-regla-multiplicativa-de-la-probabilidad-span">
@@ -633,7 +627,7 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-independencia-span">
-<h2><span style="color:#4361EE">Independencia</span><a class="headerlink" href="#span-style-color-4361ee-independencia-span" title="Permalink to this headline">¶</a></h2>
+<span id="prob1-ej3"></span><h2><span style="color:#4361EE">Independencia</span><a class="headerlink" href="#span-style-color-4361ee-independencia-span" title="Permalink to this headline">¶</a></h2>
 <p>Dos eventos <span class="math notranslate nohighlight">\(A\)</span> y <span class="math notranslate nohighlight">\(B\)</span> del espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> se dicen independientes si</p>
 <div class="math notranslate nohighlight">
 \[
@@ -644,26 +638,12 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
 \[
 \text{Prob}[A| B] = \text{Prob}[A].
 \]</div>
-<div class="section" id="id2">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
-<p>Por favor verifique esta última afirmación.</p>
-<p><em>Por favor comente su respuesta.</em></p>
 </div>
-</div>
-<div class="section" id="span-style-color-4361ee-ejercicios-span">
-<h2><span style="color:#4361EE">Ejercicios</span><a class="headerlink" href="#span-style-color-4361ee-ejercicios-span" title="Permalink to this headline">¶</a></h2>
-<p>Considere el siguiente experimento. Se lanzan dos dados no cargados de seis caras cada uno. El resultado del experimento es una pareja de números. Por ejemplo <span class="math notranslate nohighlight">\((5,6)\)</span>.</p>
-<div class="figure align-default" id="dos-dados">
-<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" style="height: 150px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Fuente …</span><a class="headerlink" href="#dos-dados" title="Permalink to this image">¶</a></p>
-</div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
-<li><p>Haga una tabla, usando Markdown con todo el espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>. Ayuda: son 36 elementos.</p></li>
-<li><p>¿Cuántos eventos son posibles? Use Python para hacer el cálculo 2^36</p></li>
-<li><p>Calcule la probabilidad de obtener 2,3,… 12.</p></li>
-<li><p>Calcule la probabilidad de obtener un número par.</p></li>
-<li><p>Compruebe que la probabilidad de obtener 5 en el dado azul es 1/5 y que este evento es independiente del valor obtenido en el dado rojo.</p></li>
-<li><p>Escriba un programa Python que construya un tensor de dimensión 2 y que contenga los 36 posibles resultados. Consulte  sobre como se hace un ciclo for en Python.</p></li>
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ol>
 </div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
@@ -682,8 +662,8 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -701,36 +681,27 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="intro.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title">Bienvenido</p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="intro.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Bienvenido(a)</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="prob2.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Variables Aleatorias</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="prob2.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Variables Aleatorias</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -746,8 +717,7 @@ y <span class="math notranslate nohighlight">\(\text{Prob}[\text{azul}] = 5/20\)
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

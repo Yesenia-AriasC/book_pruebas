@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# (1:py4)=
+# (2:py4)=
 # 
 # # <span style="color:#F72585">Inspección, Instalación y Carga de Módulos y Paquetes</span>
 # 
@@ -93,7 +93,7 @@ help("modules")
 # 
 # Por ejemplo random.
 
-# In[4]:
+# In[ ]:
 
 
 #help("random") # Muestra toda la documentación
@@ -105,7 +105,7 @@ import random
 
 # Para acceder a los atributos del módulo, basta colocar ```dir(modulo)```
 
-# In[5]:
+# In[ ]:
 
 
 dir(random)
@@ -115,7 +115,7 @@ dir(random)
 # 
 # Sigamos metiendo dentro de cada cosa (algún día llegaremos al fin...no?)
 
-# In[6]:
+# In[ ]:
 
 
 get_ipython().run_line_magic('pinfo', 'random.random')
@@ -123,20 +123,20 @@ get_ipython().run_line_magic('pinfo', 'random.random')
 
 # **¡Bingo!** Al fin algo que podemos usar:
 
-# In[7]:
+# In[ ]:
 
 
 x = random.random()
 print("Número aleatorio en [0,1]: ",x)
 
 
-# In[8]:
+# In[ ]:
 
 
 get_ipython().run_line_magic('pinfo', 'random.randint')
 
 
-# In[9]:
+# In[ ]:
 
 
 y=random.randint(3,6)
@@ -157,7 +157,7 @@ print("Número entero aleatorio entre 3 y 6: ",y)
 # 
 # ### <span style="color:#4CC9F0">Ejemplo</span>
 
-# In[10]:
+# In[ ]:
 
 
 import math as m
@@ -177,7 +177,7 @@ dir(m)
 # 
 # $A = \pi r²$
 
-# In[11]:
+# In[ ]:
 
 
 # Aplicación: Área de un círculo de radio 10 cm 
@@ -195,7 +195,7 @@ print("El Área del círculo es: ",z,"cm²")
 # - Investigar si es posible crear un módulo de Python. En caso afirmativo, crear uno simple.
 # - Explicar la lógica subyacente de la siguiente línea:
 
-# In[12]:
+# In[ ]:
 
 
 # You Must Reset Kernel 0,0
@@ -207,7 +207,7 @@ A = pi*r**2
 print(A)
 
 
-# In[13]:
+# In[ ]:
 
 
 math.pi
@@ -216,7 +216,12 @@ math.pi
 # # <span style="color:#F72585">Bonus: Fractales</span>
 # Usando un módulo llamado ```turtle``` podemos crear un arbolito bonito.
 
-# In[ ]:
+# :::{admonition} Importante
+# :class: tip
+# Por favor, para poder visualizar la salida del siguiente código abra el cuaderno en Binder
+# :::
+
+# In[1]:
 
 
 import turtle
@@ -268,6 +273,9 @@ Recursive_Koch(3, 6)
 
 # ## <span style="color:#4361EE">Autores</span>
 # 
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Bibliografía </span>
 # 

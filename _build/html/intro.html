@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bienvenido &#8212; IA y Aprendizaje profundo</title>
+    <title>Bienvenido(a) &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,20 +75,24 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Conceptos básicos de probabilidad" href="prob1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -105,6 +109,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -119,11 +127,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1 current">
   <a class="reference internal" href="#">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -157,8 +167,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -221,7 +238,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -294,8 +311,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/intro.md"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -332,6 +354,13 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-bienvenido-a-span">
+   <span style="color:#4361EE">
+    Bienvenido(a)
+   </span>
+  </a>
+ </li>
 </ul>
 
             </nav>
@@ -343,8 +372,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="bienvenido">
-<h1>Bienvenido<a class="headerlink" href="#bienvenido" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-bienvenido-a-span">
+<h1><span style="color:#F72585">Bienvenido(a)</span><a class="headerlink" href="#span-style-color-f72585-bienvenido-a-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-autores-span">
 <h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
 <ol class="simple">
@@ -357,15 +386,35 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ol class="simple">
 <li><p>Maria del Pilar Montenegro Reyes, <a class="reference external" href="mailto:pmontenegro88&#37;&#52;&#48;gmail&#46;com">pmontenegro88<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ol>
-<div class="admonition-cambios-realizados admonition">
-<p class="admonition-title">Cambios realizados</p>
-<ul class="simple">
-<li><p>Se anexó la segunda clase de probabilidad / variables aleatorias.</p></li>
-<li><p>Aprendí a hacer links dentro del libro. A partir de esto se creó una sección de definiciones para  dar una definición y ejemplos de x conceptos.</p></li>
-</ul>
-<p>*subo a github para hacer pruebas con thebe.</p>
 </div>
-<p>Espero les guste.</p>
+<div class="section" id="span-style-color-4361ee-bienvenido-a-span">
+<h2><span style="color:#4361EE">Bienvenido(a)</span><a class="headerlink" href="#span-style-color-4361ee-bienvenido-a-span" title="Permalink to this headline">¶</a></h2>
+<p>Este es el libro guía del Diplomado de Inteligencia Artificial y Aprendizaje Profundo. Para una mejor experiencia de aprendizaje, sugerimos tener bajo consideración las siguientes indicaciones.</p>
+<p>Este es un libro vivo, lo que significa que puede ejecutar el código presente en él. En las páginas que contienen celdas de código encontrará la siguiente simbología  en la parte superior derecha de la pantalla</p>
+<div class="figure align-default" id="codigo-vivo">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/THEBE_BOTON.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/THEBE_BOTON.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/THEBE_BOTON.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 1 </span><span class="caption-text">Botón lanzamiento Thebe</span><a class="headerlink" href="#codigo-vivo" title="Permalink to this image">¶</a></p>
+</div>
+<p>Por favor active el botón <code class="docutils literal notranslate"><span class="pre">live</span> <span class="pre">code</span></code> para hacer las celdas de código ejecutables en la página en la que aparecen. Existen algunas librerías y funciones que no pueden ejecutarse correctamente en jupyter-book, cuando esto suceda, se le indicará que por favor las ejecute en <code class="docutils literal notranslate"><span class="pre">Colab</span></code> o <code class="docutils literal notranslate"><span class="pre">Binder</span></code> con los botones que llevan el mismo nombre.</p>
+<p>Para poder realizar anotaciones y comentarios, es necesario que cree una cuenta en Hypothesis. Puede realizarlo desde <a class="reference external" href="https://hypothes.is/signup">este link</a>. Una vez creada la cuenta debe conectarla con Jupyter Book, para esto despliegue el menú de anotaciones con la flecha hacia la izquierda ubicada en la tabla de contenidos, haga click en <code class="docutils literal notranslate"><span class="pre">Log</span> <span class="pre">in</span></code> e ingrese los datos solicitados</p>
+<div class="figure align-default" id="menu-de-anotaciones">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/MenuAnotaci%C3%B3n.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/MenuAnotaci%C3%B3n.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/MenuAnotaci%C3%B3n.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 2 </span><span class="caption-text">Menú de anotaciones</span><a class="headerlink" href="#menu-de-anotaciones" title="Permalink to this image">¶</a></p>
+</div>
+<div class="figure align-default" id="log-in-hypothesis">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Login.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Login.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Login.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 3 </span><span class="caption-text">Log in Hypothesis</span><a class="headerlink" href="#log-in-hypothesis" title="Permalink to this image">¶</a></p>
+</div>
+<p>Una vez conectada la cuenta, puede subrayar y comentar el texto presente en el libro seleccionándolo. Los comentarios que escriba con el botón <code class="docutils literal notranslate"><span class="pre">Annotate</span></code> serán públicos. Es decir, serán visibles para todos los usuarios del libro. Para hacer comentarios visibles únicamente por usted, use el botón <code class="docutils literal notranslate"><span class="pre">Highlight</span></code></p>
+<div class="figure align-default" id="anotaciones">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Anotaciones.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Anotaciones.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Anotaciones.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">¿Cómo realizar anotaciones?</span><a class="headerlink" href="#anotaciones" title="Permalink to this image">¶</a></p>
+</div>
+<p>Para visualizar u ocultar los comentarios y anotaciones hechos por otros usuarios, debe hacer click en el botón <code class="docutils literal notranslate"><span class="pre">Show</span> <span class="pre">Highlights</span></code> ubicado en la equina superior derecha de la pantalla.</p>
+<div class="figure align-default" id="como-visualizar-comentarios">
+<a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Highlights.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Highlights.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/book_pruebas/Venus/Highlights.png" style="height: 200px;" /></a>
+<p class="caption"><span class="caption-number">Fig. 5 </span><span class="caption-text">Cómo visualizar comentarios</span><a class="headerlink" href="#como-visualizar-comentarios" title="Permalink to this image">¶</a></p>
+</div>
 </div>
 <div class="toctree-wrapper compound">
 </div>
@@ -379,8 +428,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -398,27 +447,20 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-     <div id="next">
-        <a class="right-next" href="prob1.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Conceptos básicos de probabilidad</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'>
+    <a class='right-next' id="next-link" href="prob1.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Conceptos básicos de probabilidad</span></p>
+    </div>
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -434,8 +476,7 @@ commentsRunWhenDOMLoaded(addUtterances);
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

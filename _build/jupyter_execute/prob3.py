@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (1:prob3)=
 # # <span style="color:#F72585">Probabilidad Conjunta y Entropía Cruzada</span>
 
 # ## <span style="color:#4361EE">Introducción</span>
@@ -31,13 +32,6 @@
 # Además se tiene que $\text{Var}[X]=0.72$ y $\sigma_X = 0.849$
 # ```
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Por favor verifique que si $X\sim \text{Binom}(N,\pi)$, entonces 
-# 
-# 1. $\mathbb{E}[X]=N\pi$ 
-# 2. $\text{Var}[X]=N\pi(1-\pi)$.
-
 # La segunda variable que llamaremos $Y$ se definen como sigue:
 # 
 # $$
@@ -47,7 +41,7 @@
 # \end{cases}
 # $$
 # 
-# a función de probabilidad de  Y , denotada  $p_Y$  es dada por extensión de la siguiente forma:
+# La función de probabilidad de  Y , denotada  $p_Y$  es dada por extensión de la siguiente forma:
 # 
 # |Valor |Experimentos| probabilidad cada experimento| probabilidad para este valor de $Y$| total|
 # |---|---|---| ---|---|
@@ -79,7 +73,7 @@
 # ## <span style="color:#4361EE">Función de probabilidad conjunta</span>
 # 
 
-# Abordemos el problema de determinar como está relacionadas (asociadas) estas dos variables. Para empezar observe la siguiente tabla que muestra como coocurren los valores de las dos variables aleatorias
+# Abordemos el problema de determinar como están relacionadas (asociadas) estas dos variables. Para empezar observe la siguiente tabla que muestra como coocurren los valores de las dos variables aleatorias
 # 
 # 
 # |X/Y|0|1|-1|
@@ -189,6 +183,12 @@
 # In[1]:
 
 
+get_ipython().system('pip install numpy')
+
+
+# In[2]:
+
+
 import numpy as np
 (0.064)*np.log(0.064/(0.064*.064)) +(0.288)*np.log(0.288/(0.288*0.724)) +(0.432)*np.log(0.432/(0.432*0.72) + 0.216*np.log(0.216/(0.216*0.216)))
 
@@ -217,7 +217,13 @@ import numpy as np
 # 
 # Veamos.
 
-# In[ ]:
+# In[3]:
+
+
+get_ipython().system('pip install scipy matplotlib')
+
+
+# In[4]:
 
 
 import numpy as np
@@ -235,7 +241,7 @@ print(np.round(Q1,3))
 print(np.round(Q2,3))
 
 
-# In[ ]:
+# In[5]:
 
 
 H_P_Q1 = -np.sum(P*np.log(Q1))
@@ -249,7 +255,7 @@ print('H(P,Q2)= ', H_P_Q2 )
 # 
 # Discuta los resultados en la clase.
 
-# In[ ]:
+# In[6]:
 
 
 fig, axes = plt.subplots(1, 3, figsize=(12, 4))
@@ -282,6 +288,11 @@ plt.show()
 # $$
 # H(P,Q) = - 1 \log 0.7 = 0.357
 # $$
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

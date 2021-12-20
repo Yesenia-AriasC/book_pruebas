@@ -1,13 +1,14 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (1:prob4)=
 # # <span style="color:#F72585">Distribuciones de probabilidad continuas</span>
 
 # ## <span style="color:#4361EE">Introducción</span>
 
-# En esta lección se introducen las distribuciones de probabilidad continuas. Se introducen los conceptos de información en distribuciones contínuas y la entropía diferencial.
+# En esta lección se introducen las distribuciones de probabilidad continuas. Se introducen los conceptos de información en distribuciones continuas y la entropía diferencial.
 # 
-# Al empezar se introduce el concepto de variable aleatoria contínua y la distribución normal. Si no recuerda el concepto de integral de una función en un intervalo, puede imaginar que una integral es aproximadamente un promedio de los valores de la función en un determinado intervalo.
+# Al empezar se introduce el concepto de variable aleatoria continua y la distribución normal. Si no recuerda el concepto de integral de una función en un intervalo, puede imaginar que una integral es aproximadamente un promedio de los valores de la función en un determinado intervalo.
 # 
 # Por ejemplo si una función $h(x)$ está definida en un intervalo digamos $[a,b]$, entonces la integral de $h$ en ese intervalo es aproximadamente una suma pesada:
 # 
@@ -19,6 +20,7 @@
 # 
 # Esto es todo lo necesitamos saber para seguir la lección. Calcular una integral puede ser muy complicado, pero en esta lección solamente requerimos tener presente la ecuación anterior.
 
+# (prob4:ej1)=
 #  ## <span style="color:#4361EE">Variables aleatorias continuas</span>
 # 
 # 
@@ -28,12 +30,6 @@
 # Supongamos que se mide con una herramienta de precisión el diámetro de la cabeza de un tornillo salido de un proceso de producción. Es conocido que cada tornillo producido puede tener pequeñas diferencias de tamaño. Esto se debe en general a la forma como cada tornillo es procesado. Las máquinas que los producen por lo general pierden precisión por el uso. 
 # 
 # Otro ejemplo menos preciso pero más cercano a nosotros es medir la estatura de las personas. En este caso los instrumentos son mucho menos precisos.
-
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# ¿Puede indicar otros ejemplos?
-
-# #### <span style="color:green">Escriba aquí su respuesta. Discuta con sus compañeros.</span>
 
 # 
 # Si se define $X$ como la medida en cada caso, es claro que $X$ es una variable  aleatoria, puesto que al realizar los experimentos (en este caso las mediciones), no se puede predecir con total precisión, cual será el valor medido en cada experimento. 
@@ -45,7 +41,7 @@
 #  ## <span style="color:#4361EE">Función de densidad de probabilidad</span>
 # 
 
-# La función de densidad de probabilidad, en adelante función de densidad, es el homólogo de la funciónde probabilidad. Se trata entonces de una función integrable no negativa, en donde el área bajo la curva es 1.
+# La función de densidad de probabilidad, en adelante función de densidad, es el homólogo de la función de probabilidad. Se trata entonces de una función integrable no negativa, en donde el área bajo la curva es 1.
 # 
 # El ejemplo más simple es la distribución uniforme en el intervalos $[0,1]$. En este caso la función de densidad es $g(x)=1$. Note que en este caso se tiene que
 # 
@@ -53,7 +49,7 @@
 # \int_0^1 g(x)dx = \int_0^1 1 dx= x|_{x=0}^{x=1} = 1-0 =1.
 # $$
 # 
-# Esta distibución se llama uniforme porque cada subintervalo de $[0,1]$ tiene exactamente la misma probabilidad. Por ejemplo los intervalos $[0.1,0.3]$ y $[0.5,0.7]$ tiene cada uno medida de probabilidad 0.2. En este caso, la medida de probabilidad coincide con la medida de longitud que usamos a diario para medir longitudes, como por ejemplo, el frente de una casa.
+# Esta distribución se llama uniforme porque cada subintervalo de $[0,1]$ tiene exactamente la misma probabilidad. Por ejemplo los intervalos $[0.1,0.3]$ y $[0.5,0.7]$ tiene cada uno medida de probabilidad 0.2. En este caso, la medida de probabilidad coincide con la medida de longitud que usamos a diario para medir longitudes, como por ejemplo, el frente de una casa.
 
 # 
 # ## <span style="color:#4361EE">Esperanza matemática y varianza</span>
@@ -82,9 +78,10 @@
 
 # #### <span style="color:green">Escriba aquí su respuesta. Discuta con sus compañeros.</span>
 
+# (prob4:ej3)=
 #  ## <span style="color:#4361EE">Distribución normal</span>
 
-# La distribución normal es la distribución más importante de toda la estadística. Esto no solamente se debe  a su aplicación en gran cantidad de problemas, sino porque es la distribución límite de muchas sucesiones de distribuciones que aparecen con frecuencia.  No entraremos en detalles técnicos. Solamente vamos a indicar la expesión de la función de densidad y veremos como calcular algunas probabilidades.
+# La distribución normal es la distribución más importante de toda la estadística. Esto no solamente se debe  a su aplicación en gran cantidad de problemas, sino porque es la distribución límite de muchas sucesiones de distribuciones que aparecen con frecuencia.  No entraremos en detalles técnicos. Solamente vamos a indicar la expresión de la función de densidad y veremos como calcular algunas probabilidades.
 # 
 # La densidad de la distribución normal tiene la expresión
 # 
@@ -97,7 +94,7 @@
 # 1. Los parámetros de la distribución  normal son $\mu$ y $\sigma^2$.
 # 2. La función $g(x)$ es simétrica alrededor de $\mu_X$.
 # 
-# Además si $X$ es una variable aleatoria con distibución normal, que escribiremos $X\sim \mathcal{N}(\mu,\sigma^2)$, entonces
+# Además si $X$ es una variable aleatoria con distribución normal, que escribiremos $X\sim \mathcal{N}(\mu,\sigma^2)$, entonces
 # 
 # 3. $\mathbb{E}[X] = \mu$
 # 4. $\text{Var}[X] = \sigma^2$
@@ -107,33 +104,87 @@
 # In[1]:
 
 
+get_ipython().system('pip install matplotlib numpy scipy')
+
+
+# In[2]:
+
+
+
 import matplotlib.pyplot as plt
 import numpy as np
 import scipy.stats as stats
 import math
+from matplotlib.widgets import Slider, Button
 
+get_ipython().run_line_magic('matplotlib', 'inline')
 mu = 0
 variance = 1
 sigma = math.sqrt(variance)
-x = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
-plt.plot(x, stats.norm.pdf(x, mu, sigma))
+t = np.linspace(mu - 3*sigma, mu + 3*sigma, 100)
+#Fijar los limites de los ejes
+plt.xlim(mu - 3*sigma, mu + 3*sigma)
+
+plt.plot(t, stats.norm.pdf(t, mu, sigma))
+
+
+# Para modificar mu y sigma por medio de deslizadores abra este cuaderno en Colab o Binder
+
+# In[3]:
+
+
+get_ipython().run_line_magic('matplotlib', 'notebook')
+# Crear la figura y el line que manipularemos
+fig, ax = plt.subplots()
+line, = plt.plot(t, stats.norm.pdf(t, mu, sigma), lw=2)
+
+# Ajustar el grafico para dejar espacio para los deslizadores
+plt.subplots_adjust(left=0.25, bottom=0.25)
+
+# Hacer un deslizador horizontal para el valor de mu.
+axfreq = plt.axes([0.25, 0.1, 0.65, 0.03])
+mu_slider = Slider(
+    ax=axfreq,
+    label='Mu',
+    valmin=-3,
+    valmax=3,
+    valinit=mu,
+)
+
+# Hacer un deslizador vertical para el valor de sigma
+axamp = plt.axes([0.1, 0.25, 0.0225, 0.63])
+sigma_slider = Slider(
+    ax=axamp,
+    label="Sigma",
+    valmin=0,
+    valmax=5,
+    valinit=sigma,
+    orientation="vertical"
+)
+
+# La funcion que se llama cada vez que el valor en los deslizadores cambia
+def update(val):
+    line.set_ydata(stats.norm.pdf(t, mu_slider.val, sigma_slider.val))
+    fig.canvas.draw_idle()
+
+#Registro de la funcion update para cada deslizador
+mu_slider.on_changed(update)
+sigma_slider.on_changed(update)
+
+#Creación Boton Reset
+resetax = plt.axes([0.8, 0.025, 0.1, 0.04])
+button = Button(resetax, 'Reset', hovercolor='0.975')
+
+
+def reset(event):
+    mu_slider.reset()
+    sigma_slider.reset()
+button.on_clicked(reset)
+
 plt.show()
 
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Consulte como calcular usando Python la medida de probabilidad de los siguientes intervalos, si se asume una distribución normal con media 10 y varianza 1.
-# 1. $[5,15]$.
-# 2. $[0,\infty]$
-# 3. $[8,11]$ 
-
-# ### <span style="color:#4CC9F0">Ayuda</span>
-
-# $\text{Prob}[a,b] = \text{Prob}[-\infty,b] - \text{Prob}[-\infty,a]$.
-
-# #### <span style="color:green">Escriba aquí su respuesta. Discuta con sus compañeros.</span>
-
-# In[16]:
+# In[4]:
 
 
 # Prob[−∞,𝑎] .
@@ -162,7 +213,8 @@ prob_inf_a
 # \text{Prob}[a,b] = G(b) - G(a) = \int_{-\infty}^{b}g(x)dx - \int_{-\infty}^{a}g(x)dx = \text{Prob}[-\infty,b] - \text{Prob}[-\infty,a].
 # $$
 
-# ## <span style="color:#4361EE">Información de distribuciones contínuas</span>
+# (prob4:ej4)=
+# ## <span style="color:#4361EE">Información de distribuciones continuas</span>
 # 
 
 # La siguiente gráfica muestra las funciones de información (diferencial), definida por $-\log g(x)$. La información diferencial representa el **grado de sorpresa** de observar el valor en cada punto.
@@ -170,7 +222,7 @@ prob_inf_a
 # 
 # Tanto la distribución de Student(0,1,df=10) como la doble exponencial(0,1) tienen valores sorpresa muy por debajo de lo normal(0,1) en los rangos (-6, 6). Esto significa que los valores atípicos tendrán menos efecto en el log-posterior de los modelos que usan estas distribuciones. Una línea de regresión necesitaría moverse menos para incorporar esas observaciones, ya que la distribución del error no las considerará inusuales.
 
-# In[2]:
+# In[5]:
 
 
 import matplotlib.pyplot as plt
@@ -200,11 +252,7 @@ plt.legend()
 plt.show()
 
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Revise las distribuciones de Laplace y $t$-student utilizadas arriba.
-
-# ## <span style="color:#4361EE">Entropia diferencial</span>
+# ## <span style="color:#4361EE">Entropía diferencial</span>
 # 
 
 # 
@@ -228,7 +276,7 @@ plt.show()
 # 
 # 1. Entropía conjunta: $H(X,Y) = -\int \int f(x,y)\ln f(x,y) dx dy$.
 # 2. Entropía condicional: $H(Y|X)= -\int\int  f(x,y)\ln p(y|x) dx dy$.
-# 3. Infromación mutua: $\mathfrak{M}(X,Y)  = \int \int f(x,y)[\ln f(x,y) - \ln f_X(x)f_Y(y)]dx dy$.
+# 3. Información mutua: $\mathfrak{M}(X,Y)  = \int \int f(x,y)[\ln f(x,y) - \ln f_X(x)f_Y(y)]dx dy$.
 # 
 
 # ## <span style="color:#4361EE">Entropía de la familia normal</span>
@@ -240,11 +288,11 @@ plt.show()
 # Entropia_{normal} = \tfrac{1}{2} \ln(2\pi e\sigma^2 )
 # $$
 # 
-# So observa entonces que tanto la varianza $\sigma^2$ como la entropía $\tfrac{1}{2} \ln(2\pi e\sigma^2) $ son funciones crecientes. A mayor valor de $\sigma$ mayor entropía y viceversa. Así una variable aleatoria que tiene distribución normal es mas predicible entre menor es su varianza.
+# So observa entonces que tanto la varianza $\sigma^2$ como la entropía $\tfrac{1}{2} \ln(2\pi e\sigma^2) $ son funciones crecientes. A mayor valor de $\sigma$ mayor entropía y viceversa. Así una variable aleatoria que tiene distribución normal es mas predecible entre menor es su varianza.
 # 
 # La figura muestra la entropía y la varianza en función de $\sigma$ para la familia normal.
 
-# In[18]:
+# In[6]:
 
 
 import matplotlib.pyplot as plt
@@ -269,6 +317,11 @@ plt.ylabel('entropía =$\sqrt{\log (2\pi e \sigma^2) }$',fontsize=14)
 plt.legend()
 plt.show()
 
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

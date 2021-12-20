@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (2:py1)=
+# 
+
 # # <span style="color:#F72585">Introducción al lenguaje Python</span>
 
 # ## <span style="color:#4361EE">Introducción</span>
@@ -57,7 +60,7 @@ print("Hello friend. Hello friend?")
 print("Hola\nMundo")
 
 
-# #### Ejercicio
+# ### <span style="color:#4CC9F0">Variables en Python</span>
 # 
 # Escriba un código que le diga a Python que devuelva el texto:
 # *****
@@ -94,7 +97,7 @@ print("\nEl valor de la variable y es", y)
 # ## <span style="color:#4361EE">Asignación dinámica en Python</span>
 
 # En Python, como en R, Julia, Matlab y otros lenguajes no es necesario declarar una variable de antemano, como ocurre en otros lenguajes como C, C++ y muchos otros lenguajes de bajo nivel. 
-# La asignación dińamica implica que es posible cambiar el tipo de dato de una variable con tan solo reasignarle un valor. En Python, se delega al programador la responsabilidad de cuidarse de efectos no esperados al cambiar el tipo de una variable. Vea el sigueinte ejemplo.
+# La asignación dinámica implica que es posible cambiar el tipo de dato de una variable con tan solo reasignarle un valor. En Python, se delega al programador la responsabilidad de cuidarse de efectos no esperados al cambiar el tipo de una variable. Vea el siguiente ejemplo.
 
 # In[5]:
 
@@ -109,6 +112,7 @@ x = '25 de mayo'
 print('En cambio ahora x es un string:', x)
 
 
+# (py1:ej1)=
 # ## <span style="color:#4361EE">Reglas para la creación de variables</span>
 
 # * El nombre de una variable **debe comenzar** con una letra ó con _.
@@ -116,6 +120,7 @@ print('En cambio ahora x es un string:', x)
 # * El nombre de una variable **sólo puede contener** carácteres alfa-numéricos.
 # * El nombre de una variable tiene **sensibilidad** a **mayúsculas** y **minúsculas** (x es diferente de X).
 
+# 
 # ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # Escriba un código que le diga a Python que devuelva los textos **Tengo** *my_age* **años**, donde *my_age* es una variable que tenga asignada su edad.
@@ -143,9 +148,9 @@ print(x)
 print(type(x))
 
 
-# Se observan dos cosas interesantes. Primero, el tipo de dato es una clase 'int'. Todo en Pyhon son objetos, incluidos la variables simples. En otro cuaderno estudiaremos las clases y objetos en detalle. 
+# Se observan dos cosas interesantes. Primero, el tipo de dato es una clase 'int'. Todo en Python son objetos, incluidos la variables simples. En otro cuaderno estudiaremos las clases y objetos en detalle. 
 # 
-# Segundo, En pyhton puede tener números enteros tan grandes como desee, a diferencia de otros lenguajes. de otros lenguajes.
+# Segundo, En Python puede tener números enteros tan grandes como desee, a diferencia de otros lenguajes. de otros lenguajes.
 
 # Para convertir un tipo de dato diferente a int, siempre que sea posible se usa el *cast* int. Por ejemplo
 
@@ -285,7 +290,7 @@ print("Una línea\nOtra línea")
 print('La ruta del archivo es C:\nombres\archivo.ipynb')
 
 
-# En este caso la aparición del símbolo  \  daño el mensaje. La primera solución es la siguiente. ¿puede explicarla por favor?
+# En este caso la aparición del símbolo  \  dañó el mensaje. La primera solución es la siguiente. ¿puede explicarla por favor?
 
 # In[ ]:
 
@@ -293,7 +298,7 @@ print('La ruta del archivo es C:\nombres\archivo.ipynb')
 print('La ruta del archivo es C:\\nombres\\archivo.ipynb')
 
 
-# Una segunda solución para resolver el problema consiste en escribimos r antes del string, así::
+# Una segunda solución para resolver el problema consiste en escribimos r antes del string, así:
 
 # In[ ]:
 
@@ -349,6 +354,7 @@ texto[3:-1]
 texto[-1]
 
 
+# (py1:ej2)=
 # ## <span style="color:#4361EE">Asignación múltiple</span>
 
 # Es posible asignar valores a diferentes variables en una línea de código:
@@ -382,7 +388,7 @@ print('x3 =',x3);
 
 # ### <span style="color:#4CC9F0">Ejercicio</span>
 
-# Explique que hace el siguinete código. Imprima
+# Explique qué hace el siguiente código. Imprima
 
 # In[ ]:
 
@@ -641,9 +647,10 @@ else:
     print('Martes')
 
 
-# ### <span style="color:#4CC9F0">Pregunta</span>
-
+# ::: {admonition} Pregunta
+# :class: question
 # De acuerdo al script anterior, ¿cuál es la función de la clúsula **else**?
+# :::
 
 # ### <span style="color:#4CC9F0">Ejercicio</span>
 
@@ -762,7 +769,7 @@ print("Five is greater than Three")
 
 # ### <span style="color:#4CC9F0">Ejercicio</span>
 
-# Verifique que entiende que hace el siguiente código. ¿Cuál es la salida?
+# Verifique que entiende qué hace el siguiente código. ¿Cuál es la salida?
 
 # In[ ]:
 
@@ -771,9 +778,9 @@ edad = 15
 status = None
 
 if (edad >12) and (edad<20):
-    status = 'adolecente'
+    status = 'adolescente'
 else:
-    status = 'no adolecente'
+    status = 'no adolescente'
 
 print(status)
 
@@ -802,7 +809,7 @@ print()
 print('Done')
 
 
-# #### Ejercicio
+# ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # ¿Qué hace el parámetro  *end* en el *print* anterior? 
 
@@ -821,9 +828,10 @@ for i in range(20):
 print('\nDone.')
 
 
-# **Pregunta:**
-# 
+# ::: {admonition} Pregunta
+# :class: question
 # ¿Cuál es la diferencia entre while y for?
+# :::
 
 # #### Break
 
@@ -920,6 +928,11 @@ len("Tu_nombre") #pruebe la funcion len. Cambia Tu_nombre por su nombre real.
 
 # Ingrese aquí el condicional
 
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

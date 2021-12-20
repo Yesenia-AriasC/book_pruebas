@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Funciones en Python &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,23 +75,27 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Listas, Tuplas y Diccionarios en Python" href="py3.html" />
     <link rel="prev" title="Introducción al lenguaje Python" href="py1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -108,6 +112,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -122,11 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -160,8 +170,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -224,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -297,8 +314,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fpy2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/py2.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -316,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/py2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/py2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -324,6 +346,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/py2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -409,6 +439,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
+   <span style="color:#4361EE">
+    Autores
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
    <span style="color:#4361EE">
     Comentarios
@@ -426,13 +463,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-funciones-en-python-span">
-<h1><span style="color:#F72585">Funciones en Python</span><a class="headerlink" href="#span-style-color-f72585-funciones-en-python-span" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-funciones-en-python-span">
+<span id="py2"></span><h1><span style="color:#F72585">Funciones en Python</span><a class="headerlink" href="#span-style-color-f72585-funciones-en-python-span" title="Permalink to this headline">¶</a></h1>
 <p>Para entender funciones en Python (Paquetes dentro de módulos de Python), debemos pensar en actos reales para poder hacer una <strong>analogía</strong> en el ambiente de programación.</p>
 <p>Imagínese cuando se levanta.</p>
-<p>Lo que ocurre primero, es que uno se siente vivo, se abren los ojos (no siempre), se hace pereza un rato, se levanta de la cama y luego se incia el día (cada persona tiene sus maneras diferentes de lograrlo).</p>
+<p>Lo que ocurre primero, es que uno se siente vivo, se abren los ojos (no siempre), se hace pereza un rato, se levanta de la cama y luego se inicia el día (cada persona tiene sus maneras diferentes de lograrlo).</p>
 <p>Esta serie de <strong>pasos consecutivos</strong> conforman lo que se llama una <strong>función</strong>.</p>
-<p>En el común, una <strong>función es en realidad una acción</strong> o una serie de acciones que gneran un resultado a través de un proceso intermedio.</p>
+<p>En el común, una <strong>función es en realidad una acción</strong> o una serie de acciones que generan un resultado a través de un proceso intermedio.</p>
 <p>Para poder distinguir funciones, unas de otras, se le dan dotado de nombres diferentes.</p>
 <p>Por ejemplo, la función antes descrita podría nombrarse como <strong>Levantarse</strong>:</p>
 <p>Está función se compone de los siguientes pasos:</p>
@@ -442,12 +479,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><strong>Hacer pereza.</strong></p></li>
 <li><p><strong>Levantarse.</strong></p></li>
 </ol>
-<p>En el lenguaje de promgramación, ésto se podría escribir como</p>
+<p>En el lenguaje de programación, ésto se podría escribir como</p>
 <p><code class="docutils literal notranslate"><span class="pre">Levantarse(x)</span></code></p>
 <p>donde <span class="math notranslate nohighlight">\(x\)</span> representa el individuo que hace la acción y los paréntesis significan que se habla de una función, y por lo tanto, <strong>no se confunde</strong> con una variable.</p>
 <p><strong>Ejemplo:</strong></p>
 <p>Función <code class="docutils literal notranslate"><span class="pre">CortarManzana(x)</span></code>:</p>
-<p>Esta función se puede ilustrar dela siguiente manera:</p>
+<p>Esta función se puede ilustrar de la siguiente manera:</p>
 <p><img alt="Manzanita" src="https://photos1.blogger.com/blogger/1290/1572/1600/Apple_slicing_function.png" /></p>
 <p>Como podemos ver, una función es realmente es una <strong>“Caja Negra”</strong>:</p>
 <p>La podemos usar, sin importar qué hay dentro de ella.</p>
@@ -460,7 +497,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>En <a class="reference external" href="https://docs.python.org/3/library/functions.html">este link</a>, se encuentra un manual de todas las funciones <strong>básicas</strong> de Python.</p>
 <p>Veamos algunas de ellas:</p>
 <p><strong>Ejercicio</strong></p>
-<p>Viendo la entra y salida dl código, infiera qué hace la función correspondiente:</p>
+<p>Viendo la entrada y salida del código, infiera qué hace la función correspondiente:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Your Code Here</span>
@@ -506,6 +543,27 @@ a1: 6 , a2: 1
 <p>Las funciones pueden tener uno o más parámetros asociados.</p>
 <p>Por ejemplo la función <span class="math notranslate nohighlight">\(f(x,y,z)=w\)</span>, recibe los argumentos <span class="math notranslate nohighlight">\(x,y,z\)</span> y produce el resultado <span class="math notranslate nohighlight">\(w\)</span>.</p>
 <p><strong>Ejemplo:</strong></p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install numpy matplotlib
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /opt/anaconda3/lib/python3.8/site-packages (1.20.3)
+Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.8/site-packages (3.4.2)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.8.2)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pillow&gt;=6.2.0 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (8.3.1)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.4.7)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (0.10.0)
+Requirement already satisfied: six in /opt/anaconda3/lib/python3.8/site-packages (from cycler&gt;=0.10-&gt;matplotlib) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Comente adecuadamente las siguientes líneas de código</span>
@@ -524,18 +582,25 @@ a1: 6 , a2: 1
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">aabe9f52ce75</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Comente adecuadamente las siguientes líneas de código</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> 
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> 
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>x=
+ [0.         0.21666156 0.43332312 0.64998469 0.86664625 1.08330781
+ 1.29996937 1.51663094 1.7332925  1.94995406 2.16661562 2.38327719
+ 2.59993875 2.81660031 3.03326187 3.24992343 3.466585   3.68324656
+ 3.89990812 4.11656968 4.33323125 4.54989281 4.76655437 4.98321593
+ 5.1998775  5.41653906 5.63320062 5.84986218 6.06652374 6.28318531] 
 
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+y=
+ [ 0.00000000e+00  2.14970440e-01  4.19889102e-01  6.05174215e-01
+  7.62162055e-01  8.83512044e-01  9.63549993e-01  9.98533414e-01
+  9.86826523e-01  9.28976720e-01  8.27688998e-01  6.87699459e-01
+  5.15553857e-01  3.19301530e-01  1.08119018e-01 -1.08119018e-01
+ -3.19301530e-01 -5.15553857e-01 -6.87699459e-01 -8.27688998e-01
+ -9.28976720e-01 -9.86826523e-01 -9.98533414e-01 -9.63549993e-01
+ -8.83512044e-01 -7.62162055e-01 -6.05174215e-01 -4.19889102e-01
+ -2.14970440e-01 -2.44929360e-16] 
 </pre></div>
 </div>
+<img alt="_images/py2_7_1.png" src="_images/py2_7_1.png" />
 </div>
 </div>
 <p><strong>Ejercicio:</strong></p>
@@ -580,6 +645,12 @@ a1: 6 , a2: 1
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>El suma es: 7
+El producto es: 12
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -605,6 +676,11 @@ a1: 6 , a2: 1
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>la suma es: 71
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-cual-es-la-diferencia-y-utilidad-de-la-funcion-lambda-span">
@@ -621,6 +697,11 @@ a1: 6 , a2: 1
 <span class="n">mydoubler</span> <span class="o">=</span> <span class="n">myfunc</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
 <span class="c1">#print(mydoubler)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">mydoubler</span><span class="p">(</span><span class="mi">11</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>22
 </pre></div>
 </div>
 </div>
@@ -747,8 +828,8 @@ Lista modifciada: [1, 4, 9, 16]
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HI, I AM CREATED BY A FUNCTION PASSED AS AN ARGUMENT.
-hi, i am created by a function passed as an argument.
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>HOLA, SOY CREADA POR UNA FUNCIÓN PASADA COMO ARGUMENTO.
+hola, soy creada por una función pasada como argumento.
 </pre></div>
 </div>
 </div>
@@ -786,7 +867,7 @@ hi, i am created by a function passed as an argument.
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;map object at 0x7fb6c6ff0df0&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;map object at 0x7fe613035eb0&gt;
 2 4 6 8 
 </pre></div>
 </div>
@@ -831,6 +912,13 @@ i
 </div>
 </div>
 </div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
+</div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
 <h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -840,8 +928,8 @@ i
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -859,36 +947,27 @@ i
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="py1.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span style="color:#F72585">Introducción al lenguaje Python</span></p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="py1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Introducción al lenguaje Python</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="py3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Listas, Tuplas y Diccionarios en Python</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="py3.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Listas, Tuplas y Diccionarios en Python</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -904,8 +983,7 @@ i
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
