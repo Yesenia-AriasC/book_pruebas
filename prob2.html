@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Variables Aleatorias &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,23 +75,27 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Probabilidad Conjunta y Entropía Cruzada" href="prob3.html" />
     <link rel="prev" title="Conceptos básicos de probabilidad" href="prob1.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -108,6 +112,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -122,11 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -160,8 +170,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -224,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -297,8 +314,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fprob2.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/prob2.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -316,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/prob2.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/prob2.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -324,6 +346,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/prob2.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -358,15 +388,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     Variable aleatoria
    </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejercicio-span">
-     <span style="color:#4CC9F0">
-      Ejercicio
-     </span>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-calculo-de-frecuencias-span">
@@ -427,25 +448,18 @@ commentsRunWhenDOMLoaded(addUtterances);
       Variable Binomial (Distribución Binomial)
      </span>
     </a>
-    <ul class="nav section-nav flex-column">
-     <li class="toc-h4 nav-item toc-entry">
-      <a class="reference internal nav-link" href="#ejercicio">
-       Ejercicio
-      </a>
-     </li>
-    </ul>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejercicio-span">
+     <span style="color:#4CC9F0">
+      Ejercicio
+     </span>
+    </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
     <a class="reference internal nav-link" href="#span-style-color-4cc9f0-variable-poisson-distribucion-de-poisson-span">
      <span style="color:#4CC9F0">
       Variable Poisson (Distribución de Poisson)
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id1">
-     <span style="color:#4CC9F0">
-      Ejercicio
      </span>
     </a>
    </li>
@@ -480,7 +494,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     </a>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id2">
+    <a class="reference internal nav-link" href="#id1">
      <span style="color:#4CC9F0">
       Ejercicio
      </span>
@@ -490,13 +504,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     <a class="reference internal nav-link" href="#span-style-color-4cc9f0-esperanza-de-la-distribucion-poisson-span">
      <span style="color:#4CC9F0">
       Esperanza de la distribución Poisson
-     </span>
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#id3">
-     <span style="color:#4CC9F0">
-      Ejercicio
      </span>
     </a>
    </li>
@@ -526,6 +533,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
+   <span style="color:#4361EE">
+    Autores
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
    <span style="color:#4361EE">
     Comentarios
@@ -543,17 +557,17 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-variables-aleatorias-span">
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-variables-aleatorias-span">
 <span id="prob2"></span><h1><span style="color:#F72585">Variables Aleatorias</span><a class="headerlink" href="#span-style-color-f72585-variables-aleatorias-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-introduccion-span">
 <h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
 </div>
 <div class="section" id="span-style-color-4361ee-ejemplo-de-los-dados-span">
 <h2><span style="color:#4361EE">Ejemplo de los dados</span><a class="headerlink" href="#span-style-color-4361ee-ejemplo-de-los-dados-span" title="Permalink to this headline">¶</a></h2>
-<p>Recordemos el ejercicio de la sección anterior <a class="reference internal" href="prob1.html#prob1"><span class="std std-ref">Conceptos básicos de probabilidad</span></a>. La imagen muestra dos dados de seis caras de distinto color.</p>
+<p>Recordemos el ejercicio de la sección anterior <a class="reference internal" href="ejprob.html#prob-ej1"><span class="std std-ref">Conceptos Básicos de Probabilidad</span></a>. La imagen muestra dos dados de seis caras de distinto color.</p>
 <div class="figure align-default" id="dos-dados2">
 <a class="reference internal image-reference" href="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png"><img alt="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" src="https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png" style="height: 200px;" /></a>
-<p class="caption"><span class="caption-number">Fig. 4 </span><span class="caption-text">Dos datos de seis caras
+<p class="caption"><span class="caption-number">Fig. 8 </span><span class="caption-text">Dos datos de seis caras
 Fuente …</span><a class="headerlink" href="#dos-dados2" title="Permalink to this image">¶</a></p>
 </div>
 <p>Como ya sabe del ejercicio hay 36 posibles resultados. Es decir el espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span> tiene 36 elementos y <span class="math notranslate nohighlight">\(2^{36}\)</span> eventos.</p>
@@ -579,28 +593,21 @@ f(6,5) &amp; = 11
 <h2><span style="color:#4361EE">Variable aleatoria</span><a class="headerlink" href="#span-style-color-4361ee-variable-aleatoria-span" title="Permalink to this headline">¶</a></h2>
 <p>Dado un espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>, es una función que asigna a los elementos del espacio muestral un número real.</p>
 <p>En el espacio muestral de los dos dados de seis lados, se pueden definir muchas variables aleatorias. Considere por ejemplo la variable aleatoria definida por <span class="math notranslate nohighlight">\(g(x,y) = x\times y\)</span>.</p>
-<div class="section" id="span-style-color-4cc9f0-ejercicio-span">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#span-style-color-4cc9f0-ejercicio-span" title="Permalink to this headline">¶</a></h3>
-<p>Considere el ejemplo del espacio muestral de los dos dados de seis caras, no cargados.</p>
-<ol class="simple">
-<li><p>Construya la tabla completa de los posibles resultados de de las funcioens <span class="math notranslate nohighlight">\(f\)</span> y <span class="math notranslate nohighlight">\(g\)</span>.</p></li>
-<li><p>Proponga otra variable aleatoria definida sobre el espacio muestral <span class="math notranslate nohighlight">\(\mathcal{M}\)</span>.</p></li>
-</ol>
-<p>Ayuda: Use Python. Construya primero la tabla que representa el espacio muestral, en un tensor <span class="math notranslate nohighlight">\(36\times 2\)</span>. En otro tensor construya los respectivos valores de la función.</p>
-<p><span style="color:green">Consigne su solución comentando aquí.</span></p>
-<div class="cell docutils container">
+<div class="cell tag_thebe-init tag_hide-input docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install numpy
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">0</span><span class="n">aa0b027fcb6</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /opt/anaconda3/lib/python3.8/site-packages (1.20.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 </pre></div>
 </div>
 </div>
@@ -670,7 +677,6 @@ f( 6.0 , 6.0 ) = 12.0
 </div>
 </div>
 </div>
-</div>
 <div class="section" id="span-style-color-4361ee-calculo-de-frecuencias-span">
 <h2><span style="color:#4361EE">Cálculo de frecuencias</span><a class="headerlink" href="#span-style-color-4361ee-calculo-de-frecuencias-span" title="Permalink to this headline">¶</a></h2>
 <p>Observe que en el ejemplo anterior, la variable aleatoria toma once(11) posibles valores diferentes:</p>
@@ -690,7 +696,7 @@ f( 6.0 , 6.0 ) = 12.0
 </div>
 <div class="section" id="span-style-color-4cc9f0-funcion-python-para-calcular-una-tabla-de-frecuencias-span">
 <h3><span style="color:#4CC9F0">Función Python para calcular una tabla de frecuencias</span><a class="headerlink" href="#span-style-color-4cc9f0-funcion-python-para-calcular-una-tabla-de-frecuencias-span" title="Permalink to this headline">¶</a></h3>
-<p>La siguiente función muestra un camino de como calcular la tabla de frecuencias de un conjunto de datos, puestos en una lista de Python. No es la única forma. Investigue otras formas de hacerlo.</p>
+<p>La siguiente función muestra un camino de cómo calcular la tabla de frecuencias de un conjunto de datos, puestos en una lista de Python. No es la única forma. Investigue otras formas de hacerlo.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Función Python para contar los elementos la fecuencia</span>
@@ -804,6 +810,27 @@ p_f[12] &amp; = 1/36
 \end{align}
 \end{split}\]</div>
 <p>Podemos obtener una imagen de la función, utilizando un histograma. Un histograma es un gráfico de una función de probabilidad de una variable numérica. El siguiente código Python muestra como construir un histograma de la variable aleatoria <em>f</em>.</p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install matplotlib 
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.8/site-packages (3.4.2)
+Requirement already satisfied: numpy&gt;=1.16 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (1.20.3)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (0.10.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.4.7)
+Requirement already satisfied: pillow&gt;=6.2.0 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (8.3.1)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: six in /opt/anaconda3/lib/python3.8/site-packages (from cycler&gt;=0.10-&gt;matplotlib) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -816,12 +843,12 @@ p_f[12] &amp; = 1/36
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/prob2_27_0.png" src="_images/prob2_27_0.png" />
+<img alt="_images/prob2_26_0.png" src="_images/prob2_26_0.png" />
 </div>
 </div>
 <div class="section" id="span-style-color-4cc9f0-calculo-de-algunas-probabilidades-span">
 <h3><span style="color:#4CC9F0">Cálculo de algunas probabilidades</span><a class="headerlink" href="#span-style-color-4cc9f0-calculo-de-algunas-probabilidades-span" title="Permalink to this headline">¶</a></h3>
-<p>Dado que la variable aleatoria <span class="math notranslate nohighlight">\(f\)</span> es númerica, podemos calcular la probabilidad de diferentes eventos del espacio muestral, basados en el valor de <span class="math notranslate nohighlight">\(f\)</span>. Veámos algunos ejemplos.</p>
+<p>Dado que la variable aleatoria <span class="math notranslate nohighlight">\(f\)</span> es numérica, podemos calcular la probabilidad de diferentes eventos del espacio muestral, basados en el valor de <span class="math notranslate nohighlight">\(f\)</span>. Veamos algunos ejemplos.</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 \begin{align}
@@ -836,7 +863,7 @@ p_f[12] &amp; = 1/36
 </div>
 <div class="section" id="span-style-color-4361ee-interpretacion-de-la-funcion-de-probabilidad-span">
 <h2><span style="color:#4361EE">Interpretación de la función de probabilidad</span><a class="headerlink" href="#span-style-color-4361ee-interpretacion-de-la-funcion-de-probabilidad-span" title="Permalink to this headline">¶</a></h2>
-<p>Supongamos que el experimento de lanzar se repite muchas veces. Digamos 100 veces. Como la probabilidad de obtener digmamos <span class="math notranslate nohighlight">\(f=7\)</span> es <span class="math notranslate nohighlight">\(6/36\)</span>, entonces lo que se espera que ocurra es que en los 100 lanzamientos se obtenga un valor cercano a</p>
+<p>Supongamos que el experimento de lanzar se repite muchas veces. Digamos 100 veces. Como la probabilidad de obtener digamos <span class="math notranslate nohighlight">\(f=7\)</span> es <span class="math notranslate nohighlight">\(6/36\)</span>, entonces lo que se espera que ocurra es que en los 100 lanzamientos se obtenga un valor cercano a</p>
 <div class="math notranslate nohighlight">
 \[
 \text{Número de veces que se espera que ocurra }\{f=7\} = \tfrac{6}{36}\times 100 \approx 17.
@@ -861,7 +888,7 @@ p_f[0] &amp;= 1-\pi,
 p_f[x] = \pi^{x}(1-\pi)^{1-x}, \quad x=0,1.
 \]</div>
 <p>Asegúrese de entender la fórmula anterior.</p>
-<p>Un ejemplo es el siguiente. En el experimento del lanzamiento dados no cargados, definimos la variable aleatoria <span class="math notranslate nohighlight">\(g\)</span> como sigue:</p>
+<p>Un ejemplo es el siguiente. En el experimento del lanzamiento de dados no cargados, definimos la variable aleatoria <span class="math notranslate nohighlight">\(g\)</span> como sigue:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
 g = \begin{cases} &amp;1, \text{ si  la suma de los dos dados es par} \\
@@ -874,7 +901,7 @@ g = \begin{cases} &amp;1, \text{ si  la suma de los dos dados es par} \\
 <h3><span style="color:#4CC9F0">Variable Binomial (Distribución Binomial)</span><a class="headerlink" href="#span-style-color-4cc9f0-variable-binomial-distribucion-binomial-span" title="Permalink to this headline">¶</a></h3>
 <p>Consideremos la variable aleatoria <span class="math notranslate nohighlight">\(g\)</span> definida arriba. Pero ahora vamos a considerar que hacemos el experimento digamos <span class="math notranslate nohighlight">\(N=3\)</span> veces y contamos el número de veces en que <span class="math notranslate nohighlight">\(g=1\)</span>. Por otro lado vamos a suponer que que hay un sesgo en el experimento (una especie de dados cargados y se verifica que <span class="math notranslate nohighlight">\(\text{Prob}[g=1] = 0.6\)</span>. Por lo tanto se tiene que <span class="math notranslate nohighlight">\(\text{Prob}[g=0] = 0.4\)</span>.</p>
 <p>Entonces obtenemos una variable aleatoria que llamaremos <span class="math notranslate nohighlight">\(q\)</span> y diremos que <span class="math notranslate nohighlight">\(q\)</span> es una variable Binomial. La función de probabilidad de la variable aleatoria <span class="math notranslate nohighlight">\(q\)</span> es dada por extensión como sigue. La variable <span class="math notranslate nohighlight">\(q\)</span> toma 4 posibles valores, <span class="math notranslate nohighlight">\(q = \{0,1,2,3\}\)</span></p>
-<p>Veamos como calcular las probabilidades de los valores de <span class="math notranslate nohighlight">\(q\)</span>.  La siguiente tabla muestra como calcular tales probabilidades.</p>
+<p>Veamos cómo calcular las probabilidades de los valores de <span class="math notranslate nohighlight">\(q\)</span>.  La siguiente tabla muestra cómo calcular tales probabilidades.</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Valor</p></th>
@@ -945,9 +972,23 @@ p_q[2] &amp; = 0.432\\
 p_q[3] &amp; = 0.216 
 \end{align}
 \end{split}\]</div>
-<div class="section" id="ejercicio">
-<h4>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h4>
+</div>
+<div class="section" id="span-style-color-4cc9f0-ejercicio-span">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#span-style-color-4cc9f0-ejercicio-span" title="Permalink to this headline">¶</a></h3>
 <p>Verifique los cálculos de la tabla anterior y asegúrese de entender completamente.</p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install scipy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy in /opt/anaconda3/lib/python3.8/site-packages (1.7.1)
+Requirement already satisfied: numpy&lt;1.23.0,&gt;=1.16.5 in /opt/anaconda3/lib/python3.8/site-packages (from scipy) (1.20.3)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -978,7 +1019,7 @@ p_q[3] &amp; = 0.216
 </div>
 </div>
 <p>Note que la función de probabilidad de Bernoulli es un caso especial de la Binomial con <span class="math notranslate nohighlight">\(N=1\)</span>.</p>
-<p>Existe una formula general para la función de probabilidad de una variable Binomial. Si se supone que se hacen  <span class="math notranslate nohighlight">\(N\)</span> experimentos de Bernoulli realizados de manera independientes con la misma probabilidad de éxito (obtener 1), y se anota el número de unos (<em>éxitos</em>) obtenidos, entonces la probabilidad de obtener <span class="math notranslate nohighlight">\(k\)</span> éxitos es dada por</p>
+<p>Existe una fórmula general para la función de probabilidad de una variable Binomial. Si se supone que se hacen  <span class="math notranslate nohighlight">\(N\)</span> experimentos de Bernoulli realizados de manera independientes con la misma probabilidad de éxito (obtener 1), y se anota el número de unos (<em>éxitos</em>) obtenidos, entonces la probabilidad de obtener <span class="math notranslate nohighlight">\(k\)</span> éxitos es dada por</p>
 <div class="math notranslate nohighlight">
 \[
 p_{bin}[k] = \binom{N}{k}\pi^k(1-\pi)^{N-k},
@@ -989,30 +1030,20 @@ p_{bin}[k] = \binom{N}{k}\pi^k(1-\pi)^{N-k},
 <p>Recuerde que el combinatorio <span class="math notranslate nohighlight">\(\binom{N}{k}\)</span> es el número de grupos diferentes de tamaño <em>k</em> que se pueden formar teniendo <em>N</em> elementos. Consulte cualquier libro de probabilidad para los detalles matemáticos.</p>
 </div>
 </div>
-</div>
 <div class="section" id="span-style-color-4cc9f0-variable-poisson-distribucion-de-poisson-span">
-<h3><span style="color:#4CC9F0">Variable Poisson (Distribución de Poisson)</span><a class="headerlink" href="#span-style-color-4cc9f0-variable-poisson-distribucion-de-poisson-span" title="Permalink to this headline">¶</a></h3>
-<p>Esta distribución es utilizada en problemas de conteo. Por ejemplo el número de bacterias por unidad de área o volúmen encontradas en un cultivo microbiológico.</p>
+<span id="prob2-ej2"></span><h3><span style="color:#4CC9F0">Variable Poisson (Distribución de Poisson)</span><a class="headerlink" href="#span-style-color-4cc9f0-variable-poisson-distribucion-de-poisson-span" title="Permalink to this headline">¶</a></h3>
+<p>Esta distribución es utilizada en problemas de conteo. Por ejemplo el número de bacterias por unidad de área o volumen encontradas en un cultivo microbiológico.</p>
 <p>Una variable Poisson puede tomar teóricamente valores enteros entre cero e infinito. La función de probabilidad en este caso está dada por</p>
 <div class="math notranslate nohighlight">
 \[
 p_{poi}[k] = \frac{e^{\lambda}\lambda^k}{k!},\quad k=0,1, \ldots
 \]</div>
-<p>El valor <span class="math notranslate nohighlight">\(\lambda\)</span> se interpreta como la cantidad promedio de elementos encontrados por unidad de área, volúmem, etc.</p>
-</div>
-<div class="section" id="id1">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
-<ol class="simple">
-<li><p>Revise en cualquier libro de probabilidad y estadística ejemplos de aplicación de la distribución de Poisson.</p></li>
-<li><p>Investigue como calcular probabilidades de la distribución de Poisson con scipy de Python. Suponga que para algún caso <span class="math notranslate nohighlight">\(\lambda = 5.3\)</span>. Calcule las probabilidades para <span class="math notranslate nohighlight">\( k=0,1,\ldots, 20\)</span>. Haga un gráfico de la función de probabilidad con esos datos (obviamente es una aproximación de la función completa).</p></li>
-<li><p>Haga sus comentarios.</p></li>
-</ol>
-<p><span style="color:green">Consigne su solución aquí.</span></p>
+<p>El valor <span class="math notranslate nohighlight">\(\lambda\)</span> se interpreta como la cantidad promedio de elementos encontrados por unidad de área, volumen, etc.</p>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-variable-categoricas-span">
 <h2><span style="color:#4361EE">Variable categóricas</span><a class="headerlink" href="#span-style-color-4361ee-variable-categoricas-span" title="Permalink to this headline">¶</a></h2>
-<p>En esta sección vamos a suponer que la variable aleatoria no asigna valores numéricos a los elementos del espacio muestral. En lugar de eso, asigna etiquetas. Usualmente dice que en este caso la variable es en realidad un objeto aleatorio. No haremos esa distinción en este desarrollo, pero si seremos cuidadosos en tener en cuenta que la variable no es numérica.</p>
+<p>En esta sección vamos a suponer que la variable aleatoria no asigna valores numéricos a los elementos del espacio muestral. En lugar de eso, asigna etiquetas. Usualmente dice que en este caso la variable es en realidad un objeto aleatorio. No haremos esa distinción en este desarrollo, pero sí seremos cuidadosos en tener en cuenta que la variable no es numérica.</p>
 <p>Por facilidad usaremos de nuevo el ejemplo de los dados no cargados. Definimos la siguiente variable aleatoria que llamaremos  <span class="math notranslate nohighlight">\(X\)</span>. Para este ejercicio vamos a distinguir el color de los dados. Entonces en la pareja <span class="math notranslate nohighlight">\((x,y)\)</span>, <span class="math notranslate nohighlight">\(x\)</span> corresponde al valor del dado rojo. Adicionalmente <span class="math notranslate nohighlight">\(y\)</span> representa el valor del dado azul. Entonces</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -1049,7 +1080,7 @@ p_X[B] &amp;= \tfrac{6}{36}\\
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/prob2_49_0.png" src="_images/prob2_49_0.png" />
+<img alt="_images/prob2_46_0.png" src="_images/prob2_46_0.png" />
 </div>
 </div>
 <p>Obviamente en este caso no hay cantidades numéricas, por lo que el gráfico puede obtenerse de distintas formas, cambiando el orden de la etiquetas.  Sin embargo, aún podemos hacer algunos cálculos de probabilidad.</p>
@@ -1071,7 +1102,7 @@ p_X[B] &amp;= \tfrac{6}{36}\\
 \[
 \mathbb{E}[f] = \tfrac{1}{36}[2\times 1 + 3\times 2 + 4\times 3 + 5 \times 4 + 6\times 5 +  7\times 6 +8\times 5 + 9\times 4 + 10 \times 3 + 11 \times 2 + 12 \times 1 ] = 7.
 \]</div>
-<p>Puede tambien calcular la esperanza de <span class="math notranslate nohighlight">\(f\)</span> con numpy como sigue.</p>
+<p>Puede también calcular la esperanza de <span class="math notranslate nohighlight">\(f\)</span> con numpy como sigue.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
@@ -1087,7 +1118,7 @@ p_X[B] &amp;= \tfrac{6}{36}\\
 </div>
 <div class="section" id="span-style-color-4cc9f0-esperanza-de-la-distribucion-binomial-span">
 <h3><span style="color:#4CC9F0">Esperanza de la distribución Binomial</span><a class="headerlink" href="#span-style-color-4cc9f0-esperanza-de-la-distribucion-binomial-span" title="Permalink to this headline">¶</a></h3>
-<p>En el caso del ejemplo binomial de la moneda cargada que se lanza tres veces tenomos que</p>
+<p>En el caso del ejemplo binomial de la moneda cargada que se lanza tres veces tenemos que</p>
 <div class="math notranslate nohighlight">
 \[
 \mathbb{E}[f] = 0\times 0.064  + 1 \times 0.288 + 2 \times 0.432 + 3 \times 0.216= 1.8.
@@ -1099,17 +1130,13 @@ p_X[B] &amp;= \tfrac{6}{36}\\
 \]</div>
 <p>Puede consultar cualquier texto de probabilidad para verificar el resultado. El siguiente código muestra como calcular la esperanza para el caso <span class="math notranslate nohighlight">\(\text{Bin}(3,0.6)\)</span>, con Python.</p>
 </div>
-<div class="section" id="id2">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="id1">
+<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>De una interpretación al resultado anterior. Observe que 1.8 no corresponde a un valor que pueda tomar la variable aleatoria.</p>
 </div>
 <div class="section" id="span-style-color-4cc9f0-esperanza-de-la-distribucion-poisson-span">
-<h3><span style="color:#4CC9F0">Esperanza de la distribución Poisson</span><a class="headerlink" href="#span-style-color-4cc9f0-esperanza-de-la-distribucion-poisson-span" title="Permalink to this headline">¶</a></h3>
+<span id="prob2-ej3"></span><h3><span style="color:#4CC9F0">Esperanza de la distribución Poisson</span><a class="headerlink" href="#span-style-color-4cc9f0-esperanza-de-la-distribucion-poisson-span" title="Permalink to this headline">¶</a></h3>
 <p>Una variable aleatoria con distribución <span class="math notranslate nohighlight">\(\text{Pois}(\lambda)\)</span> tiene esperanza matemática <span class="math notranslate nohighlight">\(\lambda\)</span>.</p>
-</div>
-<div class="section" id="id3">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h3>
-<p>Verifique la afirmación anterior.</p>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-varianza-y-desviacion-estandar-de-una-variable-aleatoria-span">
@@ -1132,7 +1159,7 @@ Var[X] = \mathbb{E}[X-\mu_X]^2 = \sum_{i}p_i (x_i- \mu_X)^2.
 \[
 Var(X) = \pi(1-\pi).
 \]</div>
-<p>El siguiente gráfico muestra la varianza de las distribuiciones  Bernoulli con valorea distintos del parámetro <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
+<p>El siguiente gráfico muestra la varianza de las distribuciones  Bernoulli con valorea distintos del parámetro <span class="math notranslate nohighlight">\(\pi\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -1149,10 +1176,10 @@ Var(X) = \pi(1-\pi).
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/prob2_69_0.png" src="_images/prob2_69_0.png" />
+<img alt="_images/prob2_64_0.png" src="_images/prob2_64_0.png" />
 </div>
 </div>
-<p>Se observa entonces que la máxima varianza se alcanza para el caso <span class="math notranslate nohighlight">\(\pi=0.5\)</span>. Es porque en este caso, es mas difícil predecir el resultado del experimento, dado que la probabilidad de <em>acierto</em> y <em>fallo</em> son la misma. Pero a medida que el valor <span class="math notranslate nohighlight">\(\pi\)</span> está cerca de  cero o uno, la varianza desciende hasta cero. Por ejemplo si <span class="math notranslate nohighlight">\(\pi = 0.9\)</span>, casi siempre se obtendrá <em>exito</em>. Esto siginifica que la variable es más predictible para valores muy altos o muy bajos de <span class="math notranslate nohighlight">\(\pi\)</span>. <strong>A menor varianza mayor precisión para predecir el resultado del experimento y viceversa</strong>.</p>
+<p>Se observa entonces que la máxima varianza se alcanza para el caso <span class="math notranslate nohighlight">\(\pi=0.5\)</span>. Es porque en este caso, es mas difícil predecir el resultado del experimento, dado que la probabilidad de <em>acierto</em> y <em>fallo</em> son la misma. Pero a medida que el valor <span class="math notranslate nohighlight">\(\pi\)</span> está cerca de  cero o uno, la varianza desciende hasta cero. Por ejemplo si <span class="math notranslate nohighlight">\(\pi = 0.9\)</span>, casi siempre se obtendrá <em>exito</em>. Esto significa que la variable es más predictible para valores muy altos o muy bajos de <span class="math notranslate nohighlight">\(\pi\)</span>. <strong>A menor varianza mayor precisión para predecir el resultado del experimento y viceversa</strong>.</p>
 </div>
 </div>
 <div class="section" id="span-style-color-4361ee-entropia-de-una-variable-aleatoria-span">
@@ -1180,11 +1207,18 @@ H(X) = -\sum_i p_i\log p_i = -\mathbb{E}[\log P_X]
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="_images/prob2_73_0.png" src="_images/prob2_73_0.png" />
+<img alt="_images/prob2_68_0.png" src="_images/prob2_68_0.png" />
 </div>
 </div>
 <p>Como se observa la entropía mide de la misma forma que la varianza pero en una escala diferente. Por otro lado observe que en el cálculo de la entropía no se utilizan los valores que toma la variable aleatoria. Solamente se requiere la función de probabilidad de la variable.</p>
 <p>En palabras se dice que <strong>la entropía no depende de la escala de la  variable</strong>. Solamente de su estructura de probabilidad. Por su parte la varianza si es dependiente de la escala de la variable aleatoria.</p>
+</div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
 </div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
 <h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
@@ -1195,8 +1229,8 @@ H(X) = -\sum_i p_i\log p_i = -\mathbb{E}[\log P_X]
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1214,36 +1248,27 @@ H(X) = -\sum_i p_i\log p_i = -\mathbb{E}[\log P_X]
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="prob1.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span style="color:#F72585">Conceptos básicos de probabilidad</span></p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="prob1.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Conceptos básicos de probabilidad</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="prob3.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Probabilidad Conjunta y Entropía Cruzada</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="prob3.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Probabilidad Conjunta y Entropía Cruzada</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -1259,8 +1284,7 @@ H(X) = -\sum_i p_i\log p_i = -\mathbb{E}[\log P_X]
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>

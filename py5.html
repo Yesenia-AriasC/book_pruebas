@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Introducción a Clases en Python &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,21 +75,25 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Introducción a Decoradores (Decorators) en Python" href="py6.html" />
     <link rel="prev" title="Inspección, Instalación y Carga de Módulos y Paquetes" href="py4.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -106,6 +110,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -120,11 +128,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -158,8 +168,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -222,7 +239,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -295,8 +312,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fpy5.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/py5.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -314,7 +336,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/py5.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/py5.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -322,6 +344,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/py5.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -443,27 +473,6 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-style-color-4361ee-asesora-medios-y-marketing-digital-span">
-   <span style="color:#4361EE">
-    Asesora Medios y Marketing digital
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-style-color-4361ee-espacio-asistentes-span">
-   <span style="color:#4361EE">
-    Espacio Asistentes
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#span-style-color-4361ee-bibliografia-span">
-   <span style="color:#4361EE">
-    Bibliografía
-   </span>
-  </a>
- </li>
- <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
    <span style="color:#4361EE">
     Comentarios
@@ -481,7 +490,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-introduccion-a-clases-en-python-span">
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-introduccion-a-clases-en-python-span">
 <span id="py5"></span><h1><span style="color:#F72585">Introducción a Clases en Python</span><a class="headerlink" href="#span-style-color-f72585-introduccion-a-clases-en-python-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-introduccion-span">
 <h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
@@ -523,7 +532,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Usuario at 0x7fc1a16c0dc0&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;__main__.Usuario at 0x7f95903f9ac0&gt;
 </pre></div>
 </div>
 </div>
@@ -557,7 +566,7 @@ Profundo
 <p>Los datos adjuntados a un objeto se les llaman <strong>atributos</strong></p>
 <div class="warning admonition">
 <p class="admonition-title">OJO</p>
-<p>nombre y apellido no son variables existentes en el ambiente de trabajo.</p>
+<p>Nombre y apellido no son variables existentes en el ambiente de trabajo.</p>
 </div>
 <div class="tip admonition">
 <p class="admonition-title">Consejo</p>
@@ -576,7 +585,7 @@ Profundo
 </div>
 </div>
 </div>
-<p>Una bonita consecuencia, es que podemos crear muchos objetos con campos del mismo nombre sin tener que defiinir una variable diferente para cada dato adjuntado del objeto.</p>
+<p>Una bonita consecuencia, es que podemos crear muchos objetos con campos del mismo nombre sin tener que definir una variable diferente para cada dato adjuntado del objeto.</p>
 <p>Hagamos otro objeto:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,7 +620,7 @@ Profundo
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">8</span><span class="o">-</span><span class="mi">6</span><span class="n">bb84ccb0dba</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">folders</span><span class="o">/</span><span class="n">w7</span><span class="o">/</span><span class="n">ws1ycc_x4ldf54pl86v3j8xr0000gn</span><span class="o">/</span><span class="n">T</span><span class="o">/</span><span class="n">ipykernel_79189</span><span class="o">/</span><span class="mf">456201229.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># u1 no tiene edad asginada</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">u1</span><span class="o">.</span><span class="n">edad</span>
 
@@ -954,7 +963,7 @@ Profundo
 <li><p><code class="docutils literal notranslate"><span class="pre">__name__</span></code>: nombre de la clase</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__module__</span></code>: módulo al cual pertenece la clase</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">__bases__</span></code>: clases base de ésta clase</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">__dict__</span></code>: diccionario conteniendo un conjunto <em>clave/valor</em> con todos los atributos de la clase incluídos los métodos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">__dict__</span></code>: diccionario conteniendo un conjunto <em>clave/valor</em> con todos los atributos de la clase incluidos los métodos.</p></li>
 </ul>
 <p>Los atributos intrínsecos de los objetos son:</p>
 <ul class="simple">
@@ -1093,22 +1102,6 @@ Profundo
 <li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
 </ol>
 </div>
-<div class="section" id="span-style-color-4361ee-asesora-medios-y-marketing-digital-span">
-<h2><span style="color:#4361EE">Asesora Medios y Marketing digital</span><a class="headerlink" href="#span-style-color-4361ee-asesora-medios-y-marketing-digital-span" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Maria del Pilar Montenegro, <a class="reference external" href="mailto:pmontenegro88&#37;&#52;&#48;gmail&#46;com">pmontenegro88<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
-</ol>
-</div>
-<div class="section" id="span-style-color-4361ee-espacio-asistentes-span">
-<h2><span style="color:#4361EE">Espacio Asistentes</span><a class="headerlink" href="#span-style-color-4361ee-espacio-asistentes-span" title="Permalink to this headline">¶</a></h2>
-<ol class="simple">
-<li><p>Oleg Jarma, <a class="reference external" href="mailto:ojarmam&#37;&#52;&#48;unal&#46;edu&#46;co">ojarmam<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
-<li><p>Laura Lizarazo, <a class="reference external" href="mailto:ljlizarazore&#37;&#52;&#48;unal&#46;edu&#46;co">ljlizarazore<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
-</ol>
-</div>
-<div class="section" id="span-style-color-4361ee-bibliografia-span">
-<h2><span style="color:#4361EE">Bibliografía</span><a class="headerlink" href="#span-style-color-4361ee-bibliografia-span" title="Permalink to this headline">¶</a></h2>
-</div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
 <h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -1118,8 +1111,8 @@ Profundo
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -1137,36 +1130,27 @@ Profundo
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="py4.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span style="color:#F72585">Inspección, Instalación y Carga de Módulos y Paquetes</span></p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="py4.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Inspección, Instalación y Carga de Módulos y Paquetes</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="py6.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Introducción a Decoradores (Decorators) en Python</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="py6.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Introducción a Decoradores (Decorators) en Python</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -1182,8 +1166,7 @@ Profundo
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
