@@ -215,14 +215,4 @@ print(p)
 # 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
 # 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
-# ## <span style="color:#4361EE">Asesora Medios y Marketing digital</span>
-#  
-
-# 4. Maria del Pilar Montenegro, pmontenegro88@gmail.com 
-
-# ## <span style="color:#4361EE">Asistentes</span>
-
-# 1. Oleg Jarma, ojarmam@unal.edu.co 
-# 1. Laura Lizarazo, ljlizarazore@unal.edu.co 
-
 # ## <span style="color:#4361EE">Comentarios</span>

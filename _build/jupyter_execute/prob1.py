@@ -10,7 +10,7 @@
 
 # En esta sección se introducen los conceptos básicos de probabilidad requeridos para entender la inteligencia artificial. 
 # 
-# El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentar los cálculos que se consideran necesarios para entender el concepto.
+# El propósito es presentar el lenguaje utilizado. No se hará ningún desarrollo matemático formal. Solamente se presentarán los cálculos que se consideran necesarios para entender el concepto.
 
 # ## <span style="color:#4361EE">Espacio muestral</span>
 # 
@@ -55,6 +55,7 @@
 # Ejemplos de **eventos** del Espacio Muestral
 # :::
 
+# (prob1:ej1)=
 # ## <span style="color:#4361EE">Probabilidad</span>
 # 
 # 
@@ -96,14 +97,6 @@
 # $$
 # \text{Prob}[\text{azul}\cup\text{pares}] = 5/20 + 10/20 - 3/20 = 12/20
 # $$
-
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Que piensa de la siguiente afirmación. ¿Verdadero o falso? Justifique su respuesta.
-# 
-# Si $A$ y $B$ son conjuntos disyuntos, entonces $\text{Prob}[A\cap B] = 0$.
-
-# _Por favor comente su respuesta._
 
 # ### <span style="color:#4CC9F0">Medida de todo el espacio muestral</span>
 
@@ -148,6 +141,7 @@
 # 
 # En nuestro ejemplo $impares^c= pares$. Entonces $Prob[\text{impares} ] = 1- 9/20 = 11/20$. Por favor verifica este resultado.
 
+# (prob1:ej2)=
 # ## <span style="color:#4361EE">Probabilidad condicional</span>
 
 # El concepto de probabilidad condicional es de vital importancia en el estudio del aprendizaje profundo y la inteligencia artificial.
@@ -184,12 +178,6 @@
 # \text{Prob}(\text{par}|\text{azul}) = \frac{\text{Prob}[\text{par}\cap \text{azul}]}{\text{Prob}[\text{azul}]}
 # $$
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Imagínese como se podría verificar esta última ecuación.  Calcule $\text{Prob}(\text{par}|\text{azul})$ usando la dicha ecuación.
-
-# _Por favor comente su respuesta._
-
 # :::{admonition} Importante
 # :class: tip
 # Esta es una regla general, que se enuncia así: 
@@ -221,6 +209,7 @@
 # 
 # Esto está de acuerdo con la ilustración de los evento del espacio muestral exhibidos arriba.
 
+# (prob1:ej3)=
 # ## <span style="color:#4361EE">Independencia</span>
 
 # Dos eventos $A$ y $B$ del espacio muestral $\mathcal{M}$ se dicen independientes si
@@ -237,29 +226,10 @@
 # \text{Prob}[A| B] = \text{Prob}[A].
 # $$
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
+# ## <span style="color:#4361EE">Autores</span>
 
-# Por favor verifique esta última afirmación.
-
-# _Por favor comente su respuesta._
-
-# ## <span style="color:#4361EE">Ejercicios</span>
-
-# Considere el siguiente experimento. Se lanzan dos dados no cargados de seis caras cada uno. El resultado del experimento es una pareja de números. Por ejemplo $(5,6)$.
-
-# ```{figure} https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png
-# :height: 150px
-# :name: dos-dados
-# 
-# Fuente ...
-# ```
-
-# 1. Haga una tabla, usando Markdown con todo el espacio muestral $\mathcal{M}$. Ayuda: son 36 elementos.
-# 2. ¿Cuántos eventos son posibles? Use Python para hacer el cálculo 2^36
-# 2. Calcule la probabilidad de obtener 2,3,... 12.
-# 3. Calcule la probabilidad de obtener un número par.
-# 4. Compruebe que la probabilidad de obtener 5 en el dado azul es 1/5 y que este evento es independiente del valor obtenido en el dado rojo.
-# 4. Escriba un programa Python que construya un tensor de dimensión 2 y que contenga los 36 posibles resultados. Consulte  sobre como se hace un ciclo for en Python.
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # ```{raw} html

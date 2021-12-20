@@ -8,7 +8,7 @@
 
 # ## <span style="color:#4361EE">Ejemplo de los dados</span>
 
-# Recordemos el ejercicio de la sección anterior {ref}`1:prob1`. La imagen muestra dos dados de seis caras de distinto color. 
+# Recordemos el ejercicio de la sección anterior {ref}`prob:ej1`. La imagen muestra dos dados de seis caras de distinto color. 
 
 # 
 # ```{figure} https://raw.githubusercontent.com/Yesenia-AriasC/PRT/master/dos_dados.png
@@ -49,24 +49,19 @@
 # 
 # En el espacio muestral de los dos dados de seis lados, se pueden definir muchas variables aleatorias. Considere por ejemplo la variable aleatoria definida por $g(x,y) = x\times y$.
 
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Considere el ejemplo del espacio muestral de los dos dados de seis caras, no cargados. 
-# 
-# 1. Construya la tabla completa de los posibles resultados de de las funcioens $f$ y $g$.
-# 2. Proponga otra variable aleatoria definida sobre el espacio muestral $\mathcal{M}$.
-# 
-# Ayuda: Use Python. Construya primero la tabla que representa el espacio muestral, en un tensor $36\times 2$. En otro tensor construya los respectivos valores de la función.
-
-# <span style="color:green">Consigne su solución comentando aquí.</span>
-
 # In[1]:
+
+
+get_ipython().system('pip install numpy')
+
+
+# In[2]:
 
 
 import numpy as np
 
 
-# In[19]:
+# In[3]:
 
 
 # espacio muestral
@@ -98,7 +93,7 @@ for k in range(36):
 # 
 # Entonces tenemos lo siguiente: 36 posibles valores, pero solamente 11 diferentes.  El siguiente fragmento de código muestra como obtener los posibles valores diferentes que toma la variable aleatoria $f$.
 
-# In[2]:
+# In[4]:
 
 
 print(np.unique(f))
@@ -106,9 +101,9 @@ print(np.unique(f))
 
 # ### <span style="color:#4CC9F0">Función Python para calcular una tabla de frecuencias</span>
 
-# La siguiente función muestra un camino de como calcular la tabla de frecuencias de un conjunto de datos, puestos en una lista de Python. No es la única forma. Investigue otras formas de hacerlo.
+# La siguiente función muestra un camino de cómo calcular la tabla de frecuencias de un conjunto de datos, puestos en una lista de Python. No es la única forma. Investigue otras formas de hacerlo.
 
-# In[3]:
+# In[5]:
 
 
 # Función Python para contar los elementos la fecuencia
@@ -129,7 +124,7 @@ def CountFrequency(my_list):
 
 # Asegúrese de entender completamente el código. Vamos a probar la función con dos ejemplos. Primero calculamos la frecuencia de los valores de la variable aleatoria $f$.
 
-# In[4]:
+# In[6]:
 
 
 frec = CountFrequency(f)   
@@ -142,7 +137,7 @@ frec
 
 # Podemos manipular directamente los valores del diccionario. Por ejemplo para calcular la frecuencia de 7, que ya sabemos es 6, se escribe.
 
-# In[5]:
+# In[7]:
 
 
 frec[7]
@@ -150,7 +145,7 @@ frec[7]
 
 # En un segundo ejemplo, consideremos el conjunto $ W= \{A,B,B,C,A,A \}$
 
-# In[6]:
+# In[8]:
 
 
 W = ['A','B','B','C','A','A']
@@ -186,7 +181,13 @@ frec['B']
 # 
 # Podemos obtener una imagen de la función, utilizando un histograma. Un histograma es un gráfico de una función de probabilidad de una variable numérica. El siguiente código Python muestra como construir un histograma de la variable aleatoria *f*.
 
-# In[7]:
+# In[9]:
+
+
+get_ipython().system('pip install matplotlib ')
+
+
+# In[10]:
 
 
 import matplotlib.pyplot as plt
@@ -199,7 +200,7 @@ plt.show()
 
 # ### <span style="color:#4CC9F0">Cálculo de algunas probabilidades</span>
 
-# Dado que la variable aleatoria $f$ es númerica, podemos calcular la probabilidad de diferentes eventos del espacio muestral, basados en el valor de $f$. Veámos algunos ejemplos.
+# Dado que la variable aleatoria $f$ es numérica, podemos calcular la probabilidad de diferentes eventos del espacio muestral, basados en el valor de $f$. Veamos algunos ejemplos.
 # 
 # $$
 # \begin{align}
@@ -214,7 +215,7 @@ plt.show()
 
 # ## <span style="color:#4361EE">Interpretación de la función de probabilidad</span>
 
-# Supongamos que el experimento de lanzar se repite muchas veces. Digamos 100 veces. Como la probabilidad de obtener digmamos $f=7$ es $6/36$, entonces lo que se espera que ocurra es que en los 100 lanzamientos se obtenga un valor cercano a 
+# Supongamos que el experimento de lanzar se repite muchas veces. Digamos 100 veces. Como la probabilidad de obtener digamos $f=7$ es $6/36$, entonces lo que se espera que ocurra es que en los 100 lanzamientos se obtenga un valor cercano a 
 # 
 # $$
 # \text{Número de veces que se espera que ocurra }\{f=7\} = \tfrac{6}{36}\times 100 \approx 17.
@@ -243,7 +244,7 @@ plt.show()
 # 
 # Asegúrese de entender la fórmula anterior.
 # 
-# Un ejemplo es el siguiente. En el experimento del lanzamiento dados no cargados, definimos la variable aleatoria $g$ como sigue:
+# Un ejemplo es el siguiente. En el experimento del lanzamiento de dados no cargados, definimos la variable aleatoria $g$ como sigue:
 # 
 # $$
 # g = \begin{cases} &1, \text{ si  la suma de los dos dados es par} \\
@@ -253,6 +254,7 @@ plt.show()
 # 
 # Verifique que en este caso $\pi =18/36=1/2$.
 
+# 
 # ### <span style="color:#4CC9F0">Variable Binomial (Distribución Binomial)</span>
 
 # Consideremos la variable aleatoria $g$ definida arriba. Pero ahora vamos a considerar que hacemos el experimento digamos $N=3$ veces y contamos el número de veces en que $g=1$. Por otro lado vamos a suponer que que hay un sesgo en el experimento (una especie de dados cargados y se verifica que $\text{Prob}[g=1] = 0.6$. Por lo tanto se tiene que $\text{Prob}[g=0] = 0.4$.
@@ -260,7 +262,7 @@ plt.show()
 # 
 # Entonces obtenemos una variable aleatoria que llamaremos $q$ y diremos que $q$ es una variable Binomial. La función de probabilidad de la variable aleatoria $q$ es dada por extensión como sigue. La variable $q$ toma 4 posibles valores, $q = \{0,1,2,3\}$
 # 
-# Veamos como calcular las probabilidades de los valores de $q$.  La siguiente tabla muestra como calcular tales probabilidades.
+# Veamos cómo calcular las probabilidades de los valores de $q$.  La siguiente tabla muestra cómo calcular tales probabilidades.
 # 
 # |Valor |Experimentos| probabilidad cada experimento| probabilidad para este valor de f| total|
 # |---|---|---| ---|---|
@@ -285,11 +287,17 @@ plt.show()
 # \end{align}
 # $$
 
-# #### Ejercicio
+#  ### <span style="color:#4CC9F0">Ejercicio</span>
 
 # Verifique los cálculos de la tabla anterior y asegúrese de entender completamente.
 
-# In[8]:
+# In[11]:
+
+
+get_ipython().system('pip install scipy')
+
+
+# In[12]:
 
 
 import numpy as np
@@ -313,7 +321,7 @@ plt.show()
 
 # Note que la función de probabilidad de Bernoulli es un caso especial de la Binomial con $N=1$.
 # 
-# Existe una formula general para la función de probabilidad de una variable Binomial. Si se supone que se hacen  $N$ experimentos de Bernoulli realizados de manera independientes con la misma probabilidad de éxito (obtener 1), y se anota el número de unos (*éxitos*) obtenidos, entonces la probabilidad de obtener $k$ éxitos es dada por
+# Existe una fórmula general para la función de probabilidad de una variable Binomial. Si se supone que se hacen  $N$ experimentos de Bernoulli realizados de manera independientes con la misma probabilidad de éxito (obtener 1), y se anota el número de unos (*éxitos*) obtenidos, entonces la probabilidad de obtener $k$ éxitos es dada por
 # 
 # $$
 # p_{bin}[k] = \binom{N}{k}\pi^k(1-\pi)^{N-k},
@@ -327,9 +335,10 @@ plt.show()
 # Recuerde que el combinatorio $\binom{N}{k}$ es el número de grupos diferentes de tamaño *k* que se pueden formar teniendo *N* elementos. Consulte cualquier libro de probabilidad para los detalles matemáticos.
 # ```
 
+# (prob2:ej2)=
 #  ### <span style="color:#4CC9F0">Variable Poisson (Distribución de Poisson)</span>
 
-# Esta distribución es utilizada en problemas de conteo. Por ejemplo el número de bacterias por unidad de área o volúmen encontradas en un cultivo microbiológico.
+# Esta distribución es utilizada en problemas de conteo. Por ejemplo el número de bacterias por unidad de área o volumen encontradas en un cultivo microbiológico.
 # 
 # Una variable Poisson puede tomar teóricamente valores enteros entre cero e infinito. La función de probabilidad en este caso está dada por
 # 
@@ -337,20 +346,12 @@ plt.show()
 # p_{poi}[k] = \frac{e^{\lambda}\lambda^k}{k!},\quad k=0,1, \ldots
 # $$
 # 
-# El valor $\lambda$ se interpreta como la cantidad promedio de elementos encontrados por unidad de área, volúmem, etc. 
+# El valor $\lambda$ se interpreta como la cantidad promedio de elementos encontrados por unidad de área, volumen, etc. 
 # 
-
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# 1. Revise en cualquier libro de probabilidad y estadística ejemplos de aplicación de la distribución de Poisson. 
-# 2. Investigue como calcular probabilidades de la distribución de Poisson con scipy de Python. Suponga que para algún caso $\lambda = 5.3$. Calcule las probabilidades para $ k=0,1,\ldots, 20$. Haga un gráfico de la función de probabilidad con esos datos (obviamente es una aproximación de la función completa).
-# 3. Haga sus comentarios.
-
-# <span style="color:green">Consigne su solución aquí.</span>
 
 # ## <span style="color:#4361EE">Variable categóricas</span>
 
-# En esta sección vamos a suponer que la variable aleatoria no asigna valores numéricos a los elementos del espacio muestral. En lugar de eso, asigna etiquetas. Usualmente dice que en este caso la variable es en realidad un objeto aleatorio. No haremos esa distinción en este desarrollo, pero si seremos cuidadosos en tener en cuenta que la variable no es numérica.
+# En esta sección vamos a suponer que la variable aleatoria no asigna valores numéricos a los elementos del espacio muestral. En lugar de eso, asigna etiquetas. Usualmente dice que en este caso la variable es en realidad un objeto aleatorio. No haremos esa distinción en este desarrollo, pero sí seremos cuidadosos en tener en cuenta que la variable no es numérica.
 # 
 # Por facilidad usaremos de nuevo el ejemplo de los dados no cargados. Definimos la siguiente variable aleatoria que llamaremos  $X$. Para este ejercicio vamos a distinguir el color de los dados. Entonces en la pareja $(x,y)$, $x$ corresponde al valor del dado rojo. Adicionalmente $y$ representa el valor del dado azul. Entonces 
 # 
@@ -375,7 +376,7 @@ plt.show()
 # 
 # Aún podemos hacer un gráfico de la función de probabilidad $p_X$ como sigue.
 
-# In[9]:
+# In[13]:
 
 
 import numpy as np
@@ -418,9 +419,9 @@ plt.show()
 # 
 # 
 # 
-# Puede tambien calcular la esperanza de $f$ con numpy como sigue.
+# Puede también calcular la esperanza de $f$ con numpy como sigue.
 
-# In[11]:
+# In[14]:
 
 
 np.mean(f)
@@ -428,7 +429,7 @@ np.mean(f)
 
 # ### <span style="color:#4CC9F0">Esperanza de la distribución Binomial</span>
 
-# En el caso del ejemplo binomial de la moneda cargada que se lanza tres veces tenomos que
+# En el caso del ejemplo binomial de la moneda cargada que se lanza tres veces tenemos que
 # 
 # $$
 # \mathbb{E}[f] = 0\times 0.064  + 1 \times 0.288 + 2 \times 0.432 + 3 \times 0.216= 1.8.
@@ -448,13 +449,10 @@ np.mean(f)
 
 # De una interpretación al resultado anterior. Observe que 1.8 no corresponde a un valor que pueda tomar la variable aleatoria.
 
+# (prob2:ej3)=
 # ### <span style="color:#4CC9F0">Esperanza de la distribución Poisson</span>
 
 # Una variable aleatoria con distribución $\text{Pois}(\lambda)$ tiene esperanza matemática $\lambda$. 
-
-# ### <span style="color:#4CC9F0">Ejercicio</span>
-
-# Verifique la afirmación anterior.
 
 # ## <span style="color:#4361EE"> Varianza y desviación estándar de una variable aleatoria</span>
 
@@ -479,9 +477,9 @@ np.mean(f)
 # Var(X) = \pi(1-\pi).
 # $$
 # 
-# El siguiente gráfico muestra la varianza de las distribuiciones  Bernoulli con valorea distintos del parámetro $\pi$.
+# El siguiente gráfico muestra la varianza de las distribuciones  Bernoulli con valorea distintos del parámetro $\pi$.
 
-# In[ ]:
+# In[15]:
 
 
 import numpy as np
@@ -496,7 +494,7 @@ plt.ylabel('Var')
 plt.show()
 
 
-# Se observa entonces que la máxima varianza se alcanza para el caso $\pi=0.5$. Es porque en este caso, es mas difícil predecir el resultado del experimento, dado que la probabilidad de *acierto* y *fallo* son la misma. Pero a medida que el valor $\pi$ está cerca de  cero o uno, la varianza desciende hasta cero. Por ejemplo si $\pi = 0.9$, casi siempre se obtendrá *exito*. Esto siginifica que la variable es más predictible para valores muy altos o muy bajos de $\pi$. **A menor varianza mayor precisión para predecir el resultado del experimento y viceversa**.
+# Se observa entonces que la máxima varianza se alcanza para el caso $\pi=0.5$. Es porque en este caso, es mas difícil predecir el resultado del experimento, dado que la probabilidad de *acierto* y *fallo* son la misma. Pero a medida que el valor $\pi$ está cerca de  cero o uno, la varianza desciende hasta cero. Por ejemplo si $\pi = 0.9$, casi siempre se obtendrá *exito*. Esto significa que la variable es más predictible para valores muy altos o muy bajos de $\pi$. **A menor varianza mayor precisión para predecir el resultado del experimento y viceversa**.
 
 # ## <span style="color:#4361EE">Entropía de una variable aleatoria</span>
 
@@ -510,7 +508,7 @@ plt.show()
 # 
 # Como en el caso de la varianza ilustramos el concepto para la distribución Bernoulli.
 
-# In[15]:
+# In[16]:
 
 
 import numpy as np
@@ -528,6 +526,11 @@ plt.show()
 # Como se observa la entropía mide de la misma forma que la varianza pero en una escala diferente. Por otro lado observe que en el cálculo de la entropía no se utilizan los valores que toma la variable aleatoria. Solamente se requiere la función de probabilidad de la variable. 
 # 
 # En palabras se dice que **la entropía no depende de la escala de la  variable**. Solamente de su estructura de probabilidad. Por su parte la varianza si es dependiente de la escala de la variable aleatoria.
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

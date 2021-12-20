@@ -37,13 +37,19 @@
 # 
 # El tipo de valores que puede contener un vector debe ser de la misma clase por convención. Por ejemplo, si $w$ es un vector de números reales, entonces *z=(3.2, 1.5, -7.2,0.0)* es un vector real de tamaño cuatro. Matemáticamente se dice el vector *z* tiene dimensión cuatro. En otras palabras, la dimension matemática de un vector es su tamaño.
 # 
-# El contenido y tipo de datos de un vector depende del contexto en que se está utilizando. Supongamos que se trata de construir una máquina de aprendizaje profundo que idenfique digitos escritos a mano. Lo que se acostumbra a hacer es digitalizar las imágenes correspondientes. 
+# El contenido y tipo de datos de un vector depende del contexto en que se está utilizando. Supongamos que se trata de construir una máquina de aprendizaje profundo que identifique digitos escritos a mano. Lo que se acostumbra a hacer es digitalizar las imágenes correspondientes. 
 
 # ### <span style="color:#4CC9F0">Ejemplo en Numpy</span> 
 
 # En [NumPy](https://numpy.org/) el vector $w =(1,2,3)$ se puede crear así:
 
 # In[1]:
+
+
+get_ipython().system('pip install numpy matplotlib')
+
+
+# In[2]:
 
 
 import numpy as np
@@ -61,7 +67,7 @@ print(w.shape)
 # 
 # El siguiente código dibuja algunos vectores en $\mathbf{R}^2$. Los  matemáticos dicen que estos objetos geométricos tienen dimensión geométrica 2. Por favor revisa cada línea del código para estar seguro que lo entiende.
 
-# In[2]:
+# In[3]:
 
 
 import numpy as np
@@ -97,7 +103,7 @@ plt.show()
 # ## <span style="color:#4361EE">Aritmética básica de tensores unidimensionales</span>
 # 
 
-# Mientras no se diga lo contrario, asumiremos que los tensores que usaremos tienen el mismo tamaño. Por facilidad, en las definciones usaremos tensores unidimensionales de tamaño $n=3$. En realidad el tamaño de los tensores unidimensioanles puede ser cualquier número entero $n$ y las definciones se generalizan de forma obvia.
+# Mientras no se diga lo contrario, asumiremos que los tensores que usaremos tienen el mismo tamaño. Por facilidad, en las definiciones usaremos tensores unidimensionales de tamaño $n=3$. En realidad el tamaño de los tensores unidimensionales puede ser cualquier número entero $n$ y las definiciones se generalizan de forma obvia.
 
 # Supongamos que $a= (a_1,a_2,a_3)$ y $b=(b_1,b_2,b_3)$ son dos vectores. La suma entre $a$ Y $b$ es un vector $c$ definido por
 # 
@@ -107,7 +113,7 @@ plt.show()
 # 
 # En Python escribimos
 
-# In[35]:
+# In[4]:
 
 
 a = np.array([1,2,3])
@@ -116,13 +122,13 @@ c = a + b
 print(c)
 
 
-# Similarmente la diferencia  de vectors $a-b$ es definida por
+# Similarmente la diferencia  de vectores $a-b$ es definida por
 # 
 # $$
 # c = a-b = (a_1-b_1, a_2-b_2,a_3-b_3)
 # $$
 
-# In[36]:
+# In[5]:
 
 
 a = np.array([1,2,3])
@@ -131,7 +137,7 @@ c = a - b
 print(c)
 
 
-# El producto de Hadamard, o producto elemento by elemento entre dos vectores se donota $a \odot b$ y se define como
+# El producto de Hadamard, o producto elemento by elemento entre dos vectores se denota $a \odot b$ y se define como
 # 
 # $$
 # c = a\odot b = (a_1*b_1, a_2*b_2,a_3*b_3).
@@ -140,7 +146,7 @@ print(c)
 # En Python el producto de Hadamard se implementa simplemente usando el operador de multiplicación (*). Veamos
 # 
 
-# In[37]:
+# In[6]:
 
 
 a = np.array([1,2,3])
@@ -151,7 +157,7 @@ print(c)
 
 # La división entre vectores no es una operación formalmente definida. En ocasiones sin embargo se requiere dividir los elementos de un vector entre los elementos de otro, elemento a elemento. Esta operación se implementa en Python simplemente usando el operador división (/)
 
-# In[38]:
+# In[7]:
 
 
 a = np.array([1,2,3])
@@ -179,7 +185,7 @@ print(c)
 # 
 # El tensor $M$ se representa en NumPy de la siguiente forma:
 
-# In[39]:
+# In[8]:
 
 
 import numpy as np
@@ -201,7 +207,7 @@ M.shape
 
 # La función *empty()* crea un arreglo de la forma especificada. 
 
-# In[40]:
+# In[9]:
 
 
 v = np.empty([2,3])
@@ -209,14 +215,14 @@ print(v)
 print(v.shape)
 
 
-# Observe que *v* es un tensor que tiene forma (shape) *2x2*. En NumPy un tensor está compuesto por uno más tesnsores. La dimensión del tensor *v* es 2. Se requiere un objeto de doble entrada para representar un tensor bidimensional. Los rangos de este tensor son $(2,3)$. Observe que el arreglo es representado como una lista con dos elementos, cada uno de los cuales es un arreglo de rango 3.
+# Observe que *v* es un tensor que tiene forma (shape) *2x2*. En NumPy un tensor está compuesto por uno más tensores. La dimensión del tensor *v* es 2. Se requiere un objeto de doble entrada para representar un tensor bidimensional. Los rangos de este tensor son $(2,3)$. Observe que el arreglo es representado como una lista con dos elementos, cada uno de los cuales es un arreglo de rango 3.
 
 # ### <span style="color:#4CC9F0">Tensor de ceros</span>
 # 
 
 # La función *zeros()* crea un arreglo de la forma especificada relleno de ceros.
 
-# In[41]:
+# In[10]:
 
 
 w = np.zeros([3,2])
@@ -227,7 +233,7 @@ print(w)
 
 # La función *ones()* crea un arreglo de la forma especificada relleno de unos.
 
-# In[42]:
+# In[11]:
 
 
 w = np.ones([2,2])
@@ -238,7 +244,7 @@ print(w)
 
 # **Vertical**. Con la función *vstack()*
 
-# In[43]:
+# In[12]:
 
 
 v = np.ones([2,3])
@@ -250,7 +256,7 @@ print(z.shape)
 
 # **horizontal**. Con la función *hstack()*
 
-# In[44]:
+# In[13]:
 
 
 v = np.ones([2,3])
@@ -268,7 +274,7 @@ print(z.shape)
 # 
 # Para completar de entender la indexación y rebanado de arreglos, observe el siguiente ejemplo. Asegúrese de entender completamente la lógica.
 
-# In[45]:
+# In[14]:
 
 
 a = np.array([[[1,2],[3,4],[5,6]],[[7,8],[9,10],[11,12]],[[13,14],[15,16],[17,18]],
@@ -289,9 +295,9 @@ print('a =',a)
 # ## <span style="color:#4361EE">Algebra Tensorial</span>
 # 
 
-# Numpy esta preparado para trabajar las operaciones ordinarias del álgebra lineal y más extendidamente del álgebra tensorial directamente. Los siguientes ejemplos mustran como sumar,....
+# Numpy esta preparado para trabajar las operaciones ordinarias del álgebra lineal y más extendidamente del álgebra tensorial directamente. Los siguientes ejemplos muestran como sumar,....
 
-# In[46]:
+# In[15]:
 
 
 # Tensor-operations
@@ -302,7 +308,7 @@ print(a)
 # Observe that has 3 layers of shape 2*3
 
 
-# In[47]:
+# In[16]:
 
 
 # multiply a by -1
@@ -311,7 +317,7 @@ print(b.shape)
 print(b)
 
 
-# In[48]:
+# In[17]:
 
 
 # sum
@@ -320,7 +326,7 @@ print("c=",c)
 print(c.shape)
 
 
-# In[49]:
+# In[18]:
 
 
 # difference
@@ -329,7 +335,7 @@ print("c=",c)
 print(c.shape)
 
 
-# In[50]:
+# In[19]:
 
 
 # Hadamard product
@@ -338,7 +344,7 @@ print("c=",c)
 print(c.shape)
 
 
-# In[51]:
+# In[20]:
 
 
 # component-wise division
@@ -361,7 +367,7 @@ print(c.shape)
 # 
 # Con Numpy escribimos
 
-# In[52]:
+# In[21]:
 
 
 # dot product (vectors): c = sum(a_i*b_i)
@@ -383,7 +389,7 @@ print(c.shape)
 # \end{equation}
 # $$
 
-# In[53]:
+# In[22]:
 
 
 # dot product (tensors ): c = sum(a_i*b_i)
@@ -404,7 +410,7 @@ print("D=",D)
 print("E=",E)
 
 
-# In[54]:
+# In[23]:
 
 
 # a.dot puede ser encadenado con arreglos 2D
@@ -420,7 +426,7 @@ a.dot(b).dot(b)
 # 
 # Si *a* en un arreglo N-dimensional (N-D) y b es un arreglo 1D (uno-dimensional)
 
-# In[55]:
+# In[24]:
 
 
 a = np.array([[1,2],[3,4],[5,6]])
@@ -429,7 +435,7 @@ c = a.dot(b)
 d = a@b
 
 
-# In[56]:
+# In[25]:
 
 
 print('a=', a)
@@ -442,9 +448,9 @@ print('d=', d)
 
 # Trabajando con un arreglo *A*  3-D y arreglo *B* 1D de tal forma que el tamaño de la última dimension de *A* coincide con el tamaño de *B*, el producto se puede ver como el resultado del producto de matrices  entre la matriz en cada capa por el vector *B*.
 # 
-# En el siguiente ejemplo *A* tiene tamaño 4x3x2 y *b* tiene tamaño 2 (en realidad 2x1). Entonces el producto tensorial *C=A@B* da como resultado un arreglo de tamaño 4x3x1. Cada una de las 4 matrices de tamaño 3x2 del arreglo *A* se multiplican por el vector *B*, lo que da como resultado 4 matrices de tamaño 3x1. Veámos los cálculos con Numpy.
+# En el siguiente ejemplo *A* tiene tamaño 4x3x2 y *b* tiene tamaño 2 (en realidad 2x1). Entonces el producto tensorial *C=A@B* da como resultado un arreglo de tamaño 4x3x1. Cada una de las 4 matrices de tamaño 3x2 del arreglo *A* se multiplican por el vector *B*, lo que da como resultado 4 matrices de tamaño 3x1. Veamos los cálculos con Numpy.
 
-# In[57]:
+# In[26]:
 
 
 a = np.array([[[1,2],[3,4],[5,6]],[[7,8],[9,10],[11,12]],[[13,14],[15,16],[17,18]],
@@ -458,7 +464,7 @@ a_0 = a[0,:,:]
 e = a_0@b
 
 
-# In[58]:
+# In[27]:
 
 
 print('a=', a)
@@ -478,13 +484,6 @@ print('e.shape=',e.shape)
 # 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
 # 2. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 # 3. Oleg Jarma, ojarmam@unal.edu.co 
-
-# ## <span style="color:#4361EE">Asesora Medios y Marketing digital</span>
-#  
-# 1. Maria del Pilar Montenegro, pmontenegro88@gmail.com 
-# 
-
-# ## <span style="color:#4361EE">Bibliografía</span>
 
 # 
 # ## <span style="color:#4361EE">Comentarios</span>

@@ -1,6 +1,9 @@
 #!/usr/bin/env python
 # coding: utf-8
 
+# (2:py2)=
+# 
+
 # # <span style="color:#F72585">Funciones en Python</span>
 
 # 
@@ -9,11 +12,11 @@
 # 
 # Imagínese cuando se levanta.
 # 
-# Lo que ocurre primero, es que uno se siente vivo, se abren los ojos (no siempre), se hace pereza un rato, se levanta de la cama y luego se incia el día (cada persona tiene sus maneras diferentes de lograrlo).
+# Lo que ocurre primero, es que uno se siente vivo, se abren los ojos (no siempre), se hace pereza un rato, se levanta de la cama y luego se inicia el día (cada persona tiene sus maneras diferentes de lograrlo).
 # 
 # Esta serie de **pasos consecutivos** conforman lo que se llama una **función**.
 # 
-# En el común, una **función es en realidad una acción** o una serie de acciones que gneran un resultado a través de un proceso intermedio.
+# En el común, una **función es en realidad una acción** o una serie de acciones que generan un resultado a través de un proceso intermedio.
 # 
 # Para poder distinguir funciones, unas de otras, se le dan dotado de nombres diferentes.
 # 
@@ -26,7 +29,7 @@
 # 3. **Hacer pereza.**
 # 4. **Levantarse.**
 # 
-# En el lenguaje de promgramación, ésto se podría escribir como
+# En el lenguaje de programación, ésto se podría escribir como
 # 
 # ```Levantarse(x)```
 # 
@@ -36,7 +39,7 @@
 # 
 # Función ```CortarManzana(x)```:
 # 
-# Esta función se puede ilustrar dela siguiente manera:
+# Esta función se puede ilustrar de la siguiente manera:
 # 
 # 
 # ![Manzanita](https://photos1.blogger.com/blogger/1290/1572/1600/Apple_slicing_function.png)
@@ -57,7 +60,7 @@
 # 
 # **Ejercicio**
 # 
-# Viendo la entra y salida dl código, infiera qué hace la función correspondiente:
+# Viendo la entrada y salida del código, infiera qué hace la función correspondiente:
 
 # In[1]:
 
@@ -97,6 +100,12 @@ print("a1:",a1,", a2:",a2)
 # In[2]:
 
 
+get_ipython().system('pip install numpy matplotlib')
+
+
+# In[3]:
+
+
 # Comente adecuadamente las siguientes líneas de código
 
 import numpy as np
@@ -134,7 +143,7 @@ plt.show()
 # 
 # **Ejemplo:**
 
-# In[ ]:
+# In[4]:
 
 
 # Explicar las siguientes líneas de código
@@ -144,7 +153,7 @@ def mysum_prod(x,y):
     return s,p
 
 
-# In[ ]:
+# In[5]:
 
 
 suma, prod = mysum_prod(3,4)
@@ -152,7 +161,7 @@ print("El suma es:", suma)
 print("El producto es:", prod)
 
 
-# In[ ]:
+# In[6]:
 
 
 #  Use la función correspodiente de forma inteligente
@@ -162,7 +171,7 @@ def mysum_prod(x,y):
     return [s,p]
 
 
-# In[ ]:
+# In[7]:
 
 
 # Explique qué diferencias hay entre éste método y el anterior
@@ -180,7 +189,7 @@ print("la suma es:", s)
 # 
 # **Pista:**
 
-# In[ ]:
+# In[8]:
 
 
 # Explicar adecuadamente
@@ -210,7 +219,7 @@ print(mydoubler(11))
 # 
 # Revise el siguiente ejemplo. Recibe una lista de número y regresa una nueva lista con los valores elevado al cuadrado.
 
-# In[ ]:
+# In[9]:
 
 
 # Ejemplo de una función pura
@@ -239,7 +248,7 @@ print("Lista modifciada:", Modified_List)
 # 
 # Ejemplo: consideremos un programa que encontrará la suma de todos los elementos de una lista sin usar ningún bucle for.
 
-# In[ ]:
+# In[10]:
 
 
 # Ejemplo de recursión
@@ -283,7 +292,7 @@ print(Sum(L, 0, n, count))
 # 
 # Ejemplo:
 
-# In[ ]:
+# In[11]:
 
 
 # Programa Python program para ilustrar
@@ -315,7 +324,7 @@ greet(whisper)
 # 
 # Veamos los siguientes dos ejemplos que ilustran *map()* y *filter()*.
 
-# In[ ]:
+# In[12]:
 
 
 # Ejemplo del uso de map()
@@ -337,7 +346,7 @@ for result in results:
     print(result, end = " ")
 
 
-# In[ ]:
+# In[13]:
 
 
 # Ejemplo de uso de filter()
@@ -364,6 +373,11 @@ print('Las letras filtradas son:')
 for s in filtered:
     print(s)
 
+
+# ## <span style="color:#4361EE">Autores</span>
+
+# 1. Alvaro Mauricio Montenegro Díaz, ammontenegrod@unal.edu.co
+# 1. Daniel Mauricio Montenegro Reyes, dextronomo@gmail.com 
 
 # ## <span style="color:#4361EE">Comentarios</span>
 # 

@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Probabilidad Conjunta y Entropía Cruzada &#8212; IA y Aprendizaje profundo</title>
     
-  <link href="_static/css/theme.css" rel="stylesheet" />
-  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
 
     
   <link rel="stylesheet"
@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -31,9 +31,9 @@
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
-  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -75,23 +75,27 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Distribuciones de probabilidad continuas" href="prob4.html" />
     <link rel="prev" title="Variables Aleatorias" href="prob2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="docsearch:language" content="en" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
     
   </head>
   <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
@@ -108,6 +112,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="index.html">
       
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
+      
       <img src="_static/logo.png" class="logo" alt="logo">
       
       
@@ -122,11 +130,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="intro.html">
-   Bienvenido
+   <span style="color:#F72585">
+    Bienvenido(a)
+   </span>
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   probabilidad
  </span>
@@ -160,8 +170,15 @@ commentsRunWhenDOMLoaded(addUtterances);
    </span>
   </a>
  </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="ejprob.html">
+   <span style="color:#F72585">
+    Ejercicios
+   </span>
+  </a>
+ </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Programación
  </span>
@@ -224,7 +241,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p aria-level="2" class="caption" role="heading">
  <span class="caption-text">
   Conceptos
  </span>
@@ -297,8 +314,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             href="https://github.com/Yesenia-AriasC/book_pruebas"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
-        
-        
+        <a class="issues-button"
+            href="https://github.com/Yesenia-AriasC/book_pruebas/issues/new?title=Issue%20on%20page%20%2Fprob3.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        <a class="edit-button" href="https://github.com/Yesenia-AriasC/book_pruebas/edit/main/prob3.ipynb"><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
 </div>
 
@@ -316,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/gh-pages?urlpath=tree/path/to/book/prob3.ipynb"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/Yesenia-AriasC/book_pruebas/main?urlpath=tree/prob3.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="_static/images/logo_binder.svg"
@@ -324,6 +346,14 @@ commentsRunWhenDOMLoaded(addUtterances);
         
         
         
+        <a class="colab-button" href="https://colab.research.google.com/github/Yesenia-AriasC/book_pruebas/blob/main/prob3.ipynb"><button type="button" class="btn btn-secondary topbarbtn"
+                title="Launch Colab" data-toggle="tooltip" data-placement="left"><img class="colab-button-logo"
+                    src="_static/images/logo_colab.png"
+                    alt="Interact on Colab">Colab</button></a>
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
         
     </div>
 </div>
@@ -351,15 +381,6 @@ commentsRunWhenDOMLoaded(addUtterances);
     El ejemplo de la moneda cargada
    </span>
   </a>
-  <ul class="nav section-nav flex-column">
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#span-style-color-4cc9f0-ejercicio-span">
-     <span style="color:#4CC9F0">
-      Ejercicio
-     </span>
-    </a>
-   </li>
-  </ul>
  </li>
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-funcion-de-probabilidad-conjunta-span">
@@ -422,6 +443,13 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#span-style-color-4361ee-autores-span">
+   <span style="color:#4361EE">
+    Autores
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#span-style-color-4361ee-comentarios-span">
    <span style="color:#4361EE">
     Comentarios
@@ -439,8 +467,8 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="span-style-color-f72585-probabilidad-conjunta-y-entropia-cruzada-span">
-<h1><span style="color:#F72585">Probabilidad Conjunta y Entropía Cruzada</span><a class="headerlink" href="#span-style-color-f72585-probabilidad-conjunta-y-entropia-cruzada-span" title="Permalink to this headline">¶</a></h1>
+  <div class="tex2jax_ignore mathjax_ignore section" id="span-style-color-f72585-probabilidad-conjunta-y-entropia-cruzada-span">
+<span id="prob3"></span><h1><span style="color:#F72585">Probabilidad Conjunta y Entropía Cruzada</span><a class="headerlink" href="#span-style-color-f72585-probabilidad-conjunta-y-entropia-cruzada-span" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="span-style-color-4361ee-introduccion-span">
 <h2><span style="color:#4361EE">Introducción</span><a class="headerlink" href="#span-style-color-4361ee-introduccion-span" title="Permalink to this headline">¶</a></h2>
 <p>En esta lección se introducen los concepto de función de probabilidad conjunta. Se introducen los conceptos de correlación,  información mutua y entropía cruzada.</p>
@@ -514,13 +542,6 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>Recuerde que obtuvimos que <span class="math notranslate nohighlight">\(\mathbb{E}[X]=1.8\)</span>.</p>
 <p>Además se tiene que <span class="math notranslate nohighlight">\(\text{Var}[X]=0.72\)</span> y <span class="math notranslate nohighlight">\(\sigma_X = 0.849\)</span></p>
 </div>
-<div class="section" id="span-style-color-4cc9f0-ejercicio-span">
-<h3><span style="color:#4CC9F0">Ejercicio</span><a class="headerlink" href="#span-style-color-4cc9f0-ejercicio-span" title="Permalink to this headline">¶</a></h3>
-<p>Por favor verifique que si <span class="math notranslate nohighlight">\(X\sim \text{Binom}(N,\pi)\)</span>, entonces</p>
-<ol class="simple">
-<li><p><span class="math notranslate nohighlight">\(\mathbb{E}[X]=N\pi\)</span></p></li>
-<li><p><span class="math notranslate nohighlight">\(\text{Var}[X]=N\pi(1-\pi)\)</span>.</p></li>
-</ol>
 <p>La segunda variable que llamaremos <span class="math notranslate nohighlight">\(Y\)</span> se definen como sigue:</p>
 <div class="math notranslate nohighlight">
 \[\begin{split}
@@ -529,7 +550,7 @@ Y = \begin{cases}  0, &amp;\text{ si no sale ninguna cara}, \\
 -1, &amp;\text{ si salen tres caras}.
 \end{cases}
 \end{split}\]</div>
-<p>a función de probabilidad de  Y , denotada  <span class="math notranslate nohighlight">\(p_Y\)</span>  es dada por extensión de la siguiente forma:</p>
+<p>La función de probabilidad de  Y , denotada  <span class="math notranslate nohighlight">\(p_Y\)</span>  es dada por extensión de la siguiente forma:</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>Valor</p></th>
@@ -602,10 +623,9 @@ Y = \begin{cases}  0, &amp;\text{ si no sale ninguna cara}, \\
 \end{split}\]</div>
 </div>
 </div>
-</div>
 <div class="section" id="span-style-color-4361ee-funcion-de-probabilidad-conjunta-span">
 <h2><span style="color:#4361EE">Función de probabilidad conjunta</span><a class="headerlink" href="#span-style-color-4361ee-funcion-de-probabilidad-conjunta-span" title="Permalink to this headline">¶</a></h2>
-<p>Abordemos el problema de determinar como está relacionadas (asociadas) estas dos variables. Para empezar observe la siguiente tabla que muestra como coocurren los valores de las dos variables aleatorias</p>
+<p>Abordemos el problema de determinar como están relacionadas (asociadas) estas dos variables. Para empezar observe la siguiente tabla que muestra como coocurren los valores de las dos variables aleatorias</p>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="head"><p>X/Y</p></th>
@@ -780,23 +800,28 @@ la información conjunta se define por</p>
 \]</div>
 <p>La información mutua siempre es positiva e indica la cantidad de información que las dos variables cargan conjuntamente, la una de la otra.</p>
 <p>La siguiente línea ilustra el cálculo usando Numpy.</p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install numpy
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: numpy in /opt/anaconda3/lib/python3.8/site-packages (1.20.3)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="p">(</span><span class="mf">0.064</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.064</span><span class="o">/</span><span class="p">(</span><span class="mf">0.064</span><span class="o">*.</span><span class="mi">064</span><span class="p">))</span> <span class="o">+</span><span class="p">(</span><span class="mf">0.288</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.288</span><span class="o">/</span><span class="p">(</span><span class="mf">0.288</span><span class="o">*</span><span class="mf">0.724</span><span class="p">))</span> \
+<span class="p">(</span><span class="mf">0.064</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.064</span><span class="o">/</span><span class="p">(</span><span class="mf">0.064</span><span class="o">*</span><span class="mf">.064</span><span class="p">))</span> <span class="o">+</span><span class="p">(</span><span class="mf">0.288</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.288</span><span class="o">/</span><span class="p">(</span><span class="mf">0.288</span><span class="o">*</span><span class="mf">0.724</span><span class="p">))</span> \
 <span class="o">+</span><span class="p">(</span><span class="mf">0.432</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.432</span><span class="o">/</span><span class="p">(</span><span class="mf">0.432</span><span class="o">*</span><span class="mf">0.72</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.216</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.216</span><span class="o">/</span><span class="p">(</span><span class="mf">0.216</span><span class="o">*</span><span class="mf">0.216</span><span class="p">)))</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">35</span><span class="n">a831fb135b</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="p">(</span><span class="mf">0.064</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.064</span><span class="o">/</span><span class="p">(</span><span class="mf">0.064</span><span class="o">*.</span><span class="mi">064</span><span class="p">))</span> <span class="o">+</span><span class="p">(</span><span class="mf">0.288</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.288</span><span class="o">/</span><span class="p">(</span><span class="mf">0.288</span><span class="o">*</span><span class="mf">0.724</span><span class="p">))</span> \
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="o">+</span><span class="p">(</span><span class="mf">0.432</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.432</span><span class="o">/</span><span class="p">(</span><span class="mf">0.432</span><span class="o">*</span><span class="mf">0.72</span><span class="p">)</span> <span class="o">+</span> <span class="mf">0.216</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mf">0.216</span><span class="o">/</span><span class="p">(</span><span class="mf">0.216</span><span class="o">*</span><span class="mf">0.216</span><span class="p">)))</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;numpy&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5032013743418469
 </pre></div>
 </div>
 </div>
@@ -817,6 +842,26 @@ H(P,Q) = - E_P[ \log Q]  = - (p_1\log q_1 + p_2\log q_2+ \cdots + p_n\log q_n)
 <p>Para ilustrar el concepto, calculemos la entropía cruzada entre las distribuciones binomiales <span class="math notranslate nohighlight">\( P=Bin(3, 0.3)\)</span>, <span class="math notranslate nohighlight">\(Q_1=Bin(3, 0.4)\)</span> y <span class="math notranslate nohighlight">\(Q_2=Bin(3,0.7)\)</span>.</p>
 <p>Vamos considerar a la distribución <span class="math notranslate nohighlight">\(P\)</span> como la verdadera y a <span class="math notranslate nohighlight">\(Q_1\)</span> y <span class="math notranslate nohighlight">\(Q_2\)</span> como aproximantes. Usted debe sospechar que <span class="math notranslate nohighlight">\(Q_1\)</span> es mejor aproximante que <span class="math notranslate nohighlight">\(Q_2\)</span>.</p>
 <p>Veamos.</p>
+<div class="cell tag_thebe-init tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>pip install scipy matplotlib
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: scipy in /opt/anaconda3/lib/python3.8/site-packages (1.7.1)
+Requirement already satisfied: matplotlib in /opt/anaconda3/lib/python3.8/site-packages (3.4.2)
+Requirement already satisfied: numpy&lt;1.23.0,&gt;=1.16.5 in /opt/anaconda3/lib/python3.8/site-packages (from scipy) (1.20.3)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (1.3.1)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (0.10.0)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.8.2)
+Requirement already satisfied: pillow&gt;=6.2.0 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (8.3.1)
+Requirement already satisfied: pyparsing&gt;=2.2.1 in /opt/anaconda3/lib/python3.8/site-packages (from matplotlib) (2.4.7)
+Requirement already satisfied: six in /opt/anaconda3/lib/python3.8/site-packages (from cycler&gt;=0.10-&gt;matplotlib) (1.16.0)
+</pre></div>
+</div>
+</div>
+</div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -835,6 +880,13 @@ H(P,Q) = - E_P[ \log Q]  = - (p_1\log q_1 + p_2\log q_2+ \cdots + p_n\log q_n)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0.343 0.441 0.189 0.027]
+[0.216 0.432 0.288 0.064]
+[0.027 0.189 0.441 0.343]
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -843,6 +895,12 @@ H(P,Q) = - E_P[ \log Q]  = - (p_1\log q_1 + p_2\log q_2+ \cdots + p_n\log q_n)
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;H(P,Q1)= &#39;</span><span class="p">,</span> <span class="n">H_P_Q1</span> <span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;H(P,Q2)= &#39;</span><span class="p">,</span> <span class="n">H_P_Q2</span> <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>H(P,Q1)=  1.2052697267344104
+H(P,Q2)=  2.157224596768415
 </pre></div>
 </div>
 </div>
@@ -869,6 +927,9 @@ H(P,Q) = - E_P[ \log Q]  = - (p_1\log q_1 + p_2\log q_2+ \cdots + p_n\log q_n)
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<img alt="_images/prob3_27_0.png" src="_images/prob3_27_0.png" />
+</div>
 </div>
 </div>
 </div>
@@ -883,6 +944,13 @@ H(P,Q) = - E_P[ \log Q]  = - (p_1\log q_1 + p_2\log q_2+ \cdots + p_n\log q_n)
 H(P,Q) = - 1 \log 0.7 = 0.357
 \]</div>
 </div>
+<div class="section" id="span-style-color-4361ee-autores-span">
+<h2><span style="color:#4361EE">Autores</span><a class="headerlink" href="#span-style-color-4361ee-autores-span" title="Permalink to this headline">¶</a></h2>
+<ol class="simple">
+<li><p>Alvaro Mauricio Montenegro Díaz, <a class="reference external" href="mailto:ammontenegrod&#37;&#52;&#48;unal&#46;edu&#46;co">ammontenegrod<span>&#64;</span>unal<span>&#46;</span>edu<span>&#46;</span>co</a></p></li>
+<li><p>Daniel Mauricio Montenegro Reyes, <a class="reference external" href="mailto:dextronomo&#37;&#52;&#48;gmail&#46;com">dextronomo<span>&#64;</span>gmail<span>&#46;</span>com</a></p></li>
+</ol>
+</div>
 <div class="section" id="span-style-color-4361ee-comentarios-span">
 <h2><span style="color:#4361EE">Comentarios</span><a class="headerlink" href="#span-style-color-4361ee-comentarios-span" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -892,8 +960,8 @@ H(P,Q) = - 1 \log 0.7 = 0.357
     {
         requestKernel: true,
         binderOptions: {
-            repo: "binder-examples/jupyter-stacks-datascience",
-            ref: "master",
+            repo: "Yesenia-AriasC/book_pruebas",
+            ref: "main",
         },
         codeMirrorConfig: {
             theme: "abcdef",
@@ -911,36 +979,27 @@ H(P,Q) = - 1 \log 0.7 = 0.357
               </div>
               
         
-            
-
-
-
-<div class='prev-next-bottom'>
-    
-    <div id="prev">
-        <a class="left-prev" href="prob2.html" title="previous page">
-            <i class="prevnext-label fas fa-angle-left"></i>
-            <div class="prevnext-info">
-                <p class="prevnext-label">previous</p>
-                <p class="prevnext-title"><span style="color:#F72585">Variables Aleatorias</span></p>
-            </div>
-        </a>
+            <!-- Previous / next buttons -->
+<div class='prev-next-area'> 
+    <a class='left-prev' id="prev-link" href="prob2.html" title="previous page">
+        <i class="fas fa-angle-left"></i>
+        <div class="prev-next-info">
+            <p class="prev-next-subtitle">previous</p>
+            <p class="prev-next-title"><span style="color:#F72585">Variables Aleatorias</span></p>
+        </div>
+    </a>
+    <a class='right-next' id="next-link" href="prob4.html" title="next page">
+    <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span style="color:#F72585">Distribuciones de probabilidad continuas</span></p>
     </div>
-     <div id="next">
-        <a class="right-next" href="prob4.html" title="next page">
-            <div class="prevnext-info">
-                <p class="prevnext-label">next</p>
-                <p class="prevnext-title"><span style="color:#F72585">Distribuciones de probabilidad continuas</span></p>
-            </div>
-            <i class="prevnext-label fas fa-angle-right"></i>
-        </a>
-     </div>
-
+    <i class="fas fa-angle-right"></i>
+    </a>
 </div>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
@@ -956,8 +1015,7 @@ H(P,Q) = - 1 \log 0.7 = 0.357
       </div>
     </div>
   
-  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
 
-  
   </body>
 </html>
